@@ -654,6 +654,8 @@ MonoBehaviour:
   randomFillPercent: 48
   smoothingTarget: 10
   wallCountModifier: 5
+  tree: {fileID: 5127155639437525163, guid: 4d97c52a50304a8409822f63338e22df, type: 3}
+  treeSpawnDensity: 25
 --- !u!4 &769939855
 Transform:
   m_ObjectHideFlags: 0

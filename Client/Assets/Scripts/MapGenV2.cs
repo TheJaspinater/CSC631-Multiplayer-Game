@@ -54,12 +54,24 @@ public class MapGenV2 : MonoBehaviour
     //[Range(0, 100)]
     //public int spawnDungeonOnePercentage;
 
+    //Decoritive Items Data
+    public GameObject tree;
+    [Range(0, 100)]
+    public int treeSpawnDensity;
+
     void Start()
     {
+        if (useRandomSeed == true) //Generate seeded hash. Either Random or preset so terain generation is repeatable
+        {
+            seed = DateTime.Now.ToString();
+            Debug.Log(seed);
+        }
+
         Debug.Log("Running start method.");
         mapCenterX = width / 2;
         mapCenterY = height / 2;
         GenMap();
+        spawnDecorations();
         //SpawnPlayers();
     }
 
@@ -78,11 +90,6 @@ public class MapGenV2 : MonoBehaviour
     void RandomFillMap()
     {
         Debug.Log("Running RandomFillMap method.");
-        if (useRandomSeed == true) //Generate seeded hash. Either Random or preset so terain generation is repeatable
-        {
-            seed = DateTime.Now.ToString();
-            Debug.Log(seed);
-        }
 
         System.Random psuedoRandom = new System.Random(seed.GetHashCode());
 
@@ -292,6 +299,30 @@ public class MapGenV2 : MonoBehaviour
                 for (int structY = 0; structY < 12; structY++)
                 {
                     map[x + structX, y + structY] = structTest[structX, structY];
+                }
+            }
+        }
+    }
+
+    void spawnDecorations()
+    {
+        Debug.Log("Running spawnDecorations method.");
+
+        System.Random psuedoRandom = new System.Random(seed.GetHashCode());
+
+        int aboveSpaceCount;
+        for (int x = 0; x < width; x++) // Cycle through entire tileMap
+        {
+            for (int y = 0; y < height; y++)
+            {
+                aboveSpaceCount = CountAdjacentTiles(x, y, 2, 2, -1, 7);
+                if (aboveSpaceCount == 0 && map[x, y] == 1 && map[x -1 , y] == 1 && map[x + 1, y] == 1 && map[x - 2, y] == 1 && map[x + 2, y] == 1) // if above space is empty Generate Object
+                {
+                    if (psuedoRandom.Next(0, 100) < treeSpawnDensity)
+                    {
+                        Vector3 p = new Vector3(x, y + 4.35f, 0);
+                        Instantiate(tree, p, Quaternion.identity);
+                    }
                 }
             }
         }
