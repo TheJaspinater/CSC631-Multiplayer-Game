@@ -697,8 +697,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e44a6e728da2844bca47e538c3306f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localPlayerPrefab: {fileID: 3929803226357414590, guid: b3c85277ca8f89b468884ceafade56f6, type: 3}
-  playerPrefab: {fileID: 3929803226357414590, guid: 0bd258c027260d34f83d2db0406513f3, type: 3}
+  bonesLocalPrefab: {fileID: 3929803226357414590, guid: b3c85277ca8f89b468884ceafade56f6, type: 3}
+  goopLocalPrefab: {fileID: 3281716137541971723, guid: ab86799e55ec2c74a9a4902ed4e169cd, type: 3}
+  robotLocalPrefab: {fileID: 2642805533554251879, guid: 3dacdac5fbabef94996a597954d8e7cd, type: 3}
+  wraithLocalPrefab: {fileID: 1944325433829096915, guid: 210ab684dd5db2047b472ac369fbf08e, type: 3}
+  bonesForeignPrefab: {fileID: 3929803226357414590, guid: da2f2d90c6ab2624fb6b17f5cfd9362f, type: 3}
+  goopForeignPrefab: {fileID: 3281716137541971723, guid: c0e6fde800470fd4e81841c5ed8180d8, type: 3}
+  robotForeignPrefab: {fileID: 2642805533554251879, guid: 333a7c38c3b128e42a4efad3cf83a62c, type: 3}
+  wraithForeignPrefab: {fileID: 1944325433829096915, guid: 3a2155e5bb9c3004a9a8a719c221e44a, type: 3}
 --- !u!4 &786270579
 Transform:
   m_ObjectHideFlags: 0

@@ -12,7 +12,10 @@ public class GameManager : MonoBehaviour
     public GameObject goopLocalPrefab;
     public GameObject robotLocalPrefab;
     public GameObject wraithLocalPrefab;
-    public GameObject playerPrefab;
+    public GameObject bonesForeignPrefab;
+    public GameObject goopForeignPrefab;
+    public GameObject robotForeignPrefab;
+    public GameObject wraithForeignPrefab;
 
     private void Awake()
     {
@@ -51,7 +54,22 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            _player = Instantiate(playerPrefab, _position, _rotation);
+            if (players.Count == 0)
+            {
+                _player = Instantiate(bonesForeignPrefab, _position, _rotation);
+            }
+            else if (players.Count == 1)
+            {
+                _player = Instantiate(goopForeignPrefab, _position, _rotation);
+            }
+            else if (players.Count == 2)
+            {
+                _player = Instantiate(robotForeignPrefab, _position, _rotation);
+            }
+            else
+            {
+                _player = Instantiate(wraithForeignPrefab, _position, _rotation);
+            }
         }
 
         _player.GetComponent<PlayerManager>().id = _id;
