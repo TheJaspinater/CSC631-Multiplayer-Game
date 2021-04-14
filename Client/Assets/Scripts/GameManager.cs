@@ -8,7 +8,10 @@ public class GameManager : MonoBehaviour
 
     public static Dictionary<int, PlayerManager> players = new Dictionary<int, PlayerManager>();
 
-    public GameObject localPlayerPrefab;
+    public GameObject bonesLocalPrefab;
+    public GameObject goopLocalPrefab;
+    public GameObject robotLocalPrefab;
+    public GameObject wraithLocalPrefab;
     public GameObject playerPrefab;
 
     private void Awake()
@@ -29,7 +32,22 @@ public class GameManager : MonoBehaviour
         GameObject _player;
         if (_id == Client.instance.myId)
         {
-            _player = Instantiate(localPlayerPrefab, _position, _rotation);
+            if(players.Count == 0)
+            {
+                _player = Instantiate(bonesLocalPrefab, _position, _rotation);
+            }
+            else if (players.Count == 1)
+            {
+                _player = Instantiate(goopLocalPrefab, _position, _rotation);
+            }
+            else if (players.Count == 2)
+            {
+                _player = Instantiate(robotLocalPrefab, _position, _rotation);
+            }
+            else
+            {
+                _player = Instantiate(wraithLocalPrefab, _position, _rotation);
+            }
         }
         else
         {
