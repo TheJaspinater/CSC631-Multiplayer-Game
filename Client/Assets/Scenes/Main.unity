@@ -196,6 +196,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
+  m_OnSubmit:
+    m_PersistentCalls:
+      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -388,6 +391,7 @@ TilemapRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
@@ -642,8 +646,8 @@ MonoBehaviour:
   dirtTopRightCorner: {fileID: 11400000, guid: 999f5337789c1d64aaaec77da59c59fc, type: 2}
   error: {fileID: 11400000, guid: c6314f390a36e7b4fb7b52c92640f2f7, type: 2}
   testDungeon: {fileID: 11400000, guid: c6314f390a36e7b4fb7b52c92640f2f7, type: 2}
-  width: 200
-  height: 200
+  width: 300
+  height: 300
   tilemap: {fileID: 306913620}
   seed: Test
   useRandomSeed: 0

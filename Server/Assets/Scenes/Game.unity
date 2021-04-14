@@ -169,8 +169,8 @@ MonoBehaviour:
   dirtTopRightCorner: {fileID: 11400000, guid: 03bc9cf0b29636e46b9217dfe8e3529a, type: 2}
   error: {fileID: 11400000, guid: 03bc9cf0b29636e46b9217dfe8e3529a, type: 2}
   testDungeon: {fileID: 11400000, guid: 03bc9cf0b29636e46b9217dfe8e3529a, type: 2}
-  width: 200
-  height: 200
+  width: 300
+  height: 300
   tilemap: {fileID: 1126061858}
   seed: Test
   useRandomSeed: 0
@@ -419,6 +419,7 @@ TilemapRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
