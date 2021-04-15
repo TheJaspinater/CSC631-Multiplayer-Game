@@ -177,6 +177,7 @@ MonoBehaviour:
   randomFillPercent: 48
   smoothingTarget: 10
   wallCountModifier: 5
+  spawnDungeonOnePercentage: 3
 --- !u!4 &67514341
 Transform:
   m_ObjectHideFlags: 0

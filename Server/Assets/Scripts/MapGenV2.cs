@@ -51,8 +51,8 @@ public class MapGenV2 : MonoBehaviour
     public int wallCountModifier;
 
     //Dungeon Spawn Data
-    //[Range(0, 100)]
-    //public int spawnDungeonOnePercentage;
+    [Range(0, 100)]
+    public int spawnDungeonOnePercentage;
 
     void Start()
     {
@@ -86,7 +86,7 @@ public class MapGenV2 : MonoBehaviour
 
         System.Random psuedoRandom = new System.Random(seed.GetHashCode());
 
-        //int dungeonspawn;
+        int dungeonspawn;
 
         for (int x = 0; x < width; x++) //Populate map with noise
         {
@@ -98,11 +98,11 @@ public class MapGenV2 : MonoBehaviour
                 {
                     map[x, y] = (psuedoRandom.Next(0, 100) < randomFillPercent) ? 1 : 0; //RandomFillPercent controls the density of noise
 
-/*                    if (x > mapCenterX - radiusFromCenter && x < mapCenterX + radiusFromCenter - 12 && y > mapCenterY - radiusFromCenter && y < mapCenterY + radiusFromCenter - 12) // Apply Dungeon
+                    if (x > mapCenterX - radiusFromCenter && x < mapCenterX + radiusFromCenter - 12 && y > mapCenterY - radiusFromCenter && y < mapCenterY + radiusFromCenter - 12) // Apply Dungeon
                     {
                         dungeonspawn = (psuedoRandom.Next(0, 10000) < spawnDungeonOnePercentage) ? 1 : 0;
                         SpawnDungeonOne(dungeonspawn, x, y);
-                    }*/
+                    }
                 }
             }
         }
@@ -268,51 +268,45 @@ public class MapGenV2 : MonoBehaviour
             }
         }
     }
-/*
+
     void SpawnDungeonOne(int spawn, int x, int y)
     {
         Debug.Log("Running SpawnDungeonOne method.");
         int[,] structTest = new int[12, 12] {
-            { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+            { 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
             { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
-            { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 },
+            { 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1 },
+            { 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1 },
+            { 1, 2, 0, 2, 2, 0, 2, 2, 0, 0, 2, 1 },
+            { 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 2, 1 },
+            { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 2, 1 },
+            { 1, 1, 1, 1, 2, 2, 0, 0, 2, 2, 2, 1 },
+            { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 2, 1 },
+            { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 2, 1 },
+            { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1 },
             { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
         };
-        if (spawn == 1) {
+
+        //rotate map 90 degrees
+        int n = 12;
+        int[,] ret = new int[n, n];
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = 0; j < n; ++j)
+            {
+                ret[i, j] = structTest[n - j - 1, i];
+            }
+        }
+
+        if (spawn == 1)
+        {
             for (int structX = 0; structX < 12; structX++)
             {
                 for (int structY = 0; structY < 12; structY++)
                 {
-                    map[x + structX, y + structY] = structTest[structX, structY];
+                    map[x + structX, y + structY] = ret[structX, structY];
                 }
             }
         }
     }
-
-    void SpawnPlayers()
-    {
-        int aboveSpaceCount;
-        for (int x = 0; x < width / 4; x++) // Cycle through entire tileMap
-        {
-            for (int y = 0; y < height / 4; y++)
-            {
-                aboveSpaceCount = CountAdjacentTiles(x,y,1,1,-1,3);
-                if (aboveSpaceCount == 0 && map[x, y] != 0) // if above space is empty Generate Object
-                {
-                    Vector3Int p = new Vector3Int(x, y + 1, 0);
-                    Instantiate(player, p, Quaternion.identity);
-                    x = width;
-                    y = height;
-                }
-            }
-        }
-    }*/
 }
