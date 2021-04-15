@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
 
     public void ConnectToForeignServer()
     {
+        Debug.Log("-" + IPAddress.text + "-");
         Client.instance.ip = IPAddress.text;
         startMenu.SetActive(false);
         usernameField.interactable = false;

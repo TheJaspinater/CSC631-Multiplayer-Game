@@ -1123,7 +1123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1800690047}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ConnectToServer
+        m_MethodName: ConnectToLocalServer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
