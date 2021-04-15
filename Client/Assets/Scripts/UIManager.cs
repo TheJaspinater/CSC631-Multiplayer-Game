@@ -9,7 +9,6 @@ public class UIManager : MonoBehaviour
 
     public GameObject startMenu;
     public InputField usernameField;
-    public InputField IPAddress;
 
     private void Awake()
     {
@@ -24,17 +23,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ConnectToLocalServer()
+    public void ConnectToServer()
     {
-        Client.instance.ip = "127.0.0.1";
-        startMenu.SetActive(false);
-        usernameField.interactable = false;
-        Client.instance.ConnectToServer();
-    }
-
-    public void ConnectToForeignServer()
-    {
-        Client.instance.ip = IPAddress.text;
         startMenu.SetActive(false);
         usernameField.interactable = false;
         Client.instance.ConnectToServer();
