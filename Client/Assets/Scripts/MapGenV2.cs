@@ -55,9 +55,15 @@ public class MapGenV2 : MonoBehaviour
     public int spawnDungeonOnePercentage;
 
     //Decoritive Items Data
-    public GameObject tree;
     [Range(0, 100)]
-    public int treeSpawnDensity;
+    public int DecorationSpawnDensity;
+    public GameObject tree;
+    public GameObject bush;
+    public GameObject rock;
+    public GameObject box;
+    public GameObject barrel;
+    public GameObject well;
+    public GameObject decayingWall;
 
     void Start()
     {
@@ -318,25 +324,66 @@ public class MapGenV2 : MonoBehaviour
 
     void spawnDecorations()
     {
-        Debug.Log("Running spawnDecorations method.");
-
         System.Random psuedoRandom = new System.Random(seed.GetHashCode());
 
-        int aboveSpaceCount;
         for (int x = 0; x < width; x++) // Cycle through entire tileMap
         {
             for (int y = 0; y < height; y++)
             {
-                aboveSpaceCount = CountAdjacentTiles(x, y, 2, 2, -1, 7);
-                if (aboveSpaceCount == 0 && map[x, y] == 1 && map[x -1 , y] == 1 && map[x + 1, y] == 1 && map[x - 2, y] == 1 && map[x + 2, y] == 1) // if above space is empty Generate Object
+                int aboveSpaceCount = CountAdjacentTiles(x, y, 1, 1, -1, 3);
+                if (aboveSpaceCount == 0 && map[x, y] == 1 && map[x - 1, y] == 1 && map[x + 1, y] == 1 && map[x - 2, y] == 1 && map[x + 2, y] == 1) // if above space is empty Generate Object
                 {
-                    if (psuedoRandom.Next(0, 100) < treeSpawnDensity)
+                    if (psuedoRandom.Next(0, 100) < DecorationSpawnDensity)
                     {
-                        Vector3 p = new Vector3(x, y + 4.35f, 0);
-                        Instantiate(tree, p, Quaternion.identity);
+                        Vector3 p;
+                        switch (psuedoRandom.Next(1, 8))
+                        {
+                            case 1:
+                                aboveSpaceCount = CountAdjacentTiles(x, y, 2, 2, -1, 7);
+                                p = new Vector3(x, y + 4.35f, 0);
+                                Instantiate(tree, p, Quaternion.identity);
+                                break;
+                            case 2:
+                                aboveSpaceCount = CountAdjacentTiles(x, y, 2, 2, -1, 1);
+                                p = new Vector3(x, y + 1.5f, 0);
+                                Instantiate(bush, p, Quaternion.identity);
+                                break;
+                            case 3:
+                                aboveSpaceCount = CountAdjacentTiles(x, y, 1, 1, -1, 1);
+                                p = new Vector3(x, y + 1, 0);
+                                Instantiate(rock, p, Quaternion.identity);
+                                break;
+                            case 4:
+                                aboveSpaceCount = CountAdjacentTiles(x, y, 1, 1, -1, 1);
+                                p = new Vector3(x, y + 1, 0);
+                                Instantiate(box, p, Quaternion.identity);
+                                break;
+                            case 5:
+                                aboveSpaceCount = CountAdjacentTiles(x, y, 1, 1, -1, 1);
+                                p = new Vector3(x, y + 1, 0);
+                                Instantiate(barrel, p, Quaternion.identity);
+                                break;
+                            case 6:
+                                aboveSpaceCount = CountAdjacentTiles(x, y, 1, 1, -1, 4);
+                                p = new Vector3(x, y + 1, 0);
+                                Instantiate(well, p, Quaternion.identity);
+                                break;
+                            case 7:
+                                aboveSpaceCount = CountAdjacentTiles(x, y, 2, 2, -1, 1);
+                                p = new Vector3(x, y + 1, 0);
+                                Instantiate(decayingWall, p, Quaternion.identity);
+                                break;
+                            case 8:
+                                break;
+                            default:
+                                Debug.Log("Default case for decoration spawn called.");
+                                break;
+                        }
                     }
+                 
                 }
             }
         }
     }
 }
+
