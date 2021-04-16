@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject startMenu;
     public InputField usernameField;
+    public Client ClientText;
 
     private void Awake()
     {
@@ -28,5 +29,46 @@ public class UIManager : MonoBehaviour
         startMenu.SetActive(false);
         usernameField.interactable = false;
         Client.instance.ConnectToServer();
+    }
+
+    public void TurnUIelementOnOff(GameObject ElementToSwitch)
+    {
+        ElementToSwitch.SetActive(!ElementToSwitch.activeSelf);
+    }
+
+    public void updateServerIPAddress(InputField input)
+    {
+        ClientText.ip = input.text;
+    }
+
+    public void TurnOnFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+
+    public void ChangeResolution(Dropdown change)
+    {
+        switch (change.value)
+        {
+            case 0:
+                Screen.SetResolution(1920, 1080, Screen.fullScreen);
+                break;
+
+            case 1:
+                Screen.SetResolution(1280, 720, Screen.fullScreen);
+                break;
+
+            case 2:
+                Screen.SetResolution(800, 600, Screen.fullScreen);
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    public void EndGame()
+    {
+        Application.Quit();
     }
 }
