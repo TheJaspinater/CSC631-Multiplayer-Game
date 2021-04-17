@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     private Animator anim;
 
     private bool isWalking;
@@ -70,6 +72,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Flip()
     {
+        CreateDust();
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180.0f, 0.0f);
     }
@@ -92,5 +95,11 @@ public class PlayerAnimator : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
+        Debug.Log("dust happens");
     }
 }
