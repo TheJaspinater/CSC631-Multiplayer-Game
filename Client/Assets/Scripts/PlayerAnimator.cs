@@ -12,19 +12,13 @@ public class PlayerAnimator : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     public Transform groundCheck;
-
-    private void CheckSurroundings()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-    }
+    private Vector3 lastPosition;
+    private Vector3 velocity;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        lastPosition = GameManager.players[Client.instance.myId].transform.position;
     }
 
     private void Update()
@@ -36,50 +30,34 @@ public class PlayerAnimator : MonoBehaviour
     // instead of all being local, all animations will be done with GameManager.players[ID].position 
     // or something of the sort
 
-    /*
+
     private void FixedUpdate()
     {
-        SendInputToServer();
-    }
+        velocity = (GameManager.players[Client.instance.myId].transform.position - lastPosition) / Time.deltaTime;
+        lastPosition = GameManager.players[Client.instance.myId].transform.position;
 
-    private void SendInputToServer()
-    {
-        bool[] _inputs = new bool[]
-        {
-            Input.GetKey(KeyCode.W),
-            Input.GetKey(KeyCode.S),
-            Input.GetKey(KeyCode.A),
-            Input.GetKey(KeyCode.D),
-        };
+        Debug.Log(velocity.x);
 
-        ClientSend.PlayerMovement(_inputs);
+        CheckSurroundings();
     }
-    */
 
     public void CheckMovementDirection()
     {
-        
-        if (isFacingRight && Input.GetKey(KeyCode.A))
-        {
-            Debug.Log("going right");
-            Flip();
-        }
-        else if (!isFacingRight && Input.GetKey(KeyCode.D))
-        {
-            Debug.Log("going left");
-            Flip();
-        }
-        
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (isFacingRight && velocity.x < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && velocity.x > 0)
+        {
+            Flip();
+        }
+
+
+
+        if (velocity.x != 0)
         {
             isWalking = true;
-            Debug.Log(isWalking);
-        }
-        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D))
-        {
-            isWalking = false;
-            Debug.Log(isWalking);
         }
         else
         {
@@ -89,13 +67,13 @@ public class PlayerAnimator : MonoBehaviour
 
     }
 
-    
+
     private void Flip()
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180.0f, 0.0f);
     }
-    
+
 
     private void UpdateAnimations()
     {
@@ -104,5 +82,15 @@ public class PlayerAnimator : MonoBehaviour
         // anim.SetFloat("yVelocity", rb.velocity.y);
     }
 
+    // Checks if Player is Grounded
+    private void CheckSurroundings()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+    }
 
+    // Radius for Ground Check
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
 }

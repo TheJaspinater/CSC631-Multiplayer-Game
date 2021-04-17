@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 3517950898059909184}
   - component: {fileID: 5853262511322823097}
   - component: {fileID: 5184764658750270926}
-  - component: {fileID: 4437911211629428466}
+  - component: {fileID: 766335436536975473}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -249,7 +249,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4437911211629428466
+--- !u!114 &766335436536975473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

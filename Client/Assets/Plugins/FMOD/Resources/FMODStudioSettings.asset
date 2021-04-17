@@ -142,7 +142,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: C:\Users\Marco\Documents\GitHub\CSC631Game\Client\FMODAudio
+  sourceBankPath: FMODAudio
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
