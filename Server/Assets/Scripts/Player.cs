@@ -136,6 +136,8 @@ public class Player : MonoBehaviour
     */
     private void Move(Vector2 _inputDirection)
     {
+
+
         if (isGrounded)
         {
             velocity.y = 0;
@@ -147,7 +149,7 @@ public class Player : MonoBehaviour
             // Calculate the velocity required to achieve the target jump height.
             TimeSpan result = System.DateTime.Now - waitTime;
             int milliseconds = (int)result.TotalMilliseconds;
-            if (milliseconds > 350)
+            if (milliseconds > 400)
             {
                 waitTime = System.DateTime.Now;
                 velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
