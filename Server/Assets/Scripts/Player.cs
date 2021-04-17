@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
@@ -40,6 +42,9 @@ public class Player : MonoBehaviour
     private Vector2 velocity;
 
     private bool isGrounded;
+    private int canJump = 0;
+
+    private DateTime waitTime= System.DateTime.Now;
     // public float groundCheckRadius;
     // public LayerMask whatIsGround;
     // public Transform groundCheck;
@@ -134,12 +139,21 @@ public class Player : MonoBehaviour
         if (isGrounded)
         {
             velocity.y = 0;
+            canJump = 0;
+        }
 
-            if (_inputDirection.y > 0)
+        if (_inputDirection.y > 0 && canJump < 2)
+        {
+            // Calculate the velocity required to achieve the target jump height.
+            TimeSpan result = System.DateTime.Now - waitTime;
+            int milliseconds = (int)result.TotalMilliseconds;
+            if (milliseconds > 350)
             {
-                // Calculate the velocity required to achieve the target jump height.
+                waitTime = System.DateTime.Now;
                 velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+                canJump += 1;
             }
+            
         }
 
         float acceleration = isGrounded ? walkAcceleration : airAcceleration;
@@ -154,7 +168,11 @@ public class Player : MonoBehaviour
             velocity.x = Mathf.MoveTowards(velocity.x, 0, deceleration * Time.deltaTime);
         }
 
-        velocity.y += Physics2D.gravity.y * Time.deltaTime;
+        if (velocity.y > -30)
+        {
+            velocity.y += Physics2D.gravity.y * Time.deltaTime;
+
+        }
 
         transform.Translate(velocity * Time.deltaTime);
 
@@ -182,6 +200,7 @@ public class Player : MonoBehaviour
                 if (Vector2.Angle(colliderDistance.normal, Vector2.up) < 90 && velocity.y < 0)
                 {
                     isGrounded = true;
+                    canJump = 0;
                 }
             }
         }
