@@ -1932,14 +1932,14 @@ MonoBehaviour:
   smoothingTarget: 10
   wallCountModifier: 5
   spawnDungeonOnePercentage: 3
-  DecorationSpawnDensity: 0
+  DecorationSpawnDensity: 30
   tree: {fileID: 5127155639437525163, guid: 4d97c52a50304a8409822f63338e22df, type: 3}
-  bush: {fileID: 0}
-  rock: {fileID: 0}
-  box: {fileID: 0}
-  barrel: {fileID: 0}
-  well: {fileID: 0}
-  decayingWall: {fileID: 0}
+  bush: {fileID: 6313692915741612273, guid: 50ac5f9bc96b9c644b7cfb5f7d707a94, type: 3}
+  rock: {fileID: 8526867744085778706, guid: fdd6ab38cb0ca7e4d9ca3bdf93e33dc5, type: 3}
+  box: {fileID: 4603280917192113618, guid: 30c97fd38af4d0e4fbe39f028e5e7995, type: 3}
+  barrel: {fileID: 8220968060298758585, guid: f5e86ba8ed2400e4da438b5c5310a807, type: 3}
+  well: {fileID: 2816654375914633239, guid: 4caaf547120bb964e81b1079f5a7d549, type: 3}
+  decayingWall: {fileID: 4819346400616319649, guid: 357ae54ed01a8a64ea6aadd20e3f9fd0, type: 3}
 --- !u!4 &769939855
 Transform:
   m_ObjectHideFlags: 0
