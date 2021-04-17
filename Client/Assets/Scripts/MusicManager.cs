@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
     private static MusicManager instance;
 
+    private static FMOD.Studio.Bus MasterMusic;
+    private static FMOD.Studio.Bus MasterSFX;
     private static FMOD.Studio.EventInstance Music;
+
+    public Slider mainOptionsMusicSlider;
+    public Slider gameOptionsMusicSlider;
+    public Slider mainOptionsSFXSlider;
+    public Slider gameOptionsSFXSlider;
+
 
     private void Awake()
     {
@@ -19,6 +28,9 @@ public class MusicManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
+
+        MasterMusic = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
+        MasterSFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
     }
 
     // Start is called before the first frame update
@@ -38,9 +50,18 @@ public class MusicManager : MonoBehaviour
     }
 
     //Used to change the value of background music as game progresses
-    public void SetMusicValue(string parameterToChange, float amtOfProgress)
-    {          
-        //Music.setParameterByName(parameterToChange,amtOfProgress);
+    public void SetMusicValue(Slider slider)
+    {
+        MasterMusic.setVolume(slider.value);
+        mainOptionsMusicSlider.value = slider.value;
+        gameOptionsMusicSlider.value = slider.value;
+    }
+
+    public void SetSFXVolume(Slider slider)
+    {
+        MasterSFX.setVolume(slider.value);
+        mainOptionsSFXSlider.value = slider.value;
+        gameOptionsSFXSlider.value = slider.value;
     }
 
     public void PlayGameSound(string path)
@@ -52,5 +73,4 @@ public class MusicManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(path);
     }
-    
 }

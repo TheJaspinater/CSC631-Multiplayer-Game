@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public GameObject startMenu;
     public InputField usernameField;
     public Client ClientText;
+    public GameObject InGamePauseMenu;
+    public Text IpAddressInPauseMenu;
+    public bool inGame = false;
 
     private void Awake()
     {
@@ -24,8 +27,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && inGame == true)
+        {
+            InGamePauseMenu.SetActive(!InGamePauseMenu.activeSelf);
+        }
+    }
+
     public void ConnectToServer()
     {
+        inGame = true;
         startMenu.SetActive(false);
         usernameField.interactable = false;
         Client.instance.ConnectToServer();
@@ -39,6 +51,7 @@ public class UIManager : MonoBehaviour
     public void updateServerIPAddress(InputField input)
     {
         ClientText.ip = input.text;
+        IpAddressInPauseMenu.text = input.text;
     }
 
     public void TurnOnFullscreen()
