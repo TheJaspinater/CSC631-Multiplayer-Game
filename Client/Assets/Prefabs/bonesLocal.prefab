@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5201881416140669223}
   - component: {fileID: 4043955502949166080}
   - component: {fileID: 7415017312590612343}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DustPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 4562529642805310891}
   - component: {fileID: 4853731183637968329}
   - component: {fileID: 3349137891924069282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: miniMapCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4900,7 +4900,7 @@ GameObject:
   - component: {fileID: 5915361774057099391}
   - component: {fileID: 3590756611983622355}
   - component: {fileID: 4239024755719429324}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bonesLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4964,7 +4964,7 @@ GameObject:
   - component: {fileID: 5853262511322823097}
   - component: {fileID: 5184764658750270926}
   - component: {fileID: 766335436536975473}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5083,7 +5083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8880977015998926047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5098,7 +5098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7982676827220614550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.471, y: -0.736, z: -38.668335}
+  m_LocalPosition: {x: 0.16, y: -0.62, z: -38.668335}
   m_LocalScale: {x: 0.70012474, y: 0.71698314, z: 0.70572674}
   m_Children: []
   m_Father: {fileID: 5915361774057099391}
@@ -5115,7 +5115,7 @@ GameObject:
   - component: {fileID: 4972498581251134529}
   - component: {fileID: 7273559487425820413}
   - component: {fileID: 6310362502782408300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

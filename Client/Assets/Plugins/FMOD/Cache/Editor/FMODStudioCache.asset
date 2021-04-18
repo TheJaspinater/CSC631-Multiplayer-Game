@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: FMODAudio/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637541877108195310
+  lastModified: 637542112980058557
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -212,7 +212,7 @@ MonoBehaviour:
   Path: FMODAudio/Dungeon_Brawler.bank
   Name: Dungeon_Brawler
   StudioPath: bank:/Dungeon_Brawler
-  lastModified: 637541877108175299
+  lastModified: 637542112980048625
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -254,7 +254,7 @@ MonoBehaviour:
   Path: FMODAudio/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637541877108205320
+  lastModified: 637542112980063520
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -385,7 +385,7 @@ MonoBehaviour:
   - {fileID: -8330409734720820974}
   StringsBanks:
   - {fileID: -3478619448596884637}
-  stringsBankWriteTime: 637541877108205320
+  stringsBankWriteTime: 637542112980063520
   cacheVersion: 6
 --- !u!114 &489797026529641947
 MonoBehaviour:

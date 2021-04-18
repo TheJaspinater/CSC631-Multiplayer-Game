@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimator : MonoBehaviour
+public class ForeignAnimator : MonoBehaviour
 {
     public ParticleSystem dust;
 
@@ -11,7 +11,6 @@ public class PlayerAnimator : MonoBehaviour
     private bool isWalking;
     private bool isFacingRight = true;
     private bool isGrounded;
-
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     public Transform groundCheck;
@@ -21,7 +20,7 @@ public class PlayerAnimator : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        lastPosition = GameManager.players[Client.instance.myId].transform.position;
+        lastPosition = transform.position;
     }
 
     private void Update()
@@ -36,13 +35,15 @@ public class PlayerAnimator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        velocity = (GameManager.players[Client.instance.myId].transform.position - lastPosition) / Time.deltaTime;
-        lastPosition = GameManager.players[Client.instance.myId].transform.position;
+        velocity = (transform.position - lastPosition) / Time.deltaTime;
+        lastPosition = transform.position;
 
         Debug.Log(velocity.x);
 
         CheckSurroundings();
     }
+
+    //public void CheckVelocity
 
     public void CheckMovementDirection()
     {
@@ -65,9 +66,9 @@ public class PlayerAnimator : MonoBehaviour
         else
         {
             isWalking = false;
-            
+            Debug.Log(isWalking);
         }
-        Debug.Log(isGrounded);
+
     }
 
 
@@ -81,9 +82,9 @@ public class PlayerAnimator : MonoBehaviour
 
     private void UpdateAnimations()
     {
-        anim.SetBool("isWalking", velocity.x > 0.01f || velocity.x < -0.01f);
+        anim.SetBool("isWalking", isWalking);
         anim.SetBool("isGrounded", isGrounded);
-        anim.SetFloat("yVelocity", velocity.y);
+        // anim.SetFloat("yVelocity", rb.velocity.y);
     }
 
     // Checks if Player is Grounded
