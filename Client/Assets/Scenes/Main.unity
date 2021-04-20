@@ -2604,7 +2604,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: event:/SFX_Menu_Confirmation
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &513245596
@@ -2671,7 +2671,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: event:/SFX_Menu_Select
+            m_StringArgument: event:/SFX/Menu/Menu_Select
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &578413857
@@ -5691,7 +5691,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: event:/SFX_Menu_Confirmation
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1800690047}
@@ -5770,7 +5770,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: event:/SFX_Menu_Select
+            m_StringArgument: event:/SFX/Menu/Menu_Select
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1368682101
@@ -6094,7 +6094,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: event:/SFX_Menu_Select
+            m_StringArgument: event:/SFX/Menu/Menu_Select
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1416619364
@@ -6772,7 +6772,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: event:/SFX_Menu_Back
+          m_StringArgument: event:/SFX/Menu/Menu_Back
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1603096203
@@ -6839,7 +6839,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: event:/SFX_Menu_Select
+            m_StringArgument: event:/SFX/Menu/Menu_Select
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1628264965
