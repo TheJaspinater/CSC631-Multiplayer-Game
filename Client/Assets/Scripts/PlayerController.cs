@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)){
             FMODUnity.RuntimeManager.PlayOneShot(jumpSoundEvent);
         }
-        
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             isWalking = true;
