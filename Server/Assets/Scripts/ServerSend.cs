@@ -92,7 +92,7 @@ public class ServerSend
     /// <param name="_player">The player to spawn.</param>
     public static void SpawnPlayer(int _toClient, Player _player)
     {
-        Vector3 temp = new Vector3(100, 210, 0);
+        Vector3 temp = new Vector3(150, 310, 0);
         _player.transform.position = temp;
         using (Packet _packet = new Packet((int)ServerPackets.spawnPlayer))
         {

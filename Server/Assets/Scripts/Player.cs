@@ -243,7 +243,7 @@ public class Player : MonoBehaviour
         if (health <= 0f)
         {
             health = 0f;
-            transform.position = new Vector3(100f, 210f, 0);
+            transform.position = new Vector3(150f, 150f, 0);
             ServerSend.PlayerPosition(this);
             StartCoroutine(Respawn());
         }
