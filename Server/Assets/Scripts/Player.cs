@@ -80,9 +80,22 @@ public class Player : MonoBehaviour
         attackInputs = new bool[1];
     }
 
+    public void playerDied()
+    {
+        health = 0f;
+        transform.position = new Vector3(150f, 150f, 0);
+        ServerSend.PlayerPosition(this);
+        StartCoroutine(Respawn());
+    }
+
     /// <summary>Processes player input and moves the player.</summary>
     public void FixedUpdate()
     {
+        if(transform.position.y < -10)
+        {
+            playerDied();
+        }
+
         if (health <= 0f)
         {
             return;
