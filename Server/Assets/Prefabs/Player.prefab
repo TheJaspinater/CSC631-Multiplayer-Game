@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5567716027784145662}
   m_Layer: 7
-  m_Name: GameObject
+  m_Name: AttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026762339398203598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.031, y: 0.893, z: 0}
+  m_LocalPosition: {x: 1.108, y: -0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5199437669436470636}
@@ -193,14 +193,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   username: 
-  gravity: -9.81
-  moveSpeed: 30
-  jumpSpeed: 5
+  health: 0
+  maxHealth: 100
   speed: 9
   walkAcceleration: 75
   airAcceleration: 30
   groundDeceleration: 70
   jumpHeight: 4
+  attackRadius: 0.59
+  attackDamage: 10
+  attackHitBoxPos: {fileID: 5567716027784145662}
+  whatIsDamageable:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!61 &3891072842826418764
 BoxCollider2D:
   m_ObjectHideFlags: 0

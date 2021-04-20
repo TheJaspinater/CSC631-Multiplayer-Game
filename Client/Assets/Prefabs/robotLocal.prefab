@@ -5009,6 +5009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   username: 
+  health: 0
+  maxHealth: 100
+  model: {fileID: 5372553843259498220}
 --- !u!114 &6765814826148954975
 MonoBehaviour:
   m_ObjectHideFlags: 0
