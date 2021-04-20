@@ -3484,6 +3484,8 @@ MonoBehaviour:
   smoothingTarget: 10
   wallCountModifier: 5
   spawnDungeonOnePercentage: 3
+  platformDensity: 1
+  spawnSmallPlatformPercentage: 0
   DecorationSpawnDensity: 30
   tree: {fileID: 5127155639437525163, guid: 4d97c52a50304a8409822f63338e22df, type: 3}
   bush: {fileID: 6313692915741612273, guid: 50ac5f9bc96b9c644b7cfb5f7d707a94, type: 3}

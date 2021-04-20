@@ -26,8 +26,11 @@ public class MapGenV2 : MonoBehaviour
     public Tile testDungeon;
 
     // Player data
-   // public GameObject player;
+    // public GameObject player;
     //private GameObject playerFound;
+
+    //World Seed perameters
+    private System.Random psuedoRandom;
 
     //Map Parameters
     //Map Size and center
@@ -54,9 +57,23 @@ public class MapGenV2 : MonoBehaviour
     [Range(0, 100)]
     public int spawnDungeonOnePercentage;
 
+    //Arena platform spawn rates
+    [Range(0, 100)]
+    public int platformDensity;
+    [Range(0, 100)]
+    public int spawnSmallPlatformPercentage;
+
     void Start()
     {
         Debug.Log("Running start method.");
+
+        if (useRandomSeed == true) //Generate seeded hash. Either Random or preset so terain generation is repeatable
+        {
+            seed = DateTime.Now.ToString();
+            Debug.Log(seed);
+        }
+        psuedoRandom = new System.Random(seed.GetHashCode());
+
         mapCenterX = width / 2;
         mapCenterY = height / 2;
         GenMap();
@@ -66,25 +83,20 @@ public class MapGenV2 : MonoBehaviour
     void GenMap()
     {
         Debug.Log("Running GenerateMap method.");
+
         map = new int[width, height];
         RandomFillMap();
         for (int i = 0; i < smoothingTarget; i++) //SmoothMap exicutes based on the Smoothing target creating softer structures
         {
             SmoothMap();
         }
+        SpawnArena(width, height);
         DrawMap();
     }
 
     void RandomFillMap()
     {
         Debug.Log("Running RandomFillMap method.");
-        if (useRandomSeed == true) //Generate seeded hash. Either Random or preset so terain generation is repeatable
-        {
-            seed = DateTime.Now.ToString();
-            Debug.Log(seed);
-        }
-
-        System.Random psuedoRandom = new System.Random(seed.GetHashCode());
 
         int dungeonspawn;
 
@@ -265,6 +277,82 @@ public class MapGenV2 : MonoBehaviour
                         }
                     }
                 }
+            }
+        }
+    }
+
+    void SpawnArena(int width, int height)
+    {
+        Debug.Log("Running SpawnDungeonOne method.");
+        int radius;
+        int spawn;
+
+        radius = (width < height) ? width / 9 : height / 9; // find radius for Arena. 9 is arbitrary, just seems to give a good relative sized arena for now
+
+        for (int x = mapCenterX - radius; x < mapCenterX + radius; x++) //Populate map with noise
+        {
+            for (int y = mapCenterY - radius; y < mapCenterY + radius; y++)
+            {
+                int radiusFromCenter = (int)(Math.Sqrt(Math.Pow(mapCenterX - x, 2) + Math.Pow(mapCenterY - y, 2))); //calculate radius from center of x,y grid
+
+                if (radiusFromCenter <= radius)
+                {
+                    if (y < mapCenterY - (radius / 2)) // only fill lower 4th of the arena with solid ground
+                    {
+                        map[x, y] = 1;
+                    }
+                    else
+                    {
+                        map[x, y] = 0;
+                    }
+                }
+            }
+        }
+
+        for (int x = mapCenterX - radius; x < mapCenterX + radius; x++) //Populate map with noise
+        {
+            for (int y = mapCenterY - radius; y < mapCenterY + radius; y++)
+            {
+                int radiusFromCenter = (int)(Math.Sqrt(Math.Pow(mapCenterX - x, 2) + Math.Pow(mapCenterY - y, 2))); //calculate radius from center of x,y grid
+
+                if (radiusFromCenter <= radius && y > mapCenterY - (radius / 2))
+                {
+                    spawn = (psuedoRandom.Next(0, 100) < platformDensity) ? 1 : 0;
+                    if (spawn == 1)
+                    {
+                        spawnSmallPlatform(x, y);
+                    }
+                }
+            }
+        }
+    }
+
+    void spawnSmallPlatform(int x, int y)
+    {
+        Debug.Log("Running spawnSmallPlatform method.");
+        int[,] SmallPlatform = new int[4, 4] {
+            { 1, 1, 1, 1 },
+            { 1, 1, 1, 1 },
+            { 0, 1, 1, 0 },
+            { 0, 0, 0, 0 }
+        };
+
+        //rotate map 90 degrees
+        int n = 4;
+        int[,] ret = new int[n, n];
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = 0; j < n; ++j)
+            {
+                ret[i, j] = SmallPlatform[n - j - 1, i];
+            }
+        }
+
+        for (int structX = 0; structX < 4; structX++)
+        {
+            for (int structY = 0; structY < 4; structY++)
+            {
+                map[x + structX, y + structY] = ret[structX, structY];
             }
         }
     }

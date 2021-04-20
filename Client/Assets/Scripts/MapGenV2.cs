@@ -26,8 +26,12 @@ public class MapGenV2 : MonoBehaviour
     public Tile testDungeon;
 
     // Player data
-   // public GameObject player;
+    // public GameObject player;
     //private GameObject playerFound;
+
+
+    //World Seed perameters
+    private System.Random psuedoRandom;
 
     //Map Parameters
     //Map Size and center
@@ -54,6 +58,12 @@ public class MapGenV2 : MonoBehaviour
     [Range(0, 100)]
     public int spawnDungeonOnePercentage;
 
+    //Arena platform spawn rates
+    [Range(0, 100)]
+    public int platformDensity;
+    [Range(0, 100)]
+    public int spawnSmallPlatformPercentage;
+
     //Decoritive Items Data
     [Range(0, 100)]
     public int DecorationSpawnDensity;
@@ -67,13 +77,15 @@ public class MapGenV2 : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Running start method.");
+
         if (useRandomSeed == true) //Generate seeded hash. Either Random or preset so terain generation is repeatable
         {
             seed = DateTime.Now.ToString();
             Debug.Log(seed);
         }
+        psuedoRandom = new System.Random(seed.GetHashCode());
 
-        Debug.Log("Running start method.");
         mapCenterX = width / 2;
         mapCenterY = height / 2;
         GenMap();
@@ -90,14 +102,13 @@ public class MapGenV2 : MonoBehaviour
         {
             SmoothMap();
         }
+        SpawnArena(width, height);
         DrawMap();
     }
 
     void RandomFillMap()
     {
         Debug.Log("Running RandomFillMap method.");
-
-        System.Random psuedoRandom = new System.Random(seed.GetHashCode());
 
         int dungeonspawn;
 
@@ -114,7 +125,10 @@ public class MapGenV2 : MonoBehaviour
                     if (x > mapCenterX - radiusFromCenter && x < mapCenterX + radiusFromCenter - 12 && y > mapCenterY - radiusFromCenter && y < mapCenterY + radiusFromCenter - 12) // Apply Dungeon
                     {
                         dungeonspawn = (psuedoRandom.Next(0, 10000) < spawnDungeonOnePercentage) ? 1 : 0;
-                        SpawnDungeonOne(dungeonspawn, x, y);
+                        if (dungeonspawn == 1)
+                        {
+                            SpawnDungeonOne(x, y);
+                        }
                     }
                 }
             }
@@ -156,10 +170,7 @@ public class MapGenV2 : MonoBehaviour
                 {
                     if (nextToX != mapX || nextToY != mapY) //Do not count position being measured
                     {
-                        if (map[nextToX, nextToY] == 1 || map[nextToX, nextToY] == 0) // only smooth dirt Islands, not dungeons
-                        {
-                            adjacentTitlesCount += map[nextToX, nextToY];
-                        }
+                        adjacentTitlesCount += map[nextToX, nextToY];
                     }
                     else
                     {
@@ -188,11 +199,6 @@ public class MapGenV2 : MonoBehaviour
                     {
                         Vector3Int p = new Vector3Int(x, y, 0);
                         tilemap.SetTile(p, null);
-                    }
-                    else if (map[x, y] == 2)
-                    {
-                        Vector3Int p = new Vector3Int(x, y, 0);
-                        tilemap.SetTile(p, error);
                     }
                     else if (map[x, y] == 1) // Place Dirt **********************************************************************************
                     {
@@ -282,7 +288,7 @@ public class MapGenV2 : MonoBehaviour
         }
     }
 
-    void SpawnDungeonOne(int spawn, int x, int y)
+    void SpawnDungeonOne(int x, int y)
     {
         Debug.Log("Running SpawnDungeonOne method.");
         int[,] structTest = new int[12, 12] {
@@ -311,13 +317,87 @@ public class MapGenV2 : MonoBehaviour
             }
         }
 
-        if (spawn == 1) {
-            for (int structX = 0; structX < 12; structX++)
+        for (int structX = 0; structX < 12; structX++)
+        {
+            for (int structY = 0; structY < 12; structY++)
             {
-                for (int structY = 0; structY < 12; structY++)
+                map[x + structX, y + structY] = ret[structX, structY];
+            }
+        }
+    }
+
+    void SpawnArena(int width, int height)
+    {
+        Debug.Log("Running SpawnDungeonOne method.");
+        int radius;
+        int spawn;
+
+        radius = (width < height) ? width / 9 : height / 9; // find radius for Arena. 9 is arbitrary, just seems to give a good relative sized arena for now
+
+        for (int x = mapCenterX - radius; x < mapCenterX + radius; x++) //Populate map with noise
+        {
+            for (int y = mapCenterY - radius; y < mapCenterY + radius; y++)
+            {
+                int radiusFromCenter = (int)(Math.Sqrt(Math.Pow(mapCenterX - x, 2) + Math.Pow(mapCenterY - y, 2))); //calculate radius from center of x,y grid
+
+                if (radiusFromCenter <= radius) 
                 {
-                    map[x + structX, y + structY] = ret[structX, structY];
+                    if (y < mapCenterY - (radius/2)) // only fill lower 4th of the arena with solid ground
+                    {
+                        map[x, y] = 1;
+                    }
+                    else
+                    {
+                        map[x, y] = 0;
+                    }
                 }
+            }
+        }
+
+        for (int x = mapCenterX - radius; x < mapCenterX + radius; x++) //Populate map with noise
+        {
+            for (int y = mapCenterY - radius; y < mapCenterY + radius; y++)
+            {
+                int radiusFromCenter = (int)(Math.Sqrt(Math.Pow(mapCenterX - x, 2) + Math.Pow(mapCenterY - y, 2))); //calculate radius from center of x,y grid
+
+                if (radiusFromCenter <= radius && y > mapCenterY - (radius / 2))
+                {
+                    spawn = (psuedoRandom.Next(0, 100) < platformDensity) ? 1 : 0;
+                    if (spawn == 1)
+                    {
+                        spawnSmallPlatform(x, y);
+                    }
+                }
+            }
+        }
+    }
+
+    void spawnSmallPlatform(int x, int y)
+    {
+        Debug.Log("Running spawnSmallPlatform method.");
+        int[,] SmallPlatform = new int[4, 4] {
+            { 1, 1, 1, 1 },
+            { 1, 1, 1, 1 },
+            { 0, 1, 1, 0 },
+            { 0, 0, 0, 0 }
+        };
+
+        //rotate map 90 degrees
+        int n = 4;
+        int[,] ret = new int[n, n];
+        for (int i = 0; i < n; ++i)
+        {
+            for (int j = 0; j < n; ++j)
+            {
+                ret[i, j] = SmallPlatform[n - j - 1, i];
+            }
+        }
+
+        for (int structX = 0; structX < 4; structX++)
+        {
+            for (int structY = 0; structY < 4; structY++)
+            {
+                map[x + structX, y + structY] = ret[structX, structY];
             }
         }
     }
