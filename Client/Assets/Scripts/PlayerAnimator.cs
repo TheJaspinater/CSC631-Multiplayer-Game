@@ -68,6 +68,9 @@ public class PlayerAnimator : MonoBehaviour
             isWalking = false;
             
         }
+
+        CheckIfJumped();
+
         Debug.Log(isGrounded);
     }
 
@@ -115,5 +118,10 @@ public class PlayerAnimator : MonoBehaviour
     {
         dust.Play();
         Debug.Log("dust happens");
+    }
+
+    public bool getIfJumped()
+    {
+        return hasJumped;
     }
 }
