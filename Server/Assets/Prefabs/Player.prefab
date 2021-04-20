@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2075095982638245535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3097601647403498527}
+  m_Layer: 7
+  m_Name: HitBoxObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3097601647403498527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075095982638245535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5567716027784145662}
+  m_Father: {fileID: 5199437669436470636}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3918599460501655219
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,12 +137,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026762339398203598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.108, y: -0.19, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1080017, y: -0.19000244, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5199437669436470636}
-  m_RootOrder: 2
+  m_Father: {fileID: 3097601647403498527}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4565100038387666091
 GameObject:
@@ -175,7 +206,7 @@ Transform:
   m_Children:
   - {fileID: 6302639124089113296}
   - {fileID: 619388052396747724}
-  - {fileID: 5567716027784145662}
+  - {fileID: 3097601647403498527}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -201,8 +232,8 @@ MonoBehaviour:
   groundDeceleration: 70
   jumpHeight: 4
   attackRadius: 0.59
-  attackDamage: 10
-  attackHitBoxPos: {fileID: 5567716027784145662}
+  attackDamage: 50
+  attackHitBoxPos: {fileID: 2075095982638245535}
   whatIsDamageable:
     serializedVersion: 2
     m_Bits: 128

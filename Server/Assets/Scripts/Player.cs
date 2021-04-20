@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     //TESTING---------------------
     private Vector2 _inputDirection;
     // private bool isWalking;
-    // private bool isFacingRight = true;
+    private bool isFacingRight = true;
 
     [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
     public float speed = 9;
@@ -57,8 +57,7 @@ public class Player : MonoBehaviour
     }
     */
     public float attackRadius, attackDamage;
-    [SerializeField]
-    private Transform attackHitBoxPos;
+    public GameObject attackHitBoxPos;
     [SerializeField]
     private LayerMask whatIsDamageable;
 
@@ -88,12 +87,12 @@ public class Player : MonoBehaviour
         StartCoroutine(Respawn());
     }
 
-    /*
+    
     private void Update()
     {
         CheckMovementDirection();
     }
-    */
+    
 
     /// <summary>Processes player input and moves the player.</summary>
     public void FixedUpdate()
@@ -135,7 +134,7 @@ public class Player : MonoBehaviour
         Move(_inputDirection);
     }
 
-    /*
+    
     public void CheckMovementDirection()
     {
 
@@ -149,13 +148,16 @@ public class Player : MonoBehaviour
         }
 
     }
+    
 
     private void Flip()
     {
         isFacingRight = !isFacingRight;
-        attackHitBoxPos.Rotate(0f, 180.0f, 0.0f);
+        Debug.Log("has flipped");
+        attackHitBoxPos.transform.Rotate(new Vector3(0, 180f, 0));
+        // new Vector3(attackHitBoxPos.position.x * -1, attackHitBoxPos.position.y, attackHitBoxPos.position.z);
     }
-    */
+    
 
 
     /// <summary>Calculates the player's desired movement direction and moves him.</summary>
@@ -228,6 +230,17 @@ public class Player : MonoBehaviour
 
         }
 
+        /*
+        if (_inputDirection.x > 0f)
+        {
+            isFacingRight = true;
+        }
+        if (_inputDirection.x < 0f)
+        {
+            isFacingRight = false;
+        }
+        */
+
         transform.Translate(velocity * Time.deltaTime);
 
         isGrounded = false;
@@ -295,7 +308,7 @@ public class Player : MonoBehaviour
     private void CheckAttackHitBox()
     {
         
-        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attackRadius, whatIsDamageable);
+        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.transform.GetChild(0).gameObject.transform.position, attackRadius, whatIsDamageable);
 
         foreach (Collider2D collider in detectedObjects)
         {
@@ -307,7 +320,7 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(attackHitBoxPos.position, attackRadius);
+        Gizmos.DrawWireSphere(attackHitBoxPos.transform.GetChild(0).gameObject.transform.position, attackRadius);
     }
 
     private IEnumerator Respawn()
