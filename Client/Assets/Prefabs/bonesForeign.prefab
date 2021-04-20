@@ -64,6 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f901fe4073d8ac44b502637eb919cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
+  jumpSoundEvent: event:/SFX/Player/Movement/MrBones_Jump
 --- !u!1 &5993819085811718833
 GameObject:
   m_ObjectHideFlags: 0

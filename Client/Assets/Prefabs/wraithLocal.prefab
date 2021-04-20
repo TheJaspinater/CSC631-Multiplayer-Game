@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f901fe4073d8ac44b502637eb919cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSoundEvent: event:/SFX/Player/Movement/Wraith_Jump
 --- !u!1 &4489079671187605090
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,14 +8,16 @@ public class PlayerController : MonoBehaviour
     private bool isWalking;
     // private bool isFacingRight = true;
     private bool isGrounded;
+    public string jumpSoundEvent;
 
     private void Update()
     {
-        CheckMovementDirection();
+        //CheckMovementDirection();
     }
 
     private void FixedUpdate()
     {
+        CheckMovementDirection();
         SendInputToServer();
     }
 
@@ -52,6 +54,10 @@ public class PlayerController : MonoBehaviour
             //Flip();
         }
         */
+
+        if (Input.GetKeyDown(KeyCode.W)){
+            FMODUnity.RuntimeManager.PlayOneShot(jumpSoundEvent);
+        }
         
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {

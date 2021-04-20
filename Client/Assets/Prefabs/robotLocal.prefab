@@ -5024,6 +5024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f901fe4073d8ac44b502637eb919cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSoundEvent: event:/SFX/Player/Movement/Cyborg_Jump
 --- !u!1 &2978337824930988334
 GameObject:
   m_ObjectHideFlags: 0
