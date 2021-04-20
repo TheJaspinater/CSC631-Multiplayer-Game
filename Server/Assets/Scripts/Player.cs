@@ -88,6 +88,13 @@ public class Player : MonoBehaviour
         StartCoroutine(Respawn());
     }
 
+    /*
+    private void Update()
+    {
+        CheckMovementDirection();
+    }
+    */
+
     /// <summary>Processes player input and moves the player.</summary>
     public void FixedUpdate()
     {
@@ -128,6 +135,27 @@ public class Player : MonoBehaviour
         Move(_inputDirection);
     }
 
+    /*
+    public void CheckMovementDirection()
+    {
+
+        if (isFacingRight && velocity.x < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && velocity.x > 0)
+        {
+            Flip();
+        }
+
+    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        attackHitBoxPos.Rotate(0f, 180.0f, 0.0f);
+    }
+    */
 
 
     /// <summary>Calculates the player's desired movement direction and moves him.</summary>

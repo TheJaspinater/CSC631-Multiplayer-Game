@@ -11,6 +11,7 @@ public class PlayerAnimator : MonoBehaviour
     private bool isWalking;
     private bool isFacingRight = true;
     private bool isGrounded;
+    private bool hasJumped;
 
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -76,6 +77,18 @@ public class PlayerAnimator : MonoBehaviour
         CreateDust();
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180.0f, 0.0f);
+    }
+
+    private void CheckIfJumped()
+    {
+        if (!isGrounded && velocity.y < 0f)
+        {
+            hasJumped = true;
+        }
+        else
+        {
+            hasJumped = false;
+        }
     }
 
 
