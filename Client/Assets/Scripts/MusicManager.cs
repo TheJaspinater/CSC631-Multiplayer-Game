@@ -36,7 +36,7 @@ public class MusicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Music = FMODUnity.RuntimeManager.CreateInstance("event:/MC_Main_Menu");
+        Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Main_Menu");
         Music.start();
         Music.release();
     }
@@ -44,7 +44,7 @@ public class MusicManager : MonoBehaviour
     public void StartGame()
     {
         Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        Music = FMODUnity.RuntimeManager.CreateInstance("event:/MC_Character_Select");
+        Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Character_Select");
         Music.start();
         Music.release();
     }
