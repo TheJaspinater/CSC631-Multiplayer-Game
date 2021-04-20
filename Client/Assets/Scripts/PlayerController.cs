@@ -29,7 +29,13 @@ public class PlayerController : MonoBehaviour
             Input.GetKey(KeyCode.D),
         };
 
+        bool[] _attackInputs = new bool[]
+        {
+            Input.GetMouseButtonDown(0),
+        };
+        
         ClientSend.PlayerMovement(_inputs);
+        ClientSend.PlayerAttack(_attackInputs);
     }
 
     public void CheckMovementDirection()

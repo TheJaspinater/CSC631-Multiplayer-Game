@@ -9,13 +9,11 @@ public class Player : MonoBehaviour
     public int id;
     public string username;
 
-    // public CharacterController2D controller;
-    public float gravity = -9.81f;
-    public float moveSpeed = 30f;
-    public float jumpSpeed = 5f;
+    public float health;
+    public float maxHealth = 100f;
 
     private bool[] inputs;
-    // private float yVelocity = 0;
+    private bool[] attackInputs;
 
     //TESTING---------------------
     private Vector2 _inputDirection;
@@ -58,14 +56,16 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
     */
+    public float attackRadius, attackDamage;
+    [SerializeField]
+    private Transform attackHitBoxPos;
+    [SerializeField]
+    private LayerMask whatIsDamageable;
+
     //----------------------------
 
     private void Start()
     {
-        gravity *= Time.fixedDeltaTime * Time.fixedDeltaTime;
-        moveSpeed *= Time.fixedDeltaTime;
-        jumpSpeed *= Time.fixedDeltaTime;
-
         boxCollider = GetComponent<BoxCollider2D>();
         circleCollider = GetComponent<CircleCollider2D>();
     }
@@ -74,13 +74,20 @@ public class Player : MonoBehaviour
     {
         id = _id;
         username = _username;
+        health = maxHealth;
 
         inputs = new bool[4];
+        attackInputs = new bool[1];
     }
 
     /// <summary>Processes player input and moves the player.</summary>
     public void FixedUpdate()
     {
+        if (health <= 0f)
+        {
+            return;
+        }
+
         _inputDirection = Vector2.zero;
         if (inputs[0]) //w
         {
@@ -99,9 +106,13 @@ public class Player : MonoBehaviour
             _inputDirection.x += 1f;
         }
 
+        if (attackInputs[0]) // Left Mouse Click
+        {
+            CheckAttackHitBox();
+        }
+
         //CheckSurroundings();
         Move(_inputDirection);
-        //ServerSend.PlayerPosition(this);
     }
 
 
@@ -212,9 +223,57 @@ public class Player : MonoBehaviour
     /// <summary>Updates the player input with newly received input.</summary>
     /// <param name="_inputs">The new key inputs.</param>
     /// <param name="_rotation">The new rotation.</param>
-    public void SetInput(bool[] _inputs, Quaternion _rotation)
+    public void SetInput(bool[] _inputs)
     {
         inputs = _inputs;
-        //rotation = _rotation;
+    }
+
+    public void PlayerAttack (bool[] _attackInputs)
+    {
+        attackInputs = _attackInputs;
+    }
+    public void TakeDamage(float _attackDamage)
+    {
+        if (health <= 0f)
+        {
+            return;
+        }
+
+        health -= _attackDamage;
+        if (health <= 0f)
+        {
+            health = 0f;
+            transform.position = new Vector3(100f, 210f, 0);
+            ServerSend.PlayerPosition(this);
+            StartCoroutine(Respawn());
+        }
+
+        ServerSend.PlayerHealth(this);
+    }
+
+    private void CheckAttackHitBox()
+    {
+        
+        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attackRadius, whatIsDamageable);
+
+        foreach (Collider2D collider in detectedObjects)
+        {
+            // collider.transform.parent.SendMessage("Damage", attackDamage);
+            collider.GetComponent<Player>().TakeDamage(attackDamage);
+            Debug.Log("hit");
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackHitBoxPos.position, attackRadius);
+    }
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(2f);
+
+        health = maxHealth;
+        ServerSend.PlayerRespawned(this);
     }
 }
