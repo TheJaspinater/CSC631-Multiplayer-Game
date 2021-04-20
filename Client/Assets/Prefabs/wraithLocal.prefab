@@ -54,6 +54,11 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   model: {fileID: 3181782659883522488}
+  HealthPrefab: {fileID: 630389859206484314, guid: d38a01e925ca2ad44abb5ed1a6ccd89e, type: 3}
+  BarBorder: {fileID: 0}
+  BarFilled: {fileID: 0}
+  currentValue: 0
+  currentHealth: 0
 --- !u!114 &200068865859902726
 MonoBehaviour:
   m_ObjectHideFlags: 0
