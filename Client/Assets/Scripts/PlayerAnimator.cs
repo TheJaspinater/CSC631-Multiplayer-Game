@@ -40,8 +40,6 @@ public class PlayerAnimator : MonoBehaviour
         velocity = (GameManager.players[Client.instance.myId].transform.position - lastPosition) / Time.deltaTime;
         lastPosition = GameManager.players[Client.instance.myId].transform.position;
 
-        Debug.Log(velocity.x);
-
         CheckSurroundings();
     }
 
@@ -65,13 +63,10 @@ public class PlayerAnimator : MonoBehaviour
         }
         else
         {
-            isWalking = false;
-            
+            isWalking = false;      
         }
 
         CheckIfJumped();
-
-        Debug.Log(isGrounded);
     }
 
 
@@ -101,7 +96,7 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetBool("hasJumped", hasJumped);
         anim.SetFloat("yVelocity", velocity.y);
-        Debug.Log(hasJumped);
+        Debug.Log(velocity.y);
         
     }
 

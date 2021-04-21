@@ -62,17 +62,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             isWalking = true;
-            Debug.Log(isWalking);
         }
         else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D))
         {
             isWalking = false;
-            Debug.Log(isWalking);
         }
         else
         {
             isWalking = false;
-            Debug.Log(isWalking);
         }
 
     }

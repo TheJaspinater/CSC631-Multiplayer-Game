@@ -91,6 +91,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         CheckMovementDirection();
+        CheckCollisions();
     }
     
 
@@ -244,17 +245,27 @@ public class Player : MonoBehaviour
         transform.Translate(velocity * Time.deltaTime);
 
         isGrounded = false;
+        
+        ServerSend.PlayerPosition(this);
+    }
 
-        // Retrieve all colliders we have intersected after velocity has been applied.
-        Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)transform.position + boxCollider.offset, boxCollider.size, 0);
+    // Retrieve all colliders we have intersected after velocity has been applied.
+    public void CheckCollisions()
+    {
+        Collider2D[] circleHits = Physics2D.OverlapCircleAll((Vector2)transform.position + circleCollider.offset, circleCollider.radius);
+        Collider2D[] boxHits = Physics2D.OverlapBoxAll((Vector2)transform.position + boxCollider.offset, boxCollider.size, 0);
 
-        foreach (Collider2D hit in hits)
+        foreach (Collider2D hit in circleHits)
         {
             // Ignore our own collider.
+
+            if (hit == circleCollider)
+                continue;
             if (hit == boxCollider)
                 continue;
 
-            ColliderDistance2D colliderDistance = hit.Distance(boxCollider);
+
+            ColliderDistance2D colliderDistance = hit.Distance(circleCollider);
 
             // Ensure that we are still overlapping this collider.
             // The overlap may no longer exist due to another intersected collider
@@ -271,7 +282,34 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        ServerSend.PlayerPosition(this);
+
+        foreach (Collider2D hit in boxHits)
+        {
+            // Ignore our own collider.
+
+            if (hit == circleCollider)
+                continue;
+            if (hit == boxCollider)
+                continue;
+
+
+            ColliderDistance2D colliderDistance = hit.Distance(boxCollider);
+
+            // Ensure that we are still overlapping this collider.
+            // The overlap may no longer exist due to another intersected collider
+            // pushing us out of this one.
+            if (colliderDistance.isOverlapped)
+            {
+                transform.Translate(colliderDistance.pointA - colliderDistance.pointB);
+
+                // If we intersect an object above us, set grounded to true. 
+                if (Vector2.Angle(colliderDistance.normal, Vector2.up) < 90 && velocity.y > 0)
+                {
+                    isGrounded = true;
+                    // canJump = 0;
+                }
+            }
+        }
     }
 
     /// <summary>Updates the player input with newly received input.</summary>
