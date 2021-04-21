@@ -5093,7 +5093,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7913110014237295798}
   - component: {fileID: 6571720230592335854}
-  - component: {fileID: 6205272207648253619}
   m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
@@ -5158,14 +5157,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6205272207648253619
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5259933828741372904}
-  m_Enabled: 1
 --- !u!1 &5478200178931919237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5178,6 +5169,7 @@ GameObject:
   - component: {fileID: 3181782659883522488}
   - component: {fileID: 7961312418809780499}
   - component: {fileID: 6780066980708525980}
+  - component: {fileID: 6909611668583369584}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -5288,6 +5280,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 4410524611125688393}
+--- !u!114 &6909611668583369584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478200178931919237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &6296333858344118710
 GameObject:
   m_ObjectHideFlags: 0
@@ -5298,7 +5304,6 @@ GameObject:
   m_Component:
   - component: {fileID: 828567566728273290}
   - component: {fileID: 5391416755465946}
-  - component: {fileID: 9136765521838759499}
   m_Layer: 7
   m_Name: miniMapCamera
   m_TagString: Untagged
@@ -5363,14 +5368,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &9136765521838759499
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6296333858344118710}
-  m_Enabled: 1
 --- !u!1 &8193242077626901673
 GameObject:
   m_ObjectHideFlags: 0

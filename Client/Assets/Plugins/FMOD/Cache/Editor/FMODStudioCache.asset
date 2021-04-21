@@ -81,7 +81,7 @@ MonoBehaviour:
   Path: FMODAudio/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637544422893672713
+  lastModified: 637544762422955837
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -220,6 +220,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6772306635341179847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Zombie_Walk/Zombie_Ground_Material
+  m_EditorClassIdentifier: 
+  Name: Zombie_Ground_Material
+  Min: -1
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6768459280826610277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +299,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8498202591002578434}
+  - {fileID: 7640827132217472710}
   MinDistance: 1
   MaxDistance: 20
   Length: 10750
@@ -482,7 +502,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -2244212508583311949}
+  - {fileID: -6772306635341179847}
   MinDistance: 1
   MaxDistance: 20
   Length: 11999
@@ -524,7 +544,7 @@ MonoBehaviour:
   Path: FMODAudio/Dungeon_Brawler.bank
   Name: Dungeon_Brawler
   StudioPath: bank:/Dungeon_Brawler
-  lastModified: 637544765916769274
+  lastModified: 637544762422775847
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -606,7 +626,7 @@ MonoBehaviour:
   Path: FMODAudio/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637544422893732721
+  lastModified: 637544762423015841
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -712,6 +732,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Zombie_Ground_Material
   Min: -1
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1182349617740091077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cyborg_Walk/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
   Max: 1
   Default: 0
   ID:
@@ -847,10 +887,30 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -5447205005727735591}
+  - {fileID: -733623400490570731}
   MinDistance: 1
   MaxDistance: 20
   Length: 679042
+--- !u!114 &-733623400490570731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phase_3/Player_Count
+  m_EditorClassIdentifier: 
+  Name: Player_Count
+  Min: 2
+  Max: 4
+  Default: 4
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-102936060616620691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,7 +977,7 @@ MonoBehaviour:
   - {fileID: -8330409734720820974}
   StringsBanks:
   - {fileID: -3478619448596884637}
-  stringsBankWriteTime: 637544422893732721
+  stringsBankWriteTime: 637544762423015841
   cacheVersion: 6
 --- !u!114 &489797026529641947
 MonoBehaviour:
@@ -982,7 +1042,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 1915429604766521442}
+  - {fileID: -1182349617740091077}
   MinDistance: 1
   MaxDistance: 20
   Length: 10000
@@ -1521,6 +1581,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 156614
+--- !u!114 &7640827132217472710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wraith_Walk/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7940050720014293552
 MonoBehaviour:
   m_ObjectHideFlags: 0
