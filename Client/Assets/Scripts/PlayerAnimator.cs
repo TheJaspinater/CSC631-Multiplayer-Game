@@ -84,11 +84,11 @@ public class PlayerAnimator : MonoBehaviour
 
     private void CheckIfJumped()
     {
-        if (!isGrounded && velocity.y < 0f)
+        if (velocity.y > 0f)
         {
             hasJumped = true;
         }
-        else
+        else if (velocity.y <= 0f)
         {
             hasJumped = false;
         }
@@ -99,7 +99,10 @@ public class PlayerAnimator : MonoBehaviour
     {
         anim.SetBool("isWalking", velocity.x > 0.01f || velocity.x < -0.01f);
         anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("hasJumped", hasJumped);
         anim.SetFloat("yVelocity", velocity.y);
+        Debug.Log(hasJumped);
+        
     }
 
     // Checks if Player is Grounded
