@@ -4916,7 +4916,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1506283128655358335}
   - component: {fileID: 6225510852612266886}
-  - component: {fileID: 5487513263846271383}
   m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
@@ -4981,14 +4980,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5487513263846271383
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604355245937739671}
-  m_Enabled: 1
 --- !u!1 &2933504525325111909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5246,7 +5237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3471943415239096187}
   - component: {fileID: 5268847217951136075}
-  - component: {fileID: 6282827852676062678}
   m_Layer: 7
   m_Name: miniMapCamera
   m_TagString: Untagged
@@ -5311,14 +5301,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6282827852676062678
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4774452441877799475}
-  m_Enabled: 1
 --- !u!1 &6467384110171618501
 GameObject:
   m_ObjectHideFlags: 0
@@ -5331,6 +5313,7 @@ GameObject:
   - component: {fileID: 3015103436516369330}
   - component: {fileID: 6879222873779308431}
   - component: {fileID: 2161483015019234023}
+  - component: {fileID: 4454843035252128327}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -5441,6 +5424,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 8603832037065404346}
+--- !u!114 &4454843035252128327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467384110171618501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &8237957195931213483
 GameObject:
   m_ObjectHideFlags: 0
