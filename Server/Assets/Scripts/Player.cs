@@ -90,8 +90,7 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        CheckMovementDirection();
-        CheckCollisions();
+        
     }
     
 
@@ -133,6 +132,8 @@ public class Player : MonoBehaviour
 
         //CheckSurroundings();
         Move(_inputDirection);
+        CheckMovementDirection();
+        CheckCollisions();
     }
 
     
