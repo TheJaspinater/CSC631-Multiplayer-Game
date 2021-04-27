@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject goopForeignPrefab;
     public GameObject robotForeignPrefab;
     public GameObject wraithForeignPrefab;
+    private GameObject _localPrefab;
+    private GameObject _foreignPrefab;
 
     private void Awake()
     {
@@ -33,46 +35,56 @@ public class GameManager : MonoBehaviour
     public void SpawnPlayer(int _id, string _username, Vector3 _position, Quaternion _rotation)
     {
         GameObject _player;
+        
+
         if (_id == Client.instance.myId)
         {
             if(players.Count == 0)
             {
-                _player = Instantiate(bonesLocalPrefab, _position, _rotation);
+                _localPrefab = bonesLocalPrefab;
+                _player = Instantiate(_localPrefab, _position, _rotation);
             }
             else if (players.Count == 1)
             {
-                _player = Instantiate(goopLocalPrefab, _position, _rotation);
+                _localPrefab = goopLocalPrefab;
+                _player = Instantiate(_localPrefab, _position, _rotation);
             }
             else if (players.Count == 2)
             {
-                _player = Instantiate(robotLocalPrefab, _position, _rotation);
+                _localPrefab = robotLocalPrefab;
+                _player = Instantiate(_localPrefab, _position, _rotation);
             }
             else
             {
-                _player = Instantiate(wraithLocalPrefab, _position, _rotation);
+                _localPrefab = wraithLocalPrefab;
+                _player = Instantiate(_localPrefab, _position, _rotation);
             }
         }
         else
         {
             if (players.Count == 0)
             {
+                _foreignPrefab = bonesForeignPrefab;
                 _player = Instantiate(bonesForeignPrefab, _position, _rotation);
             }
             else if (players.Count == 1)
             {
-                _player = Instantiate(goopForeignPrefab, _position, _rotation);
+                _foreignPrefab = goopForeignPrefab;
+                _player = Instantiate(_foreignPrefab, _position, _rotation);
             }
             else if (players.Count == 2)
             {
-                _player = Instantiate(robotForeignPrefab, _position, _rotation);
+                _foreignPrefab = robotForeignPrefab;
+                _player = Instantiate(_foreignPrefab, _position, _rotation);
             }
             else
             {
-                _player = Instantiate(wraithForeignPrefab, _position, _rotation);
+                _foreignPrefab = wraithForeignPrefab;
+                _player = Instantiate(_foreignPrefab, _position, _rotation);
             }
         }
 
-        _player.GetComponent<PlayerManager>().Initialize(_id, _username);
+        _player.GetComponent<PlayerManager>().Initialize(_id, _username, _localPrefab, _foreignPrefab);
         players.Add(_id, _player.GetComponent<PlayerManager>());
     }
 }

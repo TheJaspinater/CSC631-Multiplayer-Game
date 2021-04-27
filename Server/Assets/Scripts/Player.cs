@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public float health;
     public float maxHealth = 100f;
+    public float lives;
 
     private bool[] inputs;
     private bool[] attackInputs;
