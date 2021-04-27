@@ -38,6 +38,8 @@ public class ForeignAnimator : MonoBehaviour
         velocity = (transform.position - lastPosition) / Time.deltaTime;
         lastPosition = transform.position;
 
+        Debug.Log(velocity.x);
+
         CheckSurroundings();
     }
 
@@ -64,6 +66,7 @@ public class ForeignAnimator : MonoBehaviour
         else
         {
             isWalking = false;
+            Debug.Log(isWalking);
         }
 
     }
@@ -81,7 +84,7 @@ public class ForeignAnimator : MonoBehaviour
     {
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isGrounded", isGrounded);
-        anim.SetFloat("yVelocity", velocity.y);
+        // anim.SetFloat("yVelocity", rb.velocity.y);
     }
 
     // Checks if Player is Grounded
