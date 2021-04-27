@@ -17,19 +17,19 @@ public class PlayerManager : MonoBehaviour
 
     public float currentValue;
 
-    // public float currentHealth;
-
     void Start()
     {
         BarBorder = Instantiate(HealthPrefab, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
         BarFilled = new List<Image>(BarBorder.GetComponentsInChildren<Image>()).Find(img => img != BarBorder);
     }
 
-    public void Initialize(int _id, string _username)
+    public void Initialize(int _id, string _username, GameObject _localPrefab, GameObject _foreignPrefab)
     {
         id = _id;
         username = _username;
         health = maxHealth;
+        Debug.Log(_localPrefab);
+        Debug.Log(_foreignPrefab);
     }
 
     void Update()

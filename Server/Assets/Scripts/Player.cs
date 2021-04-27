@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public float health;
     public float maxHealth = 100f;
+    public float lives;
 
     private bool[] inputs;
     private bool[] attackInputs;
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     private bool isFacingRight = true;
 
     [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
-    public float speed = 9;
+    public float speed = 10f;
 
     [SerializeField, Tooltip("Acceleration while grounded.")]
     public float walkAcceleration = 75;
@@ -33,29 +34,27 @@ public class Player : MonoBehaviour
     public float groundDeceleration = 70;
 
     [SerializeField, Tooltip("Max height the character will jump regardless of gravity")]
-    public float jumpHeight = 4;
+    public float jumpHeight = 5f;
 
     private CircleCollider2D circleCollider;
     private BoxCollider2D boxCollider;
     private Vector2 velocity;
+    private Rigidbody2D body;
 
     private bool isGrounded;
     private int canJump = 0;
 
     private DateTime waitTime= System.DateTime.Now;
-    // public float groundCheckRadius;
-    // public LayerMask whatIsGround;
-    // public Transform groundCheck;
-    /*
+    public float groundCheckRadius;
+    public LayerMask whatIsGround;
+    public Transform groundCheck;
+    
     private void CheckSurroundings()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        Debug.Log(isGrounded);
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-    }
-    */
+    
     public float attackRadius, attackDamage;
     public GameObject attackHitBoxPos;
     [SerializeField]
@@ -65,6 +64,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         circleCollider = GetComponent<CircleCollider2D>();
     }
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        CheckMovementDirection();
+        
     }
     
 
@@ -130,19 +130,21 @@ public class Player : MonoBehaviour
             CheckAttackHitBox();
         }
 
-        //CheckSurroundings();
+        CheckSurroundings();
         Move(_inputDirection);
+        CheckMovementDirection();
+        // CheckCollisions();
     }
 
     
     public void CheckMovementDirection()
     {
 
-        if (isFacingRight && velocity.x < 0)
+        if (isFacingRight && _inputDirection.x < 0)
         {
             Flip();
         }
-        else if (!isFacingRight && velocity.x > 0)
+        else if (!isFacingRight && _inputDirection.x > 0)
         {
             Flip();
         }
@@ -163,35 +165,10 @@ public class Player : MonoBehaviour
     /// <summary>Calculates the player's desired movement direction and moves him.</summary>
     /// <param name="_inputDirection"></param>
     /// 
-    /*
-    private void Move(Vector2 _inputDirection)
-    {
-        Vector3 _moveDirection = transform.right * _inputDirection.x + transform.up * _inputDirection.y;
-        _moveDirection *= moveSpeed;
-
-        if (isGrounded)
-        {
-            yVelocity = 0f;
-            if (inputs[0])
-            {
-                yVelocity = jumpSpeed;
-            }
-        }
-        else
-        {
-            yVelocity += gravity;
-        }
-
-        _moveDirection.y = yVelocity;
-        controller.Move(_moveDirection);
-
-        ServerSend.PlayerPosition(this);
-    }
-    */
     private void Move(Vector2 _inputDirection)
     {
 
-
+        /*
         if (isGrounded)
         {
             velocity.y = 0;
@@ -230,31 +207,65 @@ public class Player : MonoBehaviour
 
         }
 
-        /*
-        if (_inputDirection.x > 0f)
-        {
-            isFacingRight = true;
-        }
-        if (_inputDirection.x < 0f)
-        {
-            isFacingRight = false;
-        }
-        */
-
         transform.Translate(velocity * Time.deltaTime);
 
         isGrounded = false;
+        
 
-        // Retrieve all colliders we have intersected after velocity has been applied.
-        Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)transform.position + boxCollider.offset, boxCollider.size, 0);
+        body.MovePosition(new Vector2((transform.position.x + _inputDirection.x * speed * Time.deltaTime),
+            transform.position.y + _inputDirection.y * speed * Time.deltaTime));
+        */
+        if (isGrounded)
+        {
+            canJump = 0;
+        }
+        
+        if (_inputDirection.y > 0 && canJump < 2)
+        {
+            // Calculate the velocity required to achieve the target jump height.
+            TimeSpan result = System.DateTime.Now - waitTime;
+            int milliseconds = (int)result.TotalMilliseconds;
+            if (milliseconds > 400)
+            {
+                waitTime = System.DateTime.Now;
+                body.velocity = new Vector2(body.velocity.x, jumpHeight);
+                canJump += 1;
+            }
 
-        foreach (Collider2D hit in hits)
+        }
+        
+        if (_inputDirection.x != 0)
+        {
+            body.velocity = new Vector2(_inputDirection.x * speed, body.velocity.y) ;
+        }
+        else
+        {
+            body.velocity = new Vector2(0 * speed, body.velocity.y);
+        }
+
+        isGrounded = false;
+
+        ServerSend.PlayerPosition(this);
+    }
+
+    /*
+    // Retrieve all colliders we have intersected after velocity has been applied.
+    public void CheckCollisions()
+    {
+        Collider2D[] circleHits = Physics2D.OverlapCircleAll((Vector2)transform.position + circleCollider.offset, circleCollider.radius);
+        Collider2D[] boxHits = Physics2D.OverlapBoxAll((Vector2)transform.position + boxCollider.offset, boxCollider.size, 0);
+
+        foreach (Collider2D hit in circleHits)
         {
             // Ignore our own collider.
+
+            if (hit == circleCollider)
+                continue;
             if (hit == boxCollider)
                 continue;
 
-            ColliderDistance2D colliderDistance = hit.Distance(boxCollider);
+
+            ColliderDistance2D colliderDistance = hit.Distance(circleCollider);
 
             // Ensure that we are still overlapping this collider.
             // The overlap may no longer exist due to another intersected collider
@@ -271,8 +282,36 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        ServerSend.PlayerPosition(this);
+
+        foreach (Collider2D hit in boxHits)
+        {
+            // Ignore our own collider.
+
+            if (hit == circleCollider)
+                continue;
+            if (hit == boxCollider)
+                continue;
+
+
+            ColliderDistance2D colliderDistance = hit.Distance(boxCollider);
+
+            // Ensure that we are still overlapping this collider.
+            // The overlap may no longer exist due to another intersected collider
+            // pushing us out of this one.
+            if (colliderDistance.isOverlapped)
+            {
+                transform.Translate(colliderDistance.pointA - colliderDistance.pointB);
+
+                // If we intersect an object above us, set grounded to true. 
+                if (Vector2.Angle(colliderDistance.normal, Vector2.up) < 90 && velocity.y > 0)
+                {
+                    isGrounded = true;
+                    // canJump = 0;
+                }
+            }
+        }
     }
+    */
 
     /// <summary>Updates the player input with newly received input.</summary>
     /// <param name="_inputs">The new key inputs.</param>
@@ -320,6 +359,8 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+
         Gizmos.DrawWireSphere(attackHitBoxPos.transform.GetChild(0).gameObject.transform.position, attackRadius);
     }
 

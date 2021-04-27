@@ -168,7 +168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4565100038387666091}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.005, y: -0.499, z: 0}
+  m_LocalPosition: {x: -0.005, y: -1.076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5199437669436470636}
@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 7671098765141773381}
   - component: {fileID: 3891072842826418764}
   - component: {fileID: 5842867697815727473}
+  - component: {fileID: -6326238163959764752}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -226,13 +227,19 @@ MonoBehaviour:
   username: 
   health: 0
   maxHealth: 100
+  lives: 0
   speed: 9
   walkAcceleration: 75
   airAcceleration: 30
   groundDeceleration: 70
-  jumpHeight: 4
-  attackRadius: 0.59
-  attackDamage: 50
+  jumpHeight: 15
+  groundCheckRadius: 0.53
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  groundCheck: {fileID: 619388052396747724}
+  attackRadius: 0.53
+  attackDamage: 20
   attackHitBoxPos: {fileID: 2075095982638245535}
   whatIsDamageable:
     serializedVersion: 2
@@ -250,7 +257,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: 0.38078153}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -261,7 +268,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.75}
+  m_Size: {x: 1, y: 0.58843684}
   m_EdgeRadius: 0
 --- !u!58 &5842867697815727473
 CircleCollider2D:
@@ -270,7 +277,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5119894311479228070}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -279,3 +286,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
   m_Radius: 0.5811523
+--- !u!50 &-6326238163959764752
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119894311479228070}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 5
+  m_Material: {fileID: 6200000, guid: f6abff7facce0f240aa801fa3eb664d4, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
