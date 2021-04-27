@@ -106,9 +106,9 @@ TextureImporter:
       name: Jump_Demon_Bones_0
       rect:
         serializedVersion: 2
-        x: 24
+        x: 20
         y: 447
-        width: 75
+        width: 84
         height: 138
       alignment: 9
       pivot: {x: 0.47026667, y: 0}
@@ -127,9 +127,9 @@ TextureImporter:
       name: Jump_Demon_Bones_1
       rect:
         serializedVersion: 2
-        x: 121
+        x: 118
         y: 447
-        width: 76
+        width: 84
         height: 139
       alignment: 9
       pivot: {x: 0.4819737, y: 0}
@@ -171,10 +171,10 @@ TextureImporter:
         serializedVersion: 2
         x: 326
         y: 447
-        width: 81
+        width: 84
         height: 142
       alignment: 9
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.4470238, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
