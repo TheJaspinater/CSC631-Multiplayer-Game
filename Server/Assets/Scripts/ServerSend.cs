@@ -152,6 +152,17 @@ public class ServerSend
         }
     }
 
+    public static void PlayerLives(Player _player)
+    {
+        using (Packet _packet = new Packet((int)ServerPackets.playerLives))
+        {
+            _packet.Write(_player.id);
+            _packet.Write(_player.lives);
+
+            SendTCPDataToAll(_packet);
+        }
+    }
+
     public static void PlayerRespawned(Player _player)
     {
         using (Packet _packet = new Packet((int)ServerPackets.playerRespawned))

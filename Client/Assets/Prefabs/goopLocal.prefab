@@ -5209,6 +5209,8 @@ MonoBehaviour:
   username: 
   health: 0
   maxHealth: 100
+  lives: 0
+  maxLives: 3
   model: {fileID: 3015103436516369330}
   HealthPrefab: {fileID: 630389859206484314, guid: d38a01e925ca2ad44abb5ed1a6ccd89e, type: 3}
   BarBorder: {fileID: 0}

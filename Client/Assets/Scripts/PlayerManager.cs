@@ -9,6 +9,9 @@ public class PlayerManager : MonoBehaviour
     public string username;
     public float health;
     public float maxHealth;
+    public float lives;
+    public float maxLives;
+
     public SpriteRenderer model;
 
     public GameObject HealthPrefab;
@@ -28,6 +31,7 @@ public class PlayerManager : MonoBehaviour
         id = _id;
         username = _username;
         health = maxHealth;
+        lives = maxLives;
         Debug.Log(_localPrefab);
         Debug.Log(_foreignPrefab);
     }
@@ -45,6 +49,12 @@ public class PlayerManager : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void SetLives(float _lives)
+    {
+        lives = _lives;
+
     }
 
     private float HealthMap(float currentHealth, float healthMin, float healthMax, float barMin, float barMax)
