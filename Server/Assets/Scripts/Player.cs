@@ -227,6 +227,11 @@ public class Player : MonoBehaviour
         
     }
 
+    public int PlayerID()
+    {
+        return id;
+    }
+
     public void TakeDamage(float _attackDamage)
     {
         if (health <= 0f)

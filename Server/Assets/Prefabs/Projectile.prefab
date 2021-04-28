@@ -149,5 +149,8 @@ MonoBehaviour:
   rb: {fileID: 8928201667476781755}
   thrownByPlayer: 0
   initialForce: {x: 0, y: 0}
-  explosionRadius: 1.5
-  explosionDamage: 50
+  explosionRadius: 0.5
+  explosionDamage: 20
+  whatIsDamageable:
+    serializedVersion: 2
+    m_Bits: 128

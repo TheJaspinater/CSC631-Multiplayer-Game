@@ -14,6 +14,9 @@ public class Projectile : MonoBehaviour
     public float explosionRadius = 1.5f;
     public float explosionDamage = 50f;
 
+    [SerializeField]
+    private LayerMask whatIsDamageable;
+
     private void Start()
     {
         id = nextProjectileId;
@@ -28,13 +31,31 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(transform.position);
+        // Debug.Log(transform.position);
         ServerSend.ProjectilePosition(this);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Explode();
+        
+        Collider2D[] _colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, whatIsDamageable);
+        foreach (Collider2D _collider in _colliders)
+        {
+            if (_collider.GetComponent<Player>().PlayerID() == thrownByPlayer)
+                continue;
+            else
+            {
+                Explode(_collider);
+            }
+            
+            /*
+            if (_collider.CompareTag("Player"))
+            {
+                Debug.Log("player shot");
+                _collider.GetComponent<Player>().TakeDamage(explosionDamage);
+            }
+            */
+        }
     }
 
     public void Initialize(Vector2 _initialMovementDirection, float _initialForceStrength, int _thrownByPlayer) 
@@ -43,18 +64,20 @@ public class Projectile : MonoBehaviour
         thrownByPlayer = _thrownByPlayer;
     }
 
-    private void Explode()
+    private void Explode(Collider2D collider)
     {
         ServerSend.ProjectileExploded(this);
 
-        Collider[] _colliders = Physics.OverlapSphere(transform.position, explosionRadius);
-        foreach (Collider _collider in _colliders)
-        {
-            if (_collider.CompareTag("Player"))
-            {
-                _collider.GetComponent<Player>().TakeDamage(explosionDamage);
-            }
-        }
+        collider.GetComponent<Player>().TakeDamage(explosionDamage);
+        Debug.Log("player hit");
+
+        projectiles.Remove(id);
+        Destroy(gameObject);
+    }
+
+    private void Explode()
+    {
+        ServerSend.ProjectileExploded(this);
 
         projectiles.Remove(id);
         Destroy(gameObject);
