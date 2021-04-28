@@ -38,7 +38,7 @@ public class ForeignAnimator : MonoBehaviour
         velocity = (transform.position - lastPosition) / Time.deltaTime;
         lastPosition = transform.position;
 
-        Debug.Log(velocity.x);
+        // Debug.Log(velocity.x);
 
         CheckSurroundings();
     }
@@ -66,7 +66,6 @@ public class ForeignAnimator : MonoBehaviour
         else
         {
             isWalking = false;
-            Debug.Log(isWalking);
         }
 
     }

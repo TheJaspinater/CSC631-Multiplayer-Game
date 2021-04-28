@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         bool[] _attackInputs = new bool[]
         {
             Input.GetMouseButtonDown(0),
+            Input.GetMouseButtonDown(1),
         };
         
         ClientSend.PlayerMovement(_inputs);

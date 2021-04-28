@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public static Dictionary<int, PlayerManager> players = new Dictionary<int, PlayerManager>();
+    public static Dictionary<int, ProjectileManager> projectiles = new Dictionary<int, ProjectileManager>();
 
     public GameObject bonesLocalPrefab;
     public GameObject goopLocalPrefab;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject wraithForeignPrefab;
     private GameObject _localPrefab;
     private GameObject _foreignPrefab;
+    public GameObject projectilePrefab;
 
     private void Awake()
     {
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
             if (players.Count == 0)
             {
                 _foreignPrefab = bonesForeignPrefab;
-                _player = Instantiate(bonesForeignPrefab, _position, _rotation);
+                _player = Instantiate(_foreignPrefab, _position, _rotation);
             }
             else if (players.Count == 1)
             {
@@ -86,5 +88,12 @@ public class GameManager : MonoBehaviour
 
         _player.GetComponent<PlayerManager>().Initialize(_id, _username, _localPrefab, _foreignPrefab);
         players.Add(_id, _player.GetComponent<PlayerManager>());
+    }
+
+    public void SpawnProjectile(int _id, Vector3 _position)
+    {
+        GameObject _projectile = Instantiate(projectilePrefab, _position, Quaternion.identity);
+        _projectile.GetComponent<ProjectileManager>().Initialize(_id);
+        projectiles.Add(_id, _projectile.GetComponent<ProjectileManager>());
     }
 }

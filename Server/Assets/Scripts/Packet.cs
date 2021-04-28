@@ -13,7 +13,10 @@ public enum ServerPackets
         playerRotation,
         playerDisconnected,
         playerHealth,
-        playerRespawned
+        playerRespawned,
+        spawnProjectile,
+        projectilePosition,
+        projectileExploded,
     }
 
     /// <summary>Sent from client to server.</summary>

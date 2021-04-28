@@ -96,7 +96,6 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetBool("hasJumped", hasJumped);
         anim.SetFloat("yVelocity", velocity.y);
-        Debug.Log(velocity.y);
         
     }
 
