@@ -3545,6 +3545,7 @@ MonoBehaviour:
   goopForeignPrefab: {fileID: 3281716137541971723, guid: c0e6fde800470fd4e81841c5ed8180d8, type: 3}
   robotForeignPrefab: {fileID: 2642805533554251879, guid: 333a7c38c3b128e42a4efad3cf83a62c, type: 3}
   wraithForeignPrefab: {fileID: 1944325433829096915, guid: 3a2155e5bb9c3004a9a8a719c221e44a, type: 3}
+  projectilePrefab: {fileID: 1456590162862005551, guid: 0e4a47f1102634641a6390850d76cd6a, type: 3}
 --- !u!4 &786270579
 Transform:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class Projectile : MonoBehaviour
 
     public void Initialize(Vector2 _initialMovementDirection, float _initialForceStrength, int _thrownByPlayer) 
     {
-        initialForce = new Vector2(_initialMovementDirection.x, 0);
+        initialForce = new Vector2(_initialMovementDirection.x * _initialForceStrength * Time.deltaTime, 0);
         thrownByPlayer = _thrownByPlayer;
     }
 

@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
         Debug.Log("has flipped");
         attackHitBoxPos.transform.Rotate(new Vector3(0, 180f, 0));
 
-        firePoint.transform.Rotate(new Vector3(0, 180f, 0));
+        // firePoint.transform.Rotate(new Vector3(0, 180f, 0));
         // new Vector3(attackHitBoxPos.position.x * -1, attackHitBoxPos.position.y, attackHitBoxPos.position.z);
     }
     
