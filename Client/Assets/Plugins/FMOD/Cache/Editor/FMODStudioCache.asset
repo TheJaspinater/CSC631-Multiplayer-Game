@@ -85,7 +85,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8330409734720820974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   Path: FMODAudio/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637544422893672713
+  lastModified: 637543887110000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -319,10 +319,30 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8447853172246556113}
+  - {fileID: -4938960178653635840}
   MinDistance: 1
   MaxDistance: 20
   Length: 10750
+--- !u!114 &-6311089076615999352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phase_3/Player_Count
+  m_EditorClassIdentifier: 
+  Name: Player_Count
+  Min: 2
+  Max: 4
+  Default: 4
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6171124192560727356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +475,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-4938960178653635840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wraith_Walk/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4672470664522315289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +602,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -2777306492482101196}
+  - {fileID: 5751868900114224298}
   MinDistance: 1
   MaxDistance: 20
   Length: 11999
@@ -604,7 +644,7 @@ MonoBehaviour:
   Path: FMODAudio/Dungeon_Brawler.bank
   Name: Dungeon_Brawler
   StudioPath: bank:/Dungeon_Brawler
-  lastModified: 637544765916769274
+  lastModified: 637545081700000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -706,7 +746,7 @@ MonoBehaviour:
   Path: FMODAudio/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637544422893732721
+  lastModified: 637543887110000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -774,7 +814,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2399044735094323674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,7 +897,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1738499555567790477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,7 +1067,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -2149261437335597477}
+  - {fileID: -6311089076615999352}
   MinDistance: 1
   MaxDistance: 20
   Length: 679042
@@ -1117,7 +1157,7 @@ MonoBehaviour:
   - {fileID: -8330409734720820974}
   StringsBanks:
   - {fileID: -3478619448596884637}
-  stringsBankWriteTime: 637544422893732721
+  stringsBankWriteTime: 637543887110000000
   cacheVersion: 6
 --- !u!114 &489797026529641947
 MonoBehaviour:
@@ -1182,7 +1222,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 6049126106510764916}
+  - {fileID: 1162028073554192007}
   MinDistance: 1
   MaxDistance: 20
   Length: 10000
@@ -1209,6 +1249,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 67894
+--- !u!114 &1162028073554192007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cyborg_Walk/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &1237667459351214866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,6 +1612,26 @@ MonoBehaviour:
   - Name: 
     Value: 3313792
   Exists: 1
+--- !u!114 &5751868900114224298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Zombie_Walk/Zombie_Ground_Material
+  m_EditorClassIdentifier: 
+  Name: Zombie_Ground_Material
+  Min: -1
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5997089575704076315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,7 +1671,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6246093214498790706
 MonoBehaviour:
   m_ObjectHideFlags: 0
