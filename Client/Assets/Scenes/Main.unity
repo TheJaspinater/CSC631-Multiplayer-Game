@@ -943,7 +943,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 422265259}
           m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
           m_MethodName: PlayUISound
           m_Mode: 5
@@ -1032,19 +1032,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayUISound
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1800690047}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: UpdateCharacterChoice
         m_Mode: 3
@@ -1053,7 +1041,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 422265259}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: PlayUISound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &160975433
@@ -2390,8 +2390,8 @@ RectTransform:
   m_Father: {fileID: 1322220710}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2979,11 +2979,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1800690047}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ConnectToServer
-        m_Mode: 1
+        m_MethodName: TurnUIelementOnOff
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1786025537}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2999,6 +2999,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: event:/SFX/Menu/Menu_Confirmation
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1800690047}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: TurnUIelementOnOff
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 932051668}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &513245596
@@ -3780,7 +3792,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 422265259}
           m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
           m_MethodName: PlayUISound
           m_Mode: 5
@@ -3869,19 +3881,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayUISound
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1800690047}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: UpdateCharacterChoice
         m_Mode: 3
@@ -3890,7 +3890,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 422265259}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: PlayUISound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &756148331
@@ -4532,7 +4544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &810494894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4705,7 +4717,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5050,7 +5062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &932051669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5146,7 +5158,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6425,7 +6437,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 422265259}
           m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
           m_MethodName: PlayUISound
           m_Mode: 5
@@ -6434,7 +6446,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: event:/SFX_Menu_Select
+            m_StringArgument: event:/SFX/Menu/Menu_Select
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1288154040
@@ -6481,19 +6493,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: TurnUIelementOnOff
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1786025537}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 422265259}
         m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
         m_MethodName: PlayUISound
         m_Mode: 5
@@ -6502,7 +6502,31 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1800690047}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: TurnUIelementOnOff
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1786025537}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: event:/SFX_Menu_Back
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1800690047}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: TurnUIelementOnOff
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 932051668}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1288154041
@@ -7925,7 +7949,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 422265259}
           m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
           m_MethodName: PlayUISound
           m_Mode: 5
@@ -7981,7 +8005,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1800690047}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ConnectToServer
         m_Mode: 1
@@ -7993,7 +8017,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 422265259}
         m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
         m_MethodName: PlayUISound
         m_Mode: 5
@@ -8003,6 +8027,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: event:/SFX/Menu/Menu_Confirmation
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1800690047}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: TurnUIelementOnOff
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1786025537}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1503188726
@@ -8134,7 +8170,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 422265259}
           m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
           m_MethodName: PlayUISound
           m_Mode: 5
@@ -8223,19 +8259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayUISound
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1800690047}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: UpdateCharacterChoice
         m_Mode: 3
@@ -8244,7 +8268,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 422265259}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: PlayUISound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1533711477
@@ -9304,8 +9340,8 @@ RectTransform:
   m_Father: {fileID: 1050814089}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9617,7 +9653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMenu: {fileID: 932051668}
   usernameField: {fileID: 87773762}
-  clientText: {fileID: 0}
+  clientText: {fileID: 1542038209}
   InGamePauseMenu: {fileID: 1727580988}
   IpAddressInPauseMenu: {fileID: 695875559}
   inGame: 1
@@ -10716,7 +10752,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 422265259}
           m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
           m_MethodName: PlayUISound
           m_Mode: 5
@@ -10759,8 +10795,8 @@ MonoBehaviour:
   charAnimator: {fileID: 0}
   nameText: {fileID: 1628025913}
   charValue: 0
-  baseColor: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 0}
-  selectedColor: {r: 0.2, g: 0.5019608, b: 0.105882354, a: 0}
+  baseColor: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
+  selectedColor: {r: 0.2, g: 0.5019608, b: 0.105882354, a: 1}
 --- !u!114 &2103903465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10805,19 +10841,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayUISound
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1800690047}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: UpdateCharacterChoice
         m_Mode: 3
@@ -10827,6 +10851,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 422265259}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: PlayUISound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: event:/SFX/Menu/Menu_Confirmation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2103903466
