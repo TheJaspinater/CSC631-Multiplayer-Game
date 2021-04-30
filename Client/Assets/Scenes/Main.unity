@@ -4126,26 +4126,23 @@ MonoBehaviour:
   width: 250
   height: 250
   islandLength: 20
-  islandHeight: 20
-  islandSpaceingHorizontal: 7
-  islandSpaceingVertical: 10
-  blend: 2
-  worldFillPercent: 60
-  ArenaIslandLength: 10
-  ArenaIslandHeight: 10
-  ArenaIslandSpaceingHorizontal: 4
-  ArenaIslandSpaceingVertical: 4
+  islandHeight: 11
+  islandSpaceingHorizontal: 14
+  islandSpaceingVertical: 11
+  blend: 7
+  worldFillPercent: 80
+  ArenaIslandLength: 6
+  ArenaIslandHeight: 5
+  ArenaIslandSpaceingHorizontal: 6
+  ArenaIslandSpaceingVertical: 2
   ArenaBlend: 0
-  ArenaGroundGap: 1
-  arenaFillPercent: 55
+  ArenaGroundGap: 0
+  arenaFillPercent: 80
   tilemap: {fileID: 306913620}
   seed: Test
   useRandomSeed: 0
   smoothingTarget: 20
   wallCountModifier: 5
-  spawnDungeonOnePercentage: 3
-  platformDensity: 1
-  spawnSmallPlatformPercentage: 0
   DecorationSpawnDensity: 30
   tree: {fileID: 5127155639437525163, guid: 4d97c52a50304a8409822f63338e22df, type: 3}
   bush: {fileID: 6313692915741612273, guid: 50ac5f9bc96b9c644b7cfb5f7d707a94, type: 3}
@@ -4234,7 +4231,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778504095}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -4256,7 +4253,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778504095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1561448451}

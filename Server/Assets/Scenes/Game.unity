@@ -169,17 +169,26 @@ MonoBehaviour:
   dirtTopRightCorner: {fileID: 11400000, guid: 03bc9cf0b29636e46b9217dfe8e3529a, type: 2}
   error: {fileID: 11400000, guid: 03bc9cf0b29636e46b9217dfe8e3529a, type: 2}
   testDungeon: {fileID: 11400000, guid: 03bc9cf0b29636e46b9217dfe8e3529a, type: 2}
-  width: 300
-  height: 300
+  width: 250
+  height: 250
+  islandLength: 20
+  islandHeight: 11
+  islandSpaceingHorizontal: 14
+  islandSpaceingVertical: 11
+  blend: 7
+  worldFillPercent: 80
+  ArenaIslandLength: 6
+  ArenaIslandHeight: 5
+  ArenaIslandSpaceingHorizontal: 6
+  ArenaIslandSpaceingVertical: 2
+  ArenaBlend: 0
+  ArenaGroundGap: 0
+  arenaFillPercent: 80
   tilemap: {fileID: 1126061858}
   seed: Test
   useRandomSeed: 0
-  randomFillPercent: 48
-  smoothingTarget: 10
+  smoothingTarget: 20
   wallCountModifier: 5
-  spawnDungeonOnePercentage: 3
-  platformDensity: 1
-  spawnSmallPlatformPercentage: 0
 --- !u!4 &67514341
 Transform:
   m_ObjectHideFlags: 0

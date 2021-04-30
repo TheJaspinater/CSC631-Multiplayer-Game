@@ -71,14 +71,14 @@ public class MapGenV2 : MonoBehaviour
     public int wallCountModifier;
 
     //Dungeon Spawn Data
-    [Range(0, 100)]
-    public int spawnDungeonOnePercentage;
+    /*[Range(0, 100)]
+    public int spawnDungeonOnePercentage;*/
 
     //Arena platform spawn rates
-    [Range(0, 100)]
+    /*[Range(0, 100)]
     public int platformDensity;
     [Range(0, 100)]
-    public int spawnSmallPlatformPercentage;
+    public int spawnSmallPlatformPercentage;*/
 
     //Decoritive Items Data
     [Range(0, 100)]
@@ -145,7 +145,7 @@ public class MapGenV2 : MonoBehaviour
                     blendValue = psuedoRandom.Next(0, blend);
                     horizontalSpacing = islandHeight - psuedoRandom.Next(1, islandSpaceingHorizontal) + blendValue;
                     verticalSpacing = islandLength - psuedoRandom.Next(1, islandSpaceingVertical) + blendValue;
-                    if (y % islandLength <= verticalSpacing && x % islandHeight <= horizontalSpacing /*&& y > mapCenterY - (radius / 2) + groundGap*/)
+                    if (x % islandLength <= verticalSpacing && y % islandHeight <= horizontalSpacing /*&& y > mapCenterY - (radius / 2) + groundGap*/)
                     {
                         map[x, y] = (psuedoRandom.Next(0, 100) < worldFillPercent) ? 1 : 0; //worldFillPercent controls the density of noise
                     }
@@ -394,7 +394,7 @@ public class MapGenV2 : MonoBehaviour
                         blendValue = psuedoRandom.Next(0, ArenaBlend);
                         horizontalSpacing = ArenaIslandHeight - psuedoRandom.Next(1, ArenaIslandSpaceingHorizontal) + blendValue;
                         verticalSpacing = ArenaIslandLength - psuedoRandom.Next(1, ArenaIslandSpaceingVertical) + blendValue;
-                        if (y % ArenaIslandLength <= verticalSpacing && x % ArenaIslandHeight <= horizontalSpacing && y > mapCenterY - (radius / 2) + ArenaGroundGap)
+                        if (x % ArenaIslandLength <= verticalSpacing && y % ArenaIslandHeight <= horizontalSpacing && y > mapCenterY - (radius / 2) + ArenaGroundGap)
                         {
                             map[x, y] = (psuedoRandom.Next(0, 100) < arenaFillPercent) ? 1 : 0; //worldFillPercent controls the density of noise
                         }
@@ -403,7 +403,7 @@ public class MapGenV2 : MonoBehaviour
             }
         }
 
-        for (int x = mapCenterX - radius; x < mapCenterX + radius; x++) //Populate map with noise
+        /*for (int x = mapCenterX - radius; x < mapCenterX + radius; x++) //Populate map with noise
         {
             for (int y = mapCenterY - radius; y < mapCenterY + radius; y++)
             {
@@ -418,7 +418,7 @@ public class MapGenV2 : MonoBehaviour
                     }
                 }
             }
-        }
+        }*/
     }
 
     /*void spawnSmallPlatform(int x, int y)
