@@ -39,6 +39,13 @@ public class MapGenV2 : MonoBehaviour
     public int height;
     private int mapCenterX;
     private int mapCenterY;
+    //platform Density
+    public int islandLength;
+    public int islandHeight;
+    public int islandSpaceingHorizontal;
+    public int islandSpaceingVertical;
+    public int groundGap; //used to offset platforms spawning into ground
+    public int blend; //used to blur islands together and remove the square seperation between them. Makes them look more natural
 
     //2d map array and Tilemap Refference
     int[,] map;
@@ -89,7 +96,7 @@ public class MapGenV2 : MonoBehaviour
         mapCenterX = width / 2;
         mapCenterY = height / 2;
         GenMap();
-        spawnDecorations();
+        //spawnDecorations();
         //SpawnPlayers();
     }
 
@@ -102,7 +109,7 @@ public class MapGenV2 : MonoBehaviour
         {
             SmoothMap();
         }
-        SpawnArena(width, height);
+        //SpawnArena(width, height);
         DrawMap();
     }
 
@@ -110,25 +117,45 @@ public class MapGenV2 : MonoBehaviour
     {
         Debug.Log("Running RandomFillMap method.");
 
-        int dungeonspawn;
+        //int dungeonspawn;
+        int radius = (width < height) ? width/2 : height/2;
+        int radiusFromCenter;
+
+        int horizontalSpacing;
+        int verticalSpacing;
+        int blendValue;
 
         for (int x = 0; x < width; x++) //Populate map with noise
         {
             for (int y = 0; y < height; y++)
             {
-                int radiusFromCenter = (int)(Math.Sqrt(Math.Pow(mapCenterX - x, 2) + Math.Pow(mapCenterY - y, 2))); //calculate radius from center of x,y grid
+                radiusFromCenter = (int)(Math.Sqrt(Math.Pow(mapCenterX - x, 2) + Math.Pow(mapCenterY - y, 2))); //calculate radius from center of x,y grid
 
-                if (radiusFromCenter <= mapCenterX && map[x, y] != 1 && map[x, y] != 2) //get radius and compare to map width
+                if (radiusFromCenter <= radius && map[x, y] != 1 && map[x, y] != 2) //get radius and compare to map width
                 {
-                    map[x, y] = (psuedoRandom.Next(0, 100) < randomFillPercent) ? 1 : 0; //RandomFillPercent controls the density of noise
+                    blendValue = psuedoRandom.Next(0, blend);
+                    horizontalSpacing = islandHeight - psuedoRandom.Next(1, islandSpaceingHorizontal) + blend;
+                    verticalSpacing = islandLength - psuedoRandom.Next(1, islandSpaceingVertical) + blend;
+                    if (y % islandLength <= verticalSpacing && x % islandHeight <= horizontalSpacing && y > mapCenterY - (radius / 2) + groundGap)
+                    {
+                        map[x, y] = (psuedoRandom.Next(0, 100) < randomFillPercent) ? 1 : 0; //RandomFillPercent controls the density of noise
+                    }
 
-                    if (x > mapCenterX - radiusFromCenter && x < mapCenterX + radiusFromCenter - 12 && y > mapCenterY - radiusFromCenter && y < mapCenterY + radiusFromCenter - 12) // Apply Dungeon
+                    /*if (x > mapCenterX - radiusFromCenter && x < mapCenterX + radiusFromCenter - 12 && y > mapCenterY - radiusFromCenter && y < mapCenterY + radiusFromCenter - 12) // Apply Dungeon
                     {
                         dungeonspawn = (psuedoRandom.Next(0, 10000) < spawnDungeonOnePercentage) ? 1 : 0;
                         if (dungeonspawn == 1)
                         {
                             SpawnDungeonOne(x, y);
                         }
+                    }*/
+                }
+
+                if (radiusFromCenter <= radius)
+                {
+                    if (y < mapCenterY - (radius / 2)) // only fill lower 4th of the arena with solid ground
+                    {
+                        map[x, y] = 1;
                     }
                 }
             }
@@ -288,7 +315,7 @@ public class MapGenV2 : MonoBehaviour
         }
     }
 
-    void SpawnDungeonOne(int x, int y)
+    /*void SpawnDungeonOne(int x, int y)
     {
         Debug.Log("Running SpawnDungeonOne method.");
         int[,] structTest = new int[12, 12] {
@@ -324,7 +351,7 @@ public class MapGenV2 : MonoBehaviour
                 map[x + structX, y + structY] = ret[structX, structY];
             }
         }
-    }
+    }*/
 
     void SpawnArena(int width, int height)
     {
@@ -365,14 +392,14 @@ public class MapGenV2 : MonoBehaviour
                     spawn = (psuedoRandom.Next(0, 100) < platformDensity) ? 1 : 0;
                     if (spawn == 1)
                     {
-                        spawnSmallPlatform(x, y);
+                        //spawnSmallPlatform(x, y);
                     }
                 }
             }
         }
     }
 
-    void spawnSmallPlatform(int x, int y)
+    /*void spawnSmallPlatform(int x, int y)
     {
         Debug.Log("Running spawnSmallPlatform method.");
         int[,] SmallPlatform = new int[4, 4] {
@@ -400,9 +427,9 @@ public class MapGenV2 : MonoBehaviour
                 map[x + structX, y + structY] = ret[structX, structY];
             }
         }
-    }
+    }*/
 
-    void spawnDecorations()
+    /*void spawnDecorations()
     {
         System.Random psuedoRandom = new System.Random(seed.GetHashCode());
 
@@ -464,6 +491,6 @@ public class MapGenV2 : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }
 
