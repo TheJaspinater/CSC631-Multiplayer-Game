@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject startMenu;
     public InputField usernameField;
-    public Client ClientText;
+    public Client clientText;
     public GameObject InGamePauseMenu;
     public Text IpAddressInPauseMenu;
     public bool inGame = false;
@@ -50,8 +50,13 @@ public class UIManager : MonoBehaviour
 
     public void updateServerIPAddress(InputField input)
     {
-        ClientText.ip = input.text;
+        clientText.ip = input.text;
         IpAddressInPauseMenu.text = input.text;
+    }
+
+    public void UpdateCharacterChoice(int charChoice)
+    {
+        clientText.characterSelection = charChoice;
     }
 
     public void TurnOnFullscreen()
