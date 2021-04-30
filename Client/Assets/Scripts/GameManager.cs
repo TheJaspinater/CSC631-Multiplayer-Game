@@ -34,26 +34,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnPlayer(int _id, string _username, Vector3 _position, Quaternion _rotation)
+    public void SpawnPlayer(int _id, string _username, Vector3 _position, Quaternion _rotation/*, int _characterSelection*/)
     {
         GameObject _player;
-        
+        int _characterSelection = Client.instance.characterSelection;
 
         if (_id == Client.instance.myId)
         {
-            if(players.Count == 0)
+            if(_characterSelection == 0)
             {
                 _localPrefab = bonesLocalPrefab;
                 _player = Instantiate(_localPrefab, _position, _rotation);
             }
-            else if (players.Count == 1)
-            {
-                _localPrefab = goopLocalPrefab;
-                _player = Instantiate(_localPrefab, _position, _rotation);
-            }
-            else if (players.Count == 2)
+            else if (_characterSelection == 1)
             {
                 _localPrefab = robotLocalPrefab;
+                 _player = Instantiate(_localPrefab, _position, _rotation);
+            }
+            else if (_characterSelection == 2)
+            {
+                _localPrefab = goopLocalPrefab;
                 _player = Instantiate(_localPrefab, _position, _rotation);
             }
             else
