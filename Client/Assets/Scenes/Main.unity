@@ -3400,18 +3400,24 @@ MonoBehaviour:
   dirtTopRightCorner: {fileID: 11400000, guid: 999f5337789c1d64aaaec77da59c59fc, type: 2}
   error: {fileID: 11400000, guid: c6314f390a36e7b4fb7b52c92640f2f7, type: 2}
   testDungeon: {fileID: 11400000, guid: c6314f390a36e7b4fb7b52c92640f2f7, type: 2}
-  width: 175
-  height: 175
+  width: 250
+  height: 250
   islandLength: 20
   islandHeight: 20
-  islandSpaceingHorizontal: 6
-  islandSpaceingVertical: 6
-  groundGap: 1
-  blend: 1
+  islandSpaceingHorizontal: 7
+  islandSpaceingVertical: 10
+  blend: 2
+  ArenaIslandLength: 10
+  ArenaIslandHeight: 10
+  ArenaIslandSpaceingHorizontal: 4
+  ArenaIslandSpaceingVertical: 4
+  ArenaBlend: 0
+  ArenaGroundGap: 1
+  arenaFillPercent: 55
   tilemap: {fileID: 306913620}
   seed: Test
   useRandomSeed: 0
-  randomFillPercent: 55
+  worldFillPercent: 60
   smoothingTarget: 20
   wallCountModifier: 5
   spawnDungeonOnePercentage: 3
@@ -6703,8 +6709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 125, y: 125}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 250, y: 250}
+  m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561448452
 MonoBehaviour:

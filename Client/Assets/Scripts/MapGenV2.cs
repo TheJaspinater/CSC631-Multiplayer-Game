@@ -44,8 +44,19 @@ public class MapGenV2 : MonoBehaviour
     public int islandHeight;
     public int islandSpaceingHorizontal;
     public int islandSpaceingVertical;
-    public int groundGap; //used to offset platforms spawning into ground
     public int blend; //used to blur islands together and remove the square seperation between them. Makes them look more natural
+    [Range(0, 100)]
+    public int worldFillPercent;
+
+    //Arena Density
+    public int ArenaIslandLength;
+    public int ArenaIslandHeight;
+    public int ArenaIslandSpaceingHorizontal;
+    public int ArenaIslandSpaceingVertical;
+    public int ArenaBlend; //used to blur islands together and remove the square seperation between them. Makes them look more natural
+    public int ArenaGroundGap;
+    [Range(0, 100)]
+    public int arenaFillPercent;
 
     //2d map array and Tilemap Refference
     int[,] map;
@@ -56,8 +67,6 @@ public class MapGenV2 : MonoBehaviour
     public bool useRandomSeed;
 
     //Density of map Gen(effects smoothing)
-    [Range(0, 100)]
-    public int randomFillPercent;
     public int smoothingTarget;
     public int wallCountModifier;
 
@@ -105,11 +114,11 @@ public class MapGenV2 : MonoBehaviour
         Debug.Log("Running GenerateMap method.");
         map = new int[width, height];
         RandomFillMap();
+        SpawnArena(width, height);
         for (int i = 0; i < smoothingTarget; i++) //SmoothMap exicutes based on the Smoothing target creating softer structures
         {
             SmoothMap();
         }
-        //SpawnArena(width, height);
         DrawMap();
     }
 
@@ -134,11 +143,11 @@ public class MapGenV2 : MonoBehaviour
                 if (radiusFromCenter <= radius && map[x, y] != 1 && map[x, y] != 2) //get radius and compare to map width
                 {
                     blendValue = psuedoRandom.Next(0, blend);
-                    horizontalSpacing = islandHeight - psuedoRandom.Next(1, islandSpaceingHorizontal) + blend;
-                    verticalSpacing = islandLength - psuedoRandom.Next(1, islandSpaceingVertical) + blend;
-                    if (y % islandLength <= verticalSpacing && x % islandHeight <= horizontalSpacing && y > mapCenterY - (radius / 2) + groundGap)
+                    horizontalSpacing = islandHeight - psuedoRandom.Next(1, islandSpaceingHorizontal) + blendValue;
+                    verticalSpacing = islandLength - psuedoRandom.Next(1, islandSpaceingVertical) + blendValue;
+                    if (y % islandLength <= verticalSpacing && x % islandHeight <= horizontalSpacing /*&& y > mapCenterY - (radius / 2) + groundGap*/)
                     {
-                        map[x, y] = (psuedoRandom.Next(0, 100) < randomFillPercent) ? 1 : 0; //RandomFillPercent controls the density of noise
+                        map[x, y] = (psuedoRandom.Next(0, 100) < worldFillPercent) ? 1 : 0; //worldFillPercent controls the density of noise
                     }
 
                     /*if (x > mapCenterX - radiusFromCenter && x < mapCenterX + radiusFromCenter - 12 && y > mapCenterY - radiusFromCenter && y < mapCenterY + radiusFromCenter - 12) // Apply Dungeon
@@ -151,13 +160,13 @@ public class MapGenV2 : MonoBehaviour
                     }*/
                 }
 
-                if (radiusFromCenter <= radius)
+                /*if (radiusFromCenter <= radius)
                 {
                     if (y < mapCenterY - (radius / 2)) // only fill lower 4th of the arena with solid ground
                     {
                         map[x, y] = 1;
                     }
-                }
+                }*/
             }
         }
     }
@@ -359,8 +368,14 @@ public class MapGenV2 : MonoBehaviour
         int radius;
         int spawn;
 
-        radius = (width < height) ? width / 9 : height / 9; // find radius for Arena. 9 is arbitrary, just seems to give a good relative sized arena for now
+        int horizontalSpacing;
+        int verticalSpacing;
+        int blendValue;
 
+        radius = (width < height) ? width / 5: height / 5; // find radius for Arena. 9 is arbitrary, just seems to give a good relative sized arena for now
+        
+        mapCenterY = radius;
+        
         for (int x = mapCenterX - radius; x < mapCenterX + radius; x++) //Populate map with noise
         {
             for (int y = mapCenterY - radius; y < mapCenterY + radius; y++)
@@ -376,6 +391,13 @@ public class MapGenV2 : MonoBehaviour
                     else
                     {
                         map[x, y] = 0;
+                        blendValue = psuedoRandom.Next(0, ArenaBlend);
+                        horizontalSpacing = ArenaIslandHeight - psuedoRandom.Next(1, ArenaIslandSpaceingHorizontal) + blendValue;
+                        verticalSpacing = ArenaIslandLength - psuedoRandom.Next(1, ArenaIslandSpaceingVertical) + blendValue;
+                        if (y % ArenaIslandLength <= verticalSpacing && x % ArenaIslandHeight <= horizontalSpacing && y > mapCenterY - (radius / 2) + ArenaGroundGap)
+                        {
+                            map[x, y] = (psuedoRandom.Next(0, 100) < arenaFillPercent) ? 1 : 0; //worldFillPercent controls the density of noise
+                        }
                     }
                 }
             }
