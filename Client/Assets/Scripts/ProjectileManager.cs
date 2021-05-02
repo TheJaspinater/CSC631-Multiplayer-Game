@@ -28,10 +28,10 @@ public class ProjectileManager : MonoBehaviour
         Debug.Log(velocity.x);
     }
 
-    public void Explode(Vector2 _position)
+    public void Explode(Vector3 _position)
     {
         transform.position = _position;
-        // Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         GameManager.projectiles.Remove(id);
         Destroy(gameObject);
     }

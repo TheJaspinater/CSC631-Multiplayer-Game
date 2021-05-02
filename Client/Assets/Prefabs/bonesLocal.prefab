@@ -45,7 +45,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2275998096110301560}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -5038,6 +5038,7 @@ MonoBehaviour:
   BarBorder: {fileID: 0}
   BarFilled: {fileID: 0}
   currentValue: 0
+  Wisp: {fileID: 179622947325428199, guid: fe8378305a82dc4488a2ca903793a476, type: 3}
 --- !u!114 &4239024755719429324
 MonoBehaviour:
   m_ObjectHideFlags: 0

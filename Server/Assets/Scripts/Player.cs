@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public float maxHealth = 100f;
     public float lives;
 
+    public int kills;
+
     private bool[] inputs;
     private bool[] attackInputs;
 
@@ -37,11 +39,11 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private int canJump = 0;
 
-    private DateTime waitTime= System.DateTime.Now;
+    private DateTime waitTime = System.DateTime.Now;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     public Transform groundCheck;
-    
+
     public float attackRadius, attackDamage;
     public GameObject attackHitBoxPos;
 
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
         id = _id;
         username = _username;
         health = maxHealth;
+        kills = 0;
 
         inputs = new bool[4];
         attackInputs = new bool[2];
@@ -77,17 +80,17 @@ public class Player : MonoBehaviour
         StartCoroutine(Respawn());
     }
 
-    
+
     private void Update()
     {
-        
+
     }
-    
+
 
     /// <summary>Processes player input and moves the player.</summary>
     public void FixedUpdate()
     {
-        if(transform.position.y < -10)
+        if (transform.position.y < -10)
         {
             playerDied();
         }
@@ -130,7 +133,7 @@ public class Player : MonoBehaviour
         // CheckCollisions();
     }
 
-    
+
     public void CheckMovementDirection()
     {
 
@@ -144,7 +147,7 @@ public class Player : MonoBehaviour
         }
 
     }
-    
+
 
     private void Flip()
     {
@@ -155,7 +158,7 @@ public class Player : MonoBehaviour
         // firePoint.transform.Rotate(new Vector3(0, 180f, 0));
         // new Vector3(attackHitBoxPos.position.x * -1, attackHitBoxPos.position.y, attackHitBoxPos.position.z);
     }
-    
+
 
 
     /// <summary>Calculates the player's desired movement direction and moves him.</summary>
@@ -167,7 +170,7 @@ public class Player : MonoBehaviour
         {
             canJump = 0;
         }
-        
+
         if (_inputDirection.y > 0 && canJump < 2)
         {
             // Calculate the velocity required to achieve the target jump height.
@@ -181,10 +184,10 @@ public class Player : MonoBehaviour
             }
 
         }
-        
+
         if (_inputDirection.x != 0)
         {
-            body.velocity = new Vector2(_inputDirection.x * speed, body.velocity.y) ;
+            body.velocity = new Vector2(_inputDirection.x * speed, body.velocity.y);
         }
         else
         {
@@ -204,7 +207,7 @@ public class Player : MonoBehaviour
         inputs = _inputs;
     }
 
-    public void PlayerAttack (bool[] _attackInputs)
+    public void PlayerAttack(bool[] _attackInputs)
     {
         attackInputs = _attackInputs;
     }
@@ -218,13 +221,13 @@ public class Player : MonoBehaviour
 
         if (isFacingRight)
         {
-            NetworkManager.instance.InstantiateProjectile(firePoint.transform).Initialize(_shotDirection, throwForce, id);
+            NetworkManager.instance.InstantiateProjectile(firePoint.transform).Initialize(_shotDirection, throwForce, id, this);
         }
         else
         {
-            NetworkManager.instance.InstantiateProjectile(firePoint.transform).Initialize(-_shotDirection, throwForce, id);
+            NetworkManager.instance.InstantiateProjectile(firePoint.transform).Initialize(-_shotDirection, throwForce, id, this);
         }
-        
+
     }
 
     public int PlayerID()
@@ -232,12 +235,18 @@ public class Player : MonoBehaviour
         return id;
     }
 
-    public void TakeDamage(float _attackDamage)
+    public void TakeDamage(float _attackDamage, Player _schoolShooter)
     {
         if (health <= 0f)
         {
+            _schoolShooter.kills++;
+            Debug.Log("player " + _schoolShooter.id + " has " + _schoolShooter.kills + " kills");
+            // ServerSend.PlayerKills(_schoolShooter);
+            Debug.Log("player " + id + " was killed");
             return;
         }
+
+
 
         health -= _attackDamage;
         if (health <= 0f)
@@ -253,14 +262,28 @@ public class Player : MonoBehaviour
 
     private void CheckAttackHitBox()
     {
-        
+
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.transform.GetChild(0).gameObject.transform.position, attackRadius, whatIsDamageable);
 
         foreach (Collider2D collider in detectedObjects)
         {
-            // collider.transform.parent.SendMessage("Damage", attackDamage);
-            collider.GetComponent<Player>().TakeDamage(attackDamage);
-            Debug.Log("hit");
+            if (collider.GetType() == typeof(BoxCollider2D))
+            {
+                Player _playerShot = collider.GetComponent<Player>();
+                _playerShot.TakeDamage(attackDamage, this);
+                Debug.Log("hit");
+
+                if (_playerShot.health <= 0)
+                {
+                    kills++;
+                    Debug.Log("player " + id + " has " + kills + " kills");
+                    ServerSend.PlayerKills(this);
+
+                }
+
+            }
+            // collider.GetComponent<Player>().TakeDamage(attackDamage);
+
         }
     }
 

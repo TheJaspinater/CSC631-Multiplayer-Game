@@ -56,6 +56,7 @@ MonoBehaviour:
   BarBorder: {fileID: 0}
   BarFilled: {fileID: 0}
   currentValue: 0
+  Wisp: {fileID: 179622947325428199, guid: fe8378305a82dc4488a2ca903793a476, type: 3}
 --- !u!114 &8905063841525699983
 MonoBehaviour:
   m_ObjectHideFlags: 0

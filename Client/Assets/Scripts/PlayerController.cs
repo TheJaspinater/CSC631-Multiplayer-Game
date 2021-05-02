@@ -13,12 +13,15 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         //CheckMovementDirection();
+        SendInputToServer();
+        SendAttackToServer();
+        
     }
 
     private void FixedUpdate()
     {
         CheckMovementDirection();
-        SendInputToServer();
+        
     }
 
     private void SendInputToServer()
@@ -31,13 +34,18 @@ public class PlayerController : MonoBehaviour
             Input.GetKey(KeyCode.D),
         };
 
+        ClientSend.PlayerMovement(_inputs);
+    }
+
+    private void SendAttackToServer()
+    {
         bool[] _attackInputs = new bool[]
         {
             Input.GetMouseButtonDown(0),
             Input.GetMouseButtonDown(1),
         };
+
         
-        ClientSend.PlayerMovement(_inputs);
         ClientSend.PlayerAttack(_attackInputs);
     }
 

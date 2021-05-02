@@ -9,6 +9,8 @@ public class PlayerManager : MonoBehaviour
     public string username;
     public float health;
     public float maxHealth;
+    public float kills;
+
     public SpriteRenderer model;
 
     public GameObject HealthPrefab;
@@ -16,6 +18,10 @@ public class PlayerManager : MonoBehaviour
     public Image BarFilled;
 
     public float currentValue;
+
+    public GameObject Wisp;
+
+    public static Dictionary<int, WillOWisp> wisps = new Dictionary<int, WillOWisp>();
 
     void Start()
     {
@@ -28,6 +34,7 @@ public class PlayerManager : MonoBehaviour
         id = _id;
         username = _username;
         health = maxHealth;
+        kills = 0;
         Debug.Log(_localPrefab);
         Debug.Log(_foreignPrefab);
     }
@@ -45,6 +52,20 @@ public class PlayerManager : MonoBehaviour
         {
             Die();
         }
+    }
+    
+    public void SetKills(int _kills)
+    {
+        kills = _kills;
+        SpawnWisp();
+    }
+
+    public void SpawnWisp()
+    {
+        GameObject skull;
+        skull = Instantiate(Wisp, transform.position, Quaternion.identity);
+        skull.GetComponent<WillOWisp>().Initialize(id, transform);
+        wisps.Add(id, skull.GetComponent<WillOWisp>());
     }
 
     private float HealthMap(float currentHealth, float healthMin, float healthMax, float barMin, float barMax)
