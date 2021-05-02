@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
     public void ConnectToServer()
     {
         inGame = true;
-        startMenu.SetActive(false);
+        //startMenu.SetActive(false);
         usernameField.interactable = false;
         Client.instance.ConnectToServer();
     }
