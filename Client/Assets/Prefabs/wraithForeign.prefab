@@ -56,7 +56,7 @@ MonoBehaviour:
   HealthPrefab: {fileID: 630389859206484314, guid: bf09e1d851183de4694182e313c45580, type: 3}
   BarBorder: {fileID: 0}
   BarFilled: {fileID: 0}
-  currentValue: 0
+  Player: {fileID: 5478200178931919237}
   Wisp: {fileID: 179622947325428199, guid: fe8378305a82dc4488a2ca903793a476, type: 3}
 --- !u!114 &200068865859902726
 MonoBehaviour:
@@ -4888,7 +4888,6 @@ GameObject:
   - component: {fileID: 939331994252085298}
   - component: {fileID: 3181782659883522488}
   - component: {fileID: 7961312418809780499}
-  - component: {fileID: 6780066980708525980}
   - component: {fileID: 3933432221637431452}
   m_Layer: 7
   m_Name: Sprite
@@ -4982,24 +4981,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6780066980708525980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5478200178931919237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c668de96706212941b7c070be992b240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dust: {fileID: 4217458551099497584}
-  groundCheckRadius: 0.45
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  groundCheck: {fileID: 6291752574070488144}
 --- !u!114 &3933432221637431452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,12 +4993,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd98d415a66cc14ea239215f998b0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   dust: {fileID: 4217458551099497584}
   groundCheckRadius: 0.45
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 6291752574070488144}
+  Player: {fileID: 4889763639083552466}
 --- !u!1 &7717412915676237263
 GameObject:
   m_ObjectHideFlags: 0

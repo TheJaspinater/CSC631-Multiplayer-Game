@@ -9,7 +9,9 @@ public class PlayerManager : MonoBehaviour
     public string username;
     public float health;
     public float maxHealth;
-    public float kills;
+    public int kills;
+
+    // private bool hasShot = false;
 
     public SpriteRenderer model;
 
@@ -17,8 +19,9 @@ public class PlayerManager : MonoBehaviour
     public Image BarBorder;
     public Image BarFilled;
 
-    public float currentValue;
+    private float currentValue;
 
+    public GameObject Player;
     public GameObject Wisp;
 
     public static Dictionary<int, WillOWisp> wisps = new Dictionary<int, WillOWisp>();
@@ -35,13 +38,16 @@ public class PlayerManager : MonoBehaviour
         username = _username;
         health = maxHealth;
         kills = 0;
-        Debug.Log(_localPrefab);
-        Debug.Log(_foreignPrefab);
     }
 
     void Update()
     {
         HandleHealthBar();
+    }
+
+    public int getId()
+    {
+        return id;
     }
 
     public void SetHealth(float _health)
@@ -75,10 +81,14 @@ public class PlayerManager : MonoBehaviour
 
     private void HandleHealthBar()
     {
-
         currentValue = HealthMap(health, 0, maxHealth, 0, 1);
 
         BarFilled.fillAmount = Mathf.Lerp(BarFilled.fillAmount, currentValue, Time.deltaTime);
+    }
+
+    public void playerShot()
+    {
+        Player.GetComponent<PlayerAnimator>().isShooting(id, true);
     }
 
     public void Die()

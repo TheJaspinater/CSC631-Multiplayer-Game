@@ -57,6 +57,7 @@ MonoBehaviour:
   BarBorder: {fileID: 0}
   BarFilled: {fileID: 0}
   currentValue: 0
+  Player: {fileID: 5993819085811718833}
   Wisp: {fileID: 179622947325428199, guid: fe8378305a82dc4488a2ca903793a476, type: 3}
 --- !u!114 &4239024755719429324
 MonoBehaviour:
@@ -187,12 +188,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd98d415a66cc14ea239215f998b0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   dust: {fileID: 5543681251468496511}
   groundCheckRadius: 0.45
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 8880977015998926047}
+  Player: {fileID: 3590756611983622355}
 --- !u!1 &7982676827220614550
 GameObject:
   m_ObjectHideFlags: 0

@@ -320,11 +320,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 1713248506887317861}
+  id: 0
   groundCheckRadius: 0.45
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 7090270537454488666}
+  Player: {fileID: 7636984936867873484}
 --- !u!114 &7993727231012433927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5282,7 +5284,7 @@ MonoBehaviour:
   HealthPrefab: {fileID: 630389859206484314, guid: d38a01e925ca2ad44abb5ed1a6ccd89e, type: 3}
   BarBorder: {fileID: 0}
   BarFilled: {fileID: 0}
-  currentValue: 0
+  Player: {fileID: 1418720150469545747}
   Wisp: {fileID: 179622947325428199, guid: fe8378305a82dc4488a2ca903793a476, type: 3}
 --- !u!114 &6765814826148954975
 MonoBehaviour:

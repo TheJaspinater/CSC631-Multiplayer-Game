@@ -5074,6 +5074,7 @@ MonoBehaviour:
   BarBorder: {fileID: 0}
   BarFilled: {fileID: 0}
   currentValue: 0
+  Player: {fileID: 5993819085811718833}
   Wisp: {fileID: 179622947325428199, guid: fe8378305a82dc4488a2ca903793a476, type: 3}
 --- !u!114 &4239024755719429324
 MonoBehaviour:
@@ -5281,11 +5282,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 4043955502949166080}
+  id: 0
   groundCheckRadius: 0.45
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 8880977015998926047}
+  Player: {fileID: 3590756611983622355}
 --- !u!114 &4485532219146652447
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,12 +6,14 @@ public class PlayerAnimator : MonoBehaviour
 {
     public ParticleSystem dust;
 
+    public int id;
     private Animator anim;
 
     private bool isWalking;
     private bool isFacingRight = true;
     private bool isGrounded;
     private bool hasJumped;
+    private bool hasShot;
 
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -21,6 +23,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Start()
     {
+        id = Client.instance.myId;
         anim = GetComponent<Animator>();
         lastPosition = GameManager.players[Client.instance.myId].transform.position;
     }
@@ -69,6 +72,22 @@ public class PlayerAnimator : MonoBehaviour
         CheckIfJumped();
     }
 
+    public void isShooting(int _id, bool _shoot)
+    {
+        if (_id == id)
+        {
+            hasShot = _shoot;
+            Debug.Log(hasShot);
+        }
+        Debug.Log("reached this");
+    }
+
+    public void finishShooting()
+    {
+        hasShot = false;
+        anim.SetBool("shoot1", false);
+    }
+
 
     private void Flip()
     {
@@ -96,6 +115,7 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetBool("hasJumped", hasJumped);
         anim.SetFloat("yVelocity", velocity.y);
+        anim.SetBool("shoot1", hasShot);
         
     }
 

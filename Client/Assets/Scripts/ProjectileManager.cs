@@ -24,8 +24,6 @@ public class ProjectileManager : MonoBehaviour
     {
         velocity = (transform.position - lastPosition) / Time.deltaTime;
         lastPosition = transform.position;
-
-        Debug.Log(velocity.x);
     }
 
     public void Explode(Vector3 _position)

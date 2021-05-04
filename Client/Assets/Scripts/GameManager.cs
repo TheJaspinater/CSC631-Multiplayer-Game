@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnProjectile(int _id, Vector3 _position)
     {
+        // Debug.Log("Projectile has spawned");
         GameObject _projectile = Instantiate(projectilePrefab, _position, Quaternion.identity);
         _projectile.GetComponent<ProjectileManager>().Initialize(_id);
         projectiles.Add(_id, _projectile.GetComponent<ProjectileManager>());

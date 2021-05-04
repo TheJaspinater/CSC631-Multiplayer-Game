@@ -80,6 +80,7 @@ public class ClientHandle : MonoBehaviour
         Vector3 _position = _packet.ReadVector3();
         int _thrownByPlayer = _packet.ReadInt();
 
+        GameManager.players[_thrownByPlayer].playerShot();
         GameManager.instance.SpawnProjectile(_projectileId, _position);
     }
 
