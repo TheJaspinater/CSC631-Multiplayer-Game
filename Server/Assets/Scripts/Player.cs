@@ -235,6 +235,25 @@ public class Player : MonoBehaviour
         return id;
     }
 
+    public void TakeDamage(float _attackDamage)
+    {
+        if (health <= 0f)
+        {
+            return;
+        }
+
+        health -= _attackDamage;
+        if (health <= 0f)
+        {
+            health = 0f;
+            transform.position = new Vector3(150f, 150f, 0);
+            ServerSend.PlayerPosition(this);
+            StartCoroutine(Respawn());
+        }
+
+        ServerSend.PlayerHealth(this);
+    }
+    
     public void TakeDamage(float _attackDamage, Player _schoolShooter)
     {
         if (health <= 0f)
@@ -245,8 +264,6 @@ public class Player : MonoBehaviour
             Debug.Log("player " + id + " was killed");
             return;
         }
-
-
 
         health -= _attackDamage;
         if (health <= 0f)
@@ -281,6 +298,11 @@ public class Player : MonoBehaviour
 
                 }
 
+            }
+
+            else if (collider.GetComponent<Enemy>())
+            {
+                collider.GetComponent<Enemy>().TakeDamage(attackDamage);
             }
             // collider.GetComponent<Player>().TakeDamage(attackDamage);
 

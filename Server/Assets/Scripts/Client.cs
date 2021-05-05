@@ -235,6 +235,11 @@ public class Client
                 ServerSend.SpawnPlayer(_client.id, player);
             }
         }
+
+        foreach (Enemy _enemy in Enemy.enemies.Values)
+        {
+            ServerSend.SpawnEnemy(id, _enemy);
+        }
     }
 
     /// <summary>Disconnects the client and stops all network traffic.</summary>
