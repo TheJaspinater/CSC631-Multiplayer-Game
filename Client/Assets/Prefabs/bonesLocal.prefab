@@ -5073,7 +5073,6 @@ MonoBehaviour:
   HealthPrefab: {fileID: 630389859206484314, guid: d38a01e925ca2ad44abb5ed1a6ccd89e, type: 3}
   BarBorder: {fileID: 0}
   BarFilled: {fileID: 0}
-  currentValue: 0
   Player: {fileID: 5993819085811718833}
   Wisp: {fileID: 179622947325428199, guid: fe8378305a82dc4488a2ca903793a476, type: 3}
 --- !u!114 &4239024755719429324
@@ -5177,6 +5176,7 @@ GameObject:
   - component: {fileID: 5184764658750270926}
   - component: {fileID: 766335436536975473}
   - component: {fileID: 4485532219146652447}
+  - component: {fileID: 2336002570712915554}
   m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
@@ -5288,7 +5288,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 8880977015998926047}
-  Player: {fileID: 3590756611983622355}
 --- !u!114 &4485532219146652447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5303,6 +5302,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
   ListenerNumber: -1
+--- !u!114 &2336002570712915554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993819085811718833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23055afd8674e514dafdad5db0d39e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7752219757067967170
 GameObject:
   m_ObjectHideFlags: 0

@@ -5489,6 +5489,7 @@ GameObject:
   - component: {fileID: 6879222873779308431}
   - component: {fileID: 2161483015019234023}
   - component: {fileID: 4454843035252128327}
+  - component: {fileID: 7529984513489710122}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -5600,7 +5601,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 8603832037065404346}
-  Player: {fileID: 8572012070224538925}
 --- !u!114 &4454843035252128327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5615,6 +5615,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
   ListenerNumber: -1
+--- !u!114 &7529984513489710122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467384110171618501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23055afd8674e514dafdad5db0d39e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8237957195931213483
 GameObject:
   m_ObjectHideFlags: 0

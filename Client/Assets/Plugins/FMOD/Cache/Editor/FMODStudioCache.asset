@@ -101,7 +101,7 @@ MonoBehaviour:
   Path: FMODAudio/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637554123545335939
+  lastModified: 637559124884326419
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -119,6 +119,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Menu/Menu_Back
   guid: ea9c9f7e7c183349bab0d7e483cc8b22
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7863220648109582758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Bat/Aggro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Bat/Aggro
+  guid: d32ca16df4949b4c990b36bca742d74b
   Banks:
   - {fileID: -4032785074110310067}
   IsStream: 0
@@ -168,6 +191,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-7421421370028512234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/Bell
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/Bell
+  guid: 5e7dc43457816e4483c2fe5330760141
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3000
 --- !u!114 &-7249088960917048353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +445,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2670932508501431624}
+  - {fileID: 3150616970230380205}
   MinDistance: 1
   MaxDistance: 20
   Length: 10750
@@ -469,6 +515,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5760028881814182547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/Tombstone
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/Tombstone
+  guid: 65527a07b245b8438dd3c183f95747d5
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5695630035916805769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +560,29 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 0
+--- !u!114 &-5644880447583166090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Slime/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Slime/Death
+  guid: 3ab3a9177306d7478b025e4a011d3174
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &-5614037862265005622
 MonoBehaviour:
@@ -516,6 +608,26 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 0
 --- !u!114 &-5447205005727735591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phase_3/Player_Count
+  m_EditorClassIdentifier: 
+  Name: Player_Count
+  Min: 2
+  Max: 4
+  Default: 4
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-5348838895629685602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,6 +708,29 @@ MonoBehaviour:
   - Name: 
     Value: 1522
   Exists: 1
+--- !u!114 &-4672383395983079132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Attack/Ranged/Zombie/Prep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Attack/Ranged/Zombie/Prep
+  guid: 97d0343fe3344f45b84215e79397f00e
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4634656539098253450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +817,52 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-4253425969290227799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Gameplay
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Gameplay
+  guid: bb697d5af27dd54b87d35cc8d93e301f
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 371386
+--- !u!114 &-4242589617052252029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Slime/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Slime/Attack
+  guid: 84e0eacff64b2e45955e0f8a2c16c7ef
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4228944713606801713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,7 +883,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8187033265511261681}
+  - {fileID: 118885040221454669}
   MinDistance: 1
   MaxDistance: 20
   Length: 11999
@@ -764,7 +945,7 @@ MonoBehaviour:
   Path: FMODAudio/Dungeon_Brawler.bank
   Name: Dungeon_Brawler
   StudioPath: bank:/Dungeon_Brawler
-  lastModified: 637554123545321128
+  lastModified: 637559124884006422
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -851,6 +1032,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3534919063289811895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Attack/Ranged/Cyborg/Laser
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Attack/Ranged/Cyborg/Laser
+  guid: a41e07a97ff2244c9e5ae7f01349fa13
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-3478619448596884637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,11 +1070,11 @@ MonoBehaviour:
   Path: FMODAudio/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637554123545340942
+  lastModified: 637559124884436429
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 2130
+    Value: 3360
   Exists: 1
 --- !u!114 &-3173918564587741635
 MonoBehaviour:
@@ -1058,6 +1262,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-2120321398686478054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cyborg_Walk/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2101323787362368822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,6 +1465,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-976341701520482781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Attack/Ranged/Wraith/Fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Attack/Ranged/Wraith/Fire
+  guid: ea102ad3dd11cd428b1ed415ccdb63c1
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-968897285759847739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,6 +1508,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-849167484281672164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Bat/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Bat/Death
+  guid: 704095f6ca652c479bac28b08137e32b
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-843364803875144574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,10 +1597,33 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -7189131196733230481}
+  - {fileID: -5348838895629685602}
   MinDistance: 1
   MaxDistance: 20
   Length: 679042
+--- !u!114 &-767966693400816632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/Cyborg/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/Cyborg/Death
+  guid: bec418a98d6f694ab065280deeeeadab
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-733623400490570731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,6 +1664,75 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-546387752577854571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/Disintegrate
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/Disintegrate
+  guid: 28d26b870ea74144a304a8f1fb980583
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-336583482238589555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Bat/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Bat/Attack
+  guid: 7cd09263b11adc42b779029a9b434d3c
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-105147599271093711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Damage
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Damage
+  guid: 280d571a7f27154982cce0c83c0b8a9f
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-102936060616620691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,6 +1755,29 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 0
+--- !u!114 &-15509971474277412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Slime/Aggro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Slime/Aggro
+  guid: 30963443606b0e49a01c21276c120a4a
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1432,13 +1817,61 @@ MonoBehaviour:
   - {fileID: -8868678842486179612}
   - {fileID: 4555545102997105262}
   - {fileID: -8194157971409570339}
+  - {fileID: 3089822020085358951}
+  - {fileID: -105147599271093711}
+  - {fileID: -546387752577854571}
+  - {fileID: 1272355501761194337}
+  - {fileID: -15509971474277412}
+  - {fileID: -5644880447583166090}
+  - {fileID: 8598896896213084833}
+  - {fileID: 5506734540446817498}
+  - {fileID: 3523488721404708733}
+  - {fileID: -7421421370028512234}
+  - {fileID: 2377763847274928059}
+  - {fileID: -5760028881814182547}
+  - {fileID: -849167484281672164}
+  - {fileID: -336583482238589555}
+  - {fileID: 4663194060135978682}
+  - {fileID: -4242589617052252029}
+  - {fileID: 7907326951511121220}
+  - {fileID: 6274423146560010777}
+  - {fileID: 8080092351352415088}
+  - {fileID: -4672383395983079132}
+  - {fileID: 1046890414615066695}
+  - {fileID: -3534919063289811895}
+  - {fileID: 7645229459158563376}
+  - {fileID: -4253425969290227799}
+  - {fileID: -767966693400816632}
+  - {fileID: 2756352871169664001}
+  - {fileID: -7863220648109582758}
+  - {fileID: -976341701520482781}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8330409734720820974}
   StringsBanks:
   - {fileID: -3478619448596884637}
-  stringsBankWriteTime: 637554123545340942
+  stringsBankWriteTime: 637559124884436429
   cacheVersion: 6
+--- !u!114 &118885040221454669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Zombie_Walk/Zombie_Ground_Material
+  m_EditorClassIdentifier: 
+  Name: Zombie_Ground_Material
+  Min: -1
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &233312581051597343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1522,10 +1955,33 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -6937578203391397125}
+  - {fileID: -2120321398686478054}
   MinDistance: 1
   MaxDistance: 20
   Length: 10000
+--- !u!114 &1046890414615066695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Attack/Ranged/Zombie/Throw
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Attack/Ranged/Zombie/Throw
+  guid: a3a1475721741c4d93ef6fc811bd04ac
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1150664655567400054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,6 +2019,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX_Menu_Select
   guid: ddf7b9d76a946941aa37a3e604252418
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1272355501761194337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Poof
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Poof
+  guid: 2ae7540e9702764e8f137fc56d60c32b
   Banks:
   - {fileID: -4032785074110310067}
   IsStream: 0
@@ -1673,6 +2152,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2377763847274928059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Wisp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Wisp
+  guid: 62ed05bfa3eaa14a9c49d0f91e217070
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &2437418213285968890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,6 +2235,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2756352871169664001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Slime/Slide
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Slime/Slide
+  guid: d1207019030bda46b4171ff90b72cf34
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &2856974935542285599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,6 +2281,49 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &3089822020085358951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Ghost/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Ghost/Attack
+  guid: 2765698949d4144ea6e2ad93da923ae4
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3150616970230380205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wraith_Walk/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3179092354795822720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,6 +2433,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 490
+--- !u!114 &3523488721404708733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/MrBones/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/MrBones/Death
+  guid: 54e1f9e5209b5f41a60347c73b06cf0f
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3535145715385682370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,6 +2562,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4663194060135978682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/Respawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/Respawn
+  guid: 81601d3a82dab34e9fa0f358cb1105e1
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4685751066128275746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2032,6 +2646,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5506734540446817498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/Zombie/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/Zombie/Death
+  guid: 417728851197d7479c6682a3ad891548
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5618987120640479755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2112,6 +2749,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &6274423146560010777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death/Wraith/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death/Wraith/Death
+  guid: 95795c0214368444ab41f3df11ed8f42
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6776763188024601978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2261,6 +2921,52 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7645229459158563376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Ghost/Aggro
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Ghost/Aggro
+  guid: b2b64603cba5174a8b028cde7fd6fa50
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7907326951511121220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Ghost/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Ghost/Death
+  guid: 88662ce2610d0449be354f5b6b8496ca
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7940050720014293552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2324,6 +3030,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &8080092351352415088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Attack/Ranged/MrBones/Throw
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Attack/Ranged/MrBones/Throw
+  guid: 96818950a0b3c44ea7cde2eedd6ab827
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &8187033265511261681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,6 +3136,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &8598896896213084833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Bat/Flap
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Bat/Flap
+  guid: 3e7295d3f6dd2d49a1051af1977e3785
+  Banks:
+  - {fileID: -4032785074110310067}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8702984096017966585
 MonoBehaviour:
   m_ObjectHideFlags: 0

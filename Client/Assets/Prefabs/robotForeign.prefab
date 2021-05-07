@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5372553843259498220}
   - component: {fileID: 6855282916966466328}
   - component: {fileID: 582377895484057844}
+  - component: {fileID: 6565462190783560399}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -146,14 +147,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd98d415a66cc14ea239215f998b0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
   dust: {fileID: 8040368413688371019}
   groundCheckRadius: 0.45
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 7090270537454488666}
-  Player: {fileID: 7636984936867873484}
+--- !u!114 &6565462190783560399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418720150469545747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23055afd8674e514dafdad5db0d39e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2019666327747363666
 GameObject:
   m_ObjectHideFlags: 0
