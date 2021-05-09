@@ -294,6 +294,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 5119894311479228070, guid: 5b3f730e48a91bd47b5d163f36ede4cc, type: 3}
   enemyPrefab: {fileID: 5119894311479228070, guid: 0098490fc9b10a546844289513a400f8, type: 3}
   projectilePrefab: {fileID: 8317980876024642107, guid: 112311bbb848de94cb40de79d82164ce, type: 3}
+  timeTillGameStart: 5
 --- !u!4 &359561323
 Transform:
   m_ObjectHideFlags: 0

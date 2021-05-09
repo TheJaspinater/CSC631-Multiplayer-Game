@@ -12,7 +12,27 @@ public class UIManager : MonoBehaviour
     //public Client clientText;
     public GameObject InGamePauseMenu;
     public Text IpAddressInPauseMenu;
+    public bool inLobby = false;
     public bool inGame = false;
+    public GameObject charSelectPNL;
+    public GameObject lobbyPNL;
+
+    public PlayerLobbyInfo[] GameLobby = new PlayerLobbyInfo[4];
+    
+    public Text[] GameLobbyNames = new Text[4];
+    public float lobbyTimerMax;
+    private float lobbyTimer;
+    public GameObject lobbyTimerDisplay;
+    public Text lobbyTimerNumberDisplay;
+    public GameObject GameLobbyWindow;
+
+    public struct PlayerLobbyInfo
+    {
+        public bool isInGame;
+        public int playerId;
+        public string username;
+        public int charChoice;
+    }
 
     private void Awake()
     {
@@ -27,20 +47,69 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && inGame == true)
         {
             InGamePauseMenu.SetActive(!InGamePauseMenu.activeSelf);
         }
+
+        if(inLobby == true)
+        {
+            UpdateLobbyNames();
+
+            if (GameLobby[3].isInGame == true)
+            {
+                lobbyTimerDisplay.SetActive(true);
+                lobbyTimer -= Time.deltaTime;
+                lobbyTimerNumberDisplay.text = lobbyTimer.ToString();
+            }
+            else
+            {
+                lobbyTimer = lobbyTimerMax;
+                lobbyTimerDisplay.SetActive(false);
+            }
+
+            if(lobbyTimer <= 0)
+            {
+                inGame = true;
+                inLobby = false;
+                charSelectPNL.SetActive(false);
+                lobbyPNL.SetActive(false);
+                startMenu.SetActive(false);
+                ClientSend.StartGame();
+            }
+            
+        }
+
     }
 
     public void ConnectToServer()
     {
-        inGame = true;
-        //startMenu.SetActive(false);
+        inLobby = true;
         usernameField.interactable = false;
         Client.instance.ConnectToServer();
+    }
+
+    public void UpdateLobbyNames()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            if (GameLobby[i].isInGame == true)
+            {
+                GameLobbyNames[i].text = GameLobby[i].username;
+            }
+        }
+    }
+    
+    public void AddPlayerToLobby(int _playerId, string _username, int _charSelect)
+    {
+        PlayerLobbyInfo newPlayer = new PlayerLobbyInfo();
+        newPlayer.isInGame = true;
+        newPlayer.playerId = _playerId;
+        newPlayer.username = _username;
+        newPlayer.charChoice = _charSelect;
+        GameLobby[_playerId-1] = newPlayer;
     }
 
     public void TurnUIelementOnOff(GameObject ElementToSwitch)

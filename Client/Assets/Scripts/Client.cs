@@ -294,6 +294,7 @@ public class Client : MonoBehaviour
             { (int)ServerPackets.spawnEnemy, ClientHandle.SpawnEnemy },
             { (int)ServerPackets.enemyPosition, ClientHandle.EnemyPosition },
             { (int)ServerPackets.enemyHealth, ClientHandle.EnemyHealth },
+            { (int)ServerPackets.addToLobby, ClientHandle.AddToLobby},
         };
         Debug.Log("Initialized packets.");
     }

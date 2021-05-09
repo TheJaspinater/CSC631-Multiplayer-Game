@@ -135,4 +135,19 @@ public class ClientHandle : MonoBehaviour
 
         GameManager.enemies[_enemyId].SetHealth(_health);
     }
+
+    public static void AddToLobby(Packet _packet)
+    {
+        int _numPlayers = _packet.ReadInt();
+
+        for (int i = 1; i <= _numPlayers; i++)
+        {
+            int _playerId = _packet.ReadInt();
+            string _username = _packet.ReadString();
+            int _charSelect = _packet.ReadInt();
+            UIManager.instance.AddPlayerToLobby(_playerId, _username, _charSelect);
+        }
+
+        
+    }
 }

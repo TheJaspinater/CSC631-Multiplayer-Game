@@ -10,6 +10,17 @@ public class NetworkManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public GameObject projectilePrefab;
+    public float timeTillGameStart;
+
+    private float lobbyTimer;
+    public static Dictionary<int, PlayerLobbyInfo> GameLobby = new Dictionary<int, PlayerLobbyInfo>();
+
+    public struct PlayerLobbyInfo
+    {
+        public int id;
+        public string userName;
+        public int charChoice;
+    }
 
     private void Awake()
     {
@@ -34,6 +45,11 @@ public class NetworkManager : MonoBehaviour
         Server.Start(50, 26950);
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
+
     private void OnApplicationQuit()
     {
         Server.Stop();
@@ -53,4 +69,22 @@ public class NetworkManager : MonoBehaviour
     {
         return Instantiate(projectilePrefab, _shootOrigin.position, Quaternion.identity).GetComponent<Projectile>();
     }
+
+    //MARCO CODE BELOW HERE
+    public void AddPlayerToLobby(int _fromClient, string _playerName, int _charSelect)
+    {
+        PlayerLobbyInfo newPlayer = new PlayerLobbyInfo();
+        newPlayer.id = _fromClient;
+        newPlayer.userName = _playerName;
+        newPlayer.charChoice = _charSelect;
+        GameLobby.Add(newPlayer.id, newPlayer); //values range from 1-4 for id
+    }
+
+    /*
+    public void RemovePlayerFromLobby(int _playerIdToRemove)
+    {
+        GameLobby.Remove(_playerIdToRemove);
+        ServerSend.RemoveFromLobby();
+    }*/
+    
 }

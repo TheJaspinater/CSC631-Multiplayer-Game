@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static Dictionary<int, PlayerManager> players = new Dictionary<int, PlayerManager>();
     public static Dictionary<int, ProjectileManager> projectiles = new Dictionary<int, ProjectileManager>();
     public static Dictionary<int, EnemyManager> enemies = new Dictionary<int, EnemyManager>();
+    public UIManager UImanager;
 
     public GameObject bonesLocalPrefab;
     public GameObject goopLocalPrefab;
@@ -41,6 +42,16 @@ public class GameManager : MonoBehaviour
         GameObject _player;
         int _characterSelection = Client.instance.characterSelection;
 
+        int otherCharSelection = UIManager.instance.GameLobby[_id-1].charChoice;
+        /*
+        for(int i = 0; i < 4; i++)
+        {
+            if (UImanager.GameLobby[i].playerId == _id)
+            {
+                otherCharSelection = UImanager.GameLobby[i].charChoice;
+            }
+        }*/
+
         if (_id == Client.instance.myId)
         {
             if(_characterSelection == 0)
@@ -66,19 +77,19 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (players.Count == 0)
+            if (otherCharSelection == 0)
             {
                 _foreignPrefab = bonesForeignPrefab;
                 _player = Instantiate(_foreignPrefab, _position, _rotation);
             }
-            else if (players.Count == 1)
-            {
-                _foreignPrefab = goopForeignPrefab;
-                _player = Instantiate(_foreignPrefab, _position, _rotation);
-            }
-            else if (players.Count == 2)
+            else if (otherCharSelection == 1)
             {
                 _foreignPrefab = robotForeignPrefab;
+                _player = Instantiate(_foreignPrefab, _position, _rotation);
+            }
+            else if (otherCharSelection == 2)
+            {
+                _foreignPrefab = goopForeignPrefab;
                 _player = Instantiate(_foreignPrefab, _position, _rotation);
             }
             else

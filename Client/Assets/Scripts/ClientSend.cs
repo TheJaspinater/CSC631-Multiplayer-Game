@@ -23,6 +23,20 @@ public class ClientSend : MonoBehaviour
         {
             _packet.Write(Client.instance.myId);
             _packet.Write(UIManager.instance.usernameField.text);
+            _packet.Write(Client.instance.characterSelection);
+
+            SendTCPData(_packet);
+        }
+    }
+
+    public static void StartGame()
+    {
+
+        /*will handle closing the menus
+         */
+        using (Packet _packet = new Packet((int)ClientPackets.startGame))
+        {
+            _packet.Write(UIManager.instance.usernameField.text);
 
             SendTCPData(_packet);
         }

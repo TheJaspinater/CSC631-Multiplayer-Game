@@ -16,7 +16,6 @@ public class MusicManager : MonoBehaviour
     public Slider mainOptionsSFXSlider;
     public Slider gameOptionsSFXSlider;
 
-
     private void Awake()
     {
         if (instance == null)

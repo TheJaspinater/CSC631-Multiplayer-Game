@@ -8,12 +8,21 @@ public class ServerHandle
     {
         int _clientIdCheck = _packet.ReadInt();
         string _username = _packet.ReadString();
+        int _charSelect = _packet.ReadInt();
 
-        Debug.Log($"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient}.");
+        Debug.Log($"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient} playing as char {_charSelect}");
         if (_fromClient != _clientIdCheck)
         {
             Debug.Log($"Player \"{_username}\" (ID: {_fromClient}) has assumed the wrong client ID ({_clientIdCheck})!");
         }
+
+        Server.clients[_fromClient].SendIntoLobby(_fromClient,_username, _charSelect); //-MARCO CODE   
+    }
+
+    public static void StartGame(int _fromClient, Packet _packet)
+    {
+        string _username = _packet.ReadString();
+        Debug.Log($"Sending player: {_username} with ID:{_fromClient}.");
         Server.clients[_fromClient].SendIntoGame(_username);
     }
 

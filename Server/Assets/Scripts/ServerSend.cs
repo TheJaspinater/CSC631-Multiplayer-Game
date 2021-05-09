@@ -251,5 +251,33 @@ public class ServerSend
             SendTCPDataToAll(_packet);
         }
     }
+
+    public static void AddToLobby(int _playerId, int _numPlayersInLobby,  string _username, int _charSelect)
+    {
+        using (Packet _packet = new Packet((int)ServerPackets.addToLobby))
+        {
+            _packet.Write(_numPlayersInLobby);
+
+            for (int i = 1; i <= _numPlayersInLobby; i++) {
+                _packet.Write(NetworkManager.GameLobby[i].id);
+                _packet.Write(NetworkManager.GameLobby[i].userName);
+                _packet.Write(NetworkManager.GameLobby[i].charChoice); 
+            }
+
+            SendTCPDataToAll(_packet);
+        }
+    }
+
+    public static void RemoveFromLobby(int _playerId)
+    {
+        using (Packet _packet = new Packet((int)ServerPackets.removeFromLobby))
+        {
+            _packet.Write(_playerId);
+
+            SendTCPDataToAll(_packet);
+        }
+    }
+
+
     #endregion
 }

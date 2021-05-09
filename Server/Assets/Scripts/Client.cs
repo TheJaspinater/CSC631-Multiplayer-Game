@@ -208,10 +208,47 @@ public class Client
         }
     }
 
+    /// <summary>
+    /// Sends the client into the lobby before the game and informs the client of other players - MARCO
+    /// </summary>
+    /// <param name="_playerName"></param>
+    public void SendIntoLobby(int _fromClient,string _playerName, int _charSelect)
+    {
+        NetworkManager.instance.AddPlayerToLobby(_fromClient, _playerName,_charSelect);//gives instructions for handling lobby server side
+            
+        ServerSend.AddToLobby(_fromClient, NetworkManager.GameLobby.Count, _playerName, _charSelect);//gives instructions for handling lobby client side
+        
+        
+        
+        
+        /*
+        // Send all players to the new player
+        foreach (Client _client in Server.clients.Values)
+        {
+            if (_client.player != null)
+            {
+                if (_client.id != id)
+                {
+                    ServerSend.SpawnPlayer(id, _client.player);
+                }
+            }
+        }
+
+        // Send the new player to all players (including himself)
+        foreach (Client _client in Server.clients.Values)
+        {
+            if (_client.player != null)
+            {
+                ServerSend.SpawnPlayer(_client.id, player);
+            }
+        }*/
+    }
+
     /// <summary>Sends the client into the game and informs other clients of the new player.</summary>
     /// <param name="_playerName">The username of the new player.</param>
     public void SendIntoGame(string _playerName)
     {
+        Debug.Log("Starting Game");
         player = NetworkManager.instance.InstantiatePlayer();
         player.Initialize(id, _playerName);
 
@@ -222,6 +259,7 @@ public class Client
             {
                 if (_client.id != id)
                 {
+                    Debug.Log($"Spawning player with username:{_playerName} and ID{id}");
                     ServerSend.SpawnPlayer(id, _client.player);
                 }
             }
