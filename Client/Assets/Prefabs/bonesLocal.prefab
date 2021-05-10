@@ -100,6 +100,51 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &2731330856029629022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20198518718965890}
+  - component: {fileID: 383775729346993232}
+  m_Layer: 0
+  m_Name: FMODListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20198518718965890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731330856029629022}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13769925, y: -0.75000095, z: 0}
+  m_LocalScale: {x: 0.7637871, y: 0.76378775, z: 1.2475343}
+  m_Children: []
+  m_Father: {fileID: 5915361774057099391}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383775729346993232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731330856029629022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 2731330856029629022}
+  ListenerNumber: -1
 --- !u!1 &2952278726691771820
 GameObject:
   m_ObjectHideFlags: 0
@@ -5049,6 +5094,7 @@ Transform:
   - {fileID: 5201881416140669223}
   - {fileID: 5055342594691174838}
   - {fileID: 8962278397843099449}
+  - {fileID: 20198518718965890}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5175,7 +5221,6 @@ GameObject:
   - component: {fileID: 5853262511322823097}
   - component: {fileID: 5184764658750270926}
   - component: {fileID: 766335436536975473}
-  - component: {fileID: 4485532219146652447}
   - component: {fileID: 2336002570712915554}
   m_Layer: 7
   m_Name: Capsule
@@ -5289,20 +5334,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 8880977015998926047}
---- !u!114 &4485532219146652447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5993819085811718833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1
 --- !u!114 &2336002570712915554
 MonoBehaviour:
   m_ObjectHideFlags: 0

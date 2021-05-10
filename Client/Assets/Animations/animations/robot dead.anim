@@ -21,39 +21,39 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -6423110250615294054, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.05
+    - time: 0.083333336
       value: {fileID: 7143663253199608582, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.1
-      value: {fileID: -3441226110225193886, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
     - time: 0.16666667
-      value: {fileID: 6546889378779015656, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.21666667
-      value: {fileID: 2019616226560373749, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+      value: {fileID: -3441226110225193886, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
     - time: 0.26666668
-      value: {fileID: 6905527988947720565, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.31666666
-      value: {fileID: -4012469514803195449, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.38333333
-      value: {fileID: -397739494937980783, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+      value: {fileID: 6546889378779015656, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 0.35
+      value: {fileID: 2019616226560373749, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
     - time: 0.43333334
-      value: {fileID: -3325120289032360203, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.48333332
-      value: {fileID: 4478692371751671016, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.53333336
-      value: {fileID: 8684110527380875365, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.6
-      value: {fileID: 1405946763173678710, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.65
-      value: {fileID: 7568187532025933024, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+      value: {fileID: 6905527988947720565, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 0.51666665
+      value: {fileID: -4012469514803195449, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 0.6166667
+      value: {fileID: -397739494937980783, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
     - time: 0.7
+      value: {fileID: -3325120289032360203, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 0.8
+      value: {fileID: 4478692371751671016, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 0.8833333
+      value: {fileID: 8684110527380875365, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 0.98333335
+      value: {fileID: 1405946763173678710, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 1.0666667
+      value: {fileID: 7568187532025933024, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
+    - time: 1.15
       value: {fileID: 2367497933573500311, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.75
+    - time: 1.2333333
       value: {fileID: 3006270840548368415, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.81666666
+    - time: 1.3333334
       value: {fileID: 575209897057480254, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.8666667
+    - time: 1.4166666
       value: {fileID: -6373338535097197026, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
-    - time: 0.9166667
+    - time: 1.5
       value: {fileID: -6426606348097986975, guid: 45a7195522a5e9840a1b4dc091805556, type: 3}
     attribute: m_Sprite
     path: 
@@ -97,7 +97,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.93333334
+    m_StopTime: 1.5166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -116,4 +116,32 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Cyborg/Death
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.1
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Disintegrate
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.76666665
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Tombstone
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.93333334
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Bell
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
