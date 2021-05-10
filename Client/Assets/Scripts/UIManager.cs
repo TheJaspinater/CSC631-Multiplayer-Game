@@ -133,7 +133,8 @@ public class UIManager : MonoBehaviour
 
 
     /*
-     THIS IS THE METHOD THAT COMPLETES THE GAME. USE THE "winnerID" to determine which end screen to show animating. ALSO MAKE SURE TO DESPAWN HEALTH AND MINIMAP OBJECTS. 
+     THIS IS THE METHOD THAT COMPLETES THE GAME. USE THE "winnerID" to determine which end screen to show animating. 
+        ALSO MAKE SURE TO DESPAWN HEALTH AND MINIMAP OBJECTS. 
      */
     public void CompleteGameSession(int winnerID)
     {
