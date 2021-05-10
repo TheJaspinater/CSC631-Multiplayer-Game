@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: goop dead
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 4905466255397207942, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.1
+      value: {fileID: 4359511586111322179, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.21666667
+      value: {fileID: -563014180522094222, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.26666668
+      value: {fileID: -3257735114486932069, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.36666667
+      value: {fileID: -1101526358087813204, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.48333332
+      value: {fileID: 166245713419839184, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.53333336
+      value: {fileID: -2417885362265229935, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.6333333
+      value: {fileID: 444122051117644342, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.73333335
+      value: {fileID: -1455142376127649835, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.8333333
+      value: {fileID: -6729040893066118767, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 0.93333334
+      value: {fileID: 4163765410505311630, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1
+      value: {fileID: -5960994169953977951, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.1
+      value: {fileID: 4985464896985536828, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.2
+      value: {fileID: 4176135219325103757, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.2666667
+      value: {fileID: -4943350132053417094, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.35
+      value: {fileID: 3404588666959090523, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.4333333
+      value: {fileID: -1323309753832924704, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.5333333
+      value: {fileID: -689999389028211206, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.6333333
+      value: {fileID: -2022685004008973321, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.7
+      value: {fileID: -3174308632750481872, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - time: 1.8333334
+      value: {fileID: 4997447388753318618, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 4905466255397207942, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 4359511586111322179, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -563014180522094222, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -3257735114486932069, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -1101526358087813204, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 166245713419839184, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -2417885362265229935, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 444122051117644342, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -1455142376127649835, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -6729040893066118767, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 4163765410505311630, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -5960994169953977951, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 4985464896985536828, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 4176135219325103757, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -4943350132053417094, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 3404588666959090523, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -1323309753832924704, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -689999389028211206, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -2022685004008973321, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: -3174308632750481872, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+    - {fileID: 4997447388753318618, guid: a9f2cf1c25751ad498c21233def312b8, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.85
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Zombie/Death
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.21666667
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Disintegrate
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Tombstone
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.2666667
+    functionName: PlaySound
+    data: event:/SFX/Player/Death/Bell
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
