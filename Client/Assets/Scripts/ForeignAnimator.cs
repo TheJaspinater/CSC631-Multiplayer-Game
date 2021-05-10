@@ -6,11 +6,15 @@ public class ForeignAnimator : MonoBehaviour
 {
     public ParticleSystem dust;
 
+    public int id;
     private Animator anim;
+    public PlayerManager playerManager;
 
     private bool isWalking;
     private bool isFacingRight = true;
     private bool isGrounded;
+    private bool hasShot;
+
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     public Transform groundCheck;
@@ -19,6 +23,7 @@ public class ForeignAnimator : MonoBehaviour
 
     private void Start()
     {
+        id = playerManager.id;
         anim = GetComponent<Animator>();
         lastPosition = transform.position;
     }
@@ -38,7 +43,7 @@ public class ForeignAnimator : MonoBehaviour
         velocity = (transform.position - lastPosition) / Time.deltaTime;
         lastPosition = transform.position;
 
-        // Debug.Log(velocity.x);
+        Debug.Log(velocity.x);
 
         CheckSurroundings();
     }
@@ -70,6 +75,21 @@ public class ForeignAnimator : MonoBehaviour
 
     }
 
+    public void isShooting(int _id, bool _shoot)
+    {
+        if (_id == id)
+        {
+            hasShot = _shoot;
+            Debug.Log(hasShot);
+        }
+        Debug.Log("reached this");
+    }
+
+    public void finishShooting()
+    {
+        hasShot = false;
+        anim.SetBool("shoot1", false);
+    }
 
     private void Flip()
     {
@@ -84,6 +104,7 @@ public class ForeignAnimator : MonoBehaviour
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isGrounded", isGrounded);
         // anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetBool("shoot1", hasShot);
     }
 
     // Checks if Player is Grounded

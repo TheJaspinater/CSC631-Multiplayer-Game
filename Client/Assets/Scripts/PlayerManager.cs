@@ -88,7 +88,14 @@ public class PlayerManager : MonoBehaviour
 
     public void playerShot()
     {
-        Player.GetComponent<PlayerAnimator>().isShooting(id, true);
+        if (Player.GetComponent<PlayerAnimator>())
+        {
+            Player.GetComponent<PlayerAnimator>().isShooting(id, true);
+        }
+        else if (Player.GetComponent<ForeignAnimator>())
+        {
+            Player.GetComponent<ForeignAnimator>().isShooting(id, true);
+        }
     }
 
     public void Die()
