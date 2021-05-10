@@ -150,4 +150,11 @@ public class ClientHandle : MonoBehaviour
 
         
     }
+
+    public static void CompleteGameSession(Packet _packet)
+    {
+        int winnerID = _packet.ReadInt();
+
+        UIManager.instance.CompleteGameSession(winnerID);
+    }
 }

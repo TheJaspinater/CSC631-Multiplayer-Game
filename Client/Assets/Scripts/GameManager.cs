@@ -43,14 +43,7 @@ public class GameManager : MonoBehaviour
         int _characterSelection = Client.instance.characterSelection;
 
         int otherCharSelection = UIManager.instance.GameLobby[_id-1].charChoice;
-        /*
-        for(int i = 0; i < 4; i++)
-        {
-            if (UImanager.GameLobby[i].playerId == _id)
-            {
-                otherCharSelection = UImanager.GameLobby[i].charChoice;
-            }
-        }*/
+        
 
         if (_id == Client.instance.myId)
         {

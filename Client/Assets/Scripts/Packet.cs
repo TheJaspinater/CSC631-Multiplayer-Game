@@ -22,6 +22,7 @@ public enum ServerPackets
     enemyPosition,
     enemyHealth,
     addToLobby,
+    completeGameSession,
 }
 
 /// <summary>Sent from client to server.</summary>
@@ -31,6 +32,7 @@ public enum ClientPackets
     playerMovement,
     playerAttack,
     startGame,
+    playerWin,
 }
 
 public class Packet : IDisposable

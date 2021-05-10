@@ -21,9 +21,8 @@ public enum ServerPackets
         spawnEnemy,
         enemyPosition,
         enemyHealth,
-        addToLobby, // MARCO 
-        removeFromLobby,
-
+        addToLobby,
+        completeGameSession,
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -32,7 +31,8 @@ public enum ServerPackets
         welcomeReceived = 1,
         playerMovement,
         playerAttack,
-        startGame
+        startGame,
+        playerWin
     }
 
     public class Packet : IDisposable

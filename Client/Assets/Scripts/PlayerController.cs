@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         CheckMovementDirection();
-        
     }
 
     private void SendInputToServer()
@@ -34,7 +33,9 @@ public class PlayerController : MonoBehaviour
             Input.GetKey(KeyCode.D),
         };
 
-        ClientSend.PlayerMovement(_inputs);
+        if (UIManager.instance.inEndGame == false) {
+            ClientSend.PlayerMovement(_inputs);
+        }
     }
 
     private void SendAttackToServer()
@@ -51,8 +52,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log(true);
         }
         */
-        
-        ClientSend.PlayerAttack(_attackInputs);
+        if (UIManager.instance.inEndGame == false)
+        {
+            ClientSend.PlayerAttack(_attackInputs);
+        }
     }
 
     public void CheckMovementDirection()

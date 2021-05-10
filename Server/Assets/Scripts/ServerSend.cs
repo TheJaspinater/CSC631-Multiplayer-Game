@@ -268,6 +268,18 @@ public class ServerSend
         }
     }
 
+    public static void CompleteGameSession(int winnerID)
+    {
+        using (Packet _packet = new Packet((int)ServerPackets.completeGameSession))
+        {
+            _packet.Write(winnerID);
+
+            SendTCPDataToAll(_packet);
+        }
+    }
+
+
+    /*
     public static void RemoveFromLobby(int _playerId)
     {
         using (Packet _packet = new Packet((int)ServerPackets.removeFromLobby))
@@ -276,7 +288,7 @@ public class ServerSend
 
             SendTCPDataToAll(_packet);
         }
-    }
+    }*/
 
 
     #endregion

@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     public float maxHealth;
     public int kills;
 
+    private int killsNeededToWin;
+
     // private bool hasShot = false;
 
     public SpriteRenderer model;
@@ -38,11 +40,13 @@ public class PlayerManager : MonoBehaviour
         username = _username;
         health = maxHealth;
         kills = 0;
+        killsNeededToWin = UIManager.instance.killsNeededToWin;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         HandleHealthBar();
+        CheckForWin();
     }
 
     public int getId()
@@ -72,6 +76,16 @@ public class PlayerManager : MonoBehaviour
         skull = Instantiate(Wisp, transform.position, Quaternion.identity);
         skull.GetComponent<WillOWisp>().Initialize(id, transform);
         wisps.Add(id, skull.GetComponent<WillOWisp>());
+    }
+
+    /*used to check for wisp count win condiditon*/
+    public void CheckForWin()
+    {
+        if(kills >= killsNeededToWin)
+        {
+            Debug.Log("Player has won.");
+            ClientSend.PlayerWin(id);
+        }
     }
 
     private float HealthMap(float currentHealth, float healthMin, float healthMax, float barMin, float barMax)

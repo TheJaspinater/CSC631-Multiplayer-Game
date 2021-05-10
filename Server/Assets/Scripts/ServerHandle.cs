@@ -26,6 +26,15 @@ public class ServerHandle
         Server.clients[_fromClient].SendIntoGame(_username);
     }
 
+    public static void PlayerWin(int _fromClient, Packet _packet)
+    {
+        int winnerID = _packet.ReadInt();
+        Debug.Log($"Player ID:{winnerID} has won!");
+
+        ServerSend.CompleteGameSession(winnerID);
+
+    }
+
     public static void PlayerMovement(int _fromClient, Packet _packet)
     {
         bool[] _inputs = new bool[_packet.ReadInt()];
