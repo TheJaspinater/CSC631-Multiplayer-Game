@@ -14,6 +14,7 @@ public class ForeignAnimator : MonoBehaviour
     private bool isFacingRight = true;
     private bool isGrounded;
     private bool hasShot;
+    private bool hasDied = false;
 
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -31,6 +32,7 @@ public class ForeignAnimator : MonoBehaviour
     private void Update()
     {
         CheckMovementDirection();
+        CheckIfHasDied();
         UpdateAnimations();
     }
 
@@ -96,6 +98,20 @@ public class ForeignAnimator : MonoBehaviour
         CreateDust();
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180.0f, 0.0f);
+    }
+
+    private void CheckIfHasDied()
+    {
+        if (playerManager.health <= 0)
+        {
+            hasDied = true;
+            anim.SetBool("isDead", hasDied);
+        }
+        else if (playerManager.health > 0)
+        {
+            hasDied = false;
+            anim.SetBool("isDead", hasDied);
+        }
     }
 
 

@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: a9f2cf1c25751ad498c21233def312b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4905466255397207942
+    second: Infected_Bones_Dies_0
+  - first:
+      213: 4359511586111322179
+    second: Infected_Bones_Dies_1
+  - first:
+      213: -563014180522094222
+    second: Infected_Bones_Dies_2
+  - first:
+      213: -3257735114486932069
+    second: Infected_Bones_Dies_3
+  - first:
+      213: -1101526358087813204
+    second: Infected_Bones_Dies_4
+  - first:
+      213: 166245713419839184
+    second: Infected_Bones_Dies_5
+  - first:
+      213: -2417885362265229935
+    second: Infected_Bones_Dies_6
+  - first:
+      213: 444122051117644342
+    second: Infected_Bones_Dies_7
+  - first:
+      213: -1455142376127649835
+    second: Infected_Bones_Dies_8
+  - first:
+      213: -6729040893066118767
+    second: Infected_Bones_Dies_9
+  - first:
+      213: 4163765410505311630
+    second: Infected_Bones_Dies_10
+  - first:
+      213: -5960994169953977951
+    second: Infected_Bones_Dies_11
+  - first:
+      213: 4985464896985536828
+    second: Infected_Bones_Dies_12
+  - first:
+      213: 4176135219325103757
+    second: Infected_Bones_Dies_13
+  - first:
+      213: -4943350132053417094
+    second: Infected_Bones_Dies_14
+  - first:
+      213: 3404588666959090523
+    second: Infected_Bones_Dies_15
+  - first:
+      213: -1323309753832924704
+    second: Infected_Bones_Dies_16
+  - first:
+      213: -689999389028211206
+    second: Infected_Bones_Dies_17
+  - first:
+      213: -2022685004008973321
+    second: Infected_Bones_Dies_18
+  - first:
+      213: -3174308632750481872
+    second: Infected_Bones_Dies_19
+  - first:
+      213: 4997447388753318618
+    second: Infected_Bones_Dies_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 62
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 471
+        width: 75
+        height: 125
+      alignment: 9
+      pivot: {x: 0.48175678, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fbd9aa197b31440800000000000000
+      internalID: 4905466255397207942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 469
+        width: 72
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5598611, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3487d5c90b8108c30800000000000000
+      internalID: 4359511586111322179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 469
+        width: 80
+        height: 94
+      alignment: 9
+      pivot: {x: 0.505125, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2711976f595cf28f0800000000000000
+      internalID: -563014180522094222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 469
+        width: 105
+        height: 94
+      alignment: 9
+      pivot: {x: 0.52133334, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d90b07c233ac2d0800000000000000
+      internalID: -3257735114486932069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_4
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 470
+        width: 117
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5076068, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7327b0d9796b0f0800000000000000
+      internalID: -1101526358087813204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 357
+        width: 125
+        height: 94
+      alignment: 9
+      pivot: {x: 0.52536, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d622d5789f9e4200800000000000000
+      internalID: 166245713419839184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 357
+        width: 127
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5088189, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1957092d212f17ed0800000000000000
+      internalID: -2417885362265229935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_7
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 355
+        width: 127
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5174016, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63af8c507a6d92600800000000000000
+      internalID: 444122051117644342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_8
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 355
+        width: 127
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5035433, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d72b45f7bb4ecbe0800000000000000
+      internalID: -1455142376127649835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 261
+        width: 127
+        height: 62
+      alignment: 9
+      pivot: {x: 0.52763784, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19977b1b5f4ad92a0800000000000000
+      internalID: -6729040893066118767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_10
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 261
+        width: 127
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5274016, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e854a3d849aa8c930800000000000000
+      internalID: 4163765410505311630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_11
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 262
+        width: 102
+        height: 66
+      alignment: 9
+      pivot: {x: 0.4954902, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9f7b7926b464da0800000000000000
+      internalID: -5960994169953977951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_12
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 263
+        width: 92
+        height: 67
+      alignment: 9
+      pivot: {x: 0.48413044, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c399001e8edef2540800000000000000
+      internalID: 4985464896985536828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 178
+        width: 78
+        height: 67
+      alignment: 9
+      pivot: {x: 0.49641028, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8eeed91bdc94f930800000000000000
+      internalID: 4176135219325103757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 181
+        width: 76
+        height: 67
+      alignment: 9
+      pivot: {x: 0.48421052, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a736392fe31b56bb0800000000000000
+      internalID: -4943350132053417094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_15
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 174
+        width: 71
+        height: 81
+      alignment: 9
+      pivot: {x: 0.509155, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53da64ba578f3f20800000000000000
+      internalID: 3404588666959090523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_16
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 172
+        width: 72
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5034722, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e99af24ac8a2ade0800000000000000
+      internalID: -1323309753832924704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_17
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 163
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.46188888, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5acb12631ac66f0800000000000000
+      internalID: -689999389028211206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 68
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.45933333, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb198b94bafde3e0800000000000000
+      internalID: -2022685004008973321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_19
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 68
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.46833336, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e9371ed1792f3d0800000000000000
+      internalID: -3174308632750481872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Infected_Bones_Dies_20
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 62
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.45866665, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad258562cef7a5540800000000000000
+      internalID: 4997447388753318618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

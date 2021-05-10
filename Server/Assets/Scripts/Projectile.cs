@@ -47,12 +47,12 @@ public class Projectile : MonoBehaviour
             {
                 if (_collider.GetComponent<Player>().PlayerID() == thrownByPlayer)
                     continue;
-                else if (_collider.CompareTag("Player"))
+                else if (_collider.GetComponent<Player>())
                 {
                     Explode(_collider);            
                     // ServerSend.PlayerKills(originalPlayer);
                 }
-                else if (_collider.CompareTag("Enemy"))
+                else if (_collider.GetComponent<Enemy>())
                 {
                     Explode(_collider);
                 }
@@ -80,7 +80,7 @@ public class Projectile : MonoBehaviour
     {
         ServerSend.ProjectileExploded(this);
         
-        if (collider.CompareTag("Player"))
+        if (collider.GetComponent<Player>())
         {
             Player _playerShot = collider.GetComponent<Player>();
             _playerShot.TakeDamage(explosionDamage, originalPlayer);
@@ -90,7 +90,7 @@ public class Projectile : MonoBehaviour
                 ServerSend.PlayerKills(originalPlayer);
             }
         }
-        else if (collider.CompareTag("Enemy"))
+        else if (collider.GetComponent<Enemy>())
         {
             collider.GetComponent<Enemy>().TakeDamage(explosionDamage);
         }

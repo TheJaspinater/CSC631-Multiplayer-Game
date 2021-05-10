@@ -269,8 +269,8 @@ public class Player : MonoBehaviour
         if (health <= 0f)
         {
             health = 0f;
-            transform.position = new Vector3(150f, 150f, 0);
-            ServerSend.PlayerPosition(this);
+            // transform.position = new Vector3(150f, 150f, 0);
+            // ServerSend.PlayerPosition(this);
             StartCoroutine(Respawn());
         }
 
@@ -324,6 +324,9 @@ public class Player : MonoBehaviour
     private IEnumerator Respawn()
     {
         yield return new WaitForSeconds(2f);
+
+        transform.position = new Vector3(150f, 152f, 0);
+        ServerSend.PlayerPosition(this);
 
         health = maxHealth;
         ServerSend.PlayerRespawned(this);

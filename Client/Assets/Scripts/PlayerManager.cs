@@ -100,12 +100,12 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
-        model.enabled = false;
+        // model.enabled = false;
     }
 
     public void Respawn()
     {
-        model.enabled = true;
+        // model.enabled = true;
         SetHealth(maxHealth);
     }
 }

@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: 0a5432478b2c3e6419788d02fd568db9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5696558748009046200
+    second: Demon_Bones_Dies_7
+  - first:
+      213: -934419416064636911
+    second: Demon_Bones_Dies_8
+  - first:
+      213: -3851146515190181535
+    second: Demon_Bones_Dies_9
+  - first:
+      213: 5950941255817709699
+    second: Demon_Bones_Dies_10
+  - first:
+      213: -3057758297546622545
+    second: Demon_Bones_Dies_11
+  - first:
+      213: -4688352343132025848
+    second: Demon_Bones_Dies_12
+  - first:
+      213: -6843969873364673269
+    second: Demon_Bones_Dies_13
+  - first:
+      213: 5434946161536705158
+    second: Demon_Bones_Dies_14
+  - first:
+      213: 7948840158476620444
+    second: Demon_Bones_Dies_15
+  - first:
+      213: 2259635359377541291
+    second: Demon_Bones_Dies_16
+  - first:
+      213: 7231383985496368852
+    second: Demon_Bones_Dies_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 62
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 462
+        width: 73
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4712329, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1391e7e384fab9d20800000000000000
+      internalID: 3286413077917866289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 461
+        width: 80
+        height: 132
+      alignment: 9
+      pivot: {x: 0.49762502, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b08a79bc33fa860800000000000000
+      internalID: 7543304850384620416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 461
+        width: 85
+        height: 132
+      alignment: 9
+      pivot: {x: 0.48141176, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3689f544c33004f80800000000000000
+      internalID: -8124490170396338077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_3
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 461
+        width: 88
+        height: 132
+      alignment: 9
+      pivot: {x: 0.47727272, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047c7447db6ed6ea0800000000000000
+      internalID: -5877788237274560704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 461
+        width: 88
+        height: 132
+      alignment: 9
+      pivot: {x: 0.46954545, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1977ef75093d20630800000000000000
+      internalID: 3891905644906575761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_5
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 460
+        width: 91
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4496703, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb7170fc36314a90800000000000000
+      internalID: -7331519083022550029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_6
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 460
+        width: 97
+        height: 119
+      alignment: 9
+      pivot: {x: 0.4943299, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763ff1a6003f72750800000000000000
+      internalID: 6280255388497474407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 324
+        width: 96
+        height: 119
+      alignment: 9
+      pivot: {x: 0.4885417, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b02939effd3e0f40800000000000000
+      internalID: 5696558748009046200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_8
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 333
+        width: 89
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5034832, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1184d3aed764803f0800000000000000
+      internalID: -934419416064636911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 333
+        width: 91
+        height: 97
+      alignment: 9
+      pivot: {x: 0.5089011, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1611b1016aafd8ac0800000000000000
+      internalID: -3851146515190181535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 373
+        width: 78
+        height: 43
+      alignment: 9
+      pivot: {x: 0.50217944, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3884b30fa8df59250800000000000000
+      internalID: 5950941255817709699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_11
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 375
+        width: 76
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5081579, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9fab17709a095d0800000000000000
+      internalID: -3057758297546622545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_12
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 375
+        width: 71
+        height: 81
+      alignment: 9
+      pivot: {x: 0.53295773, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cceb54260afeeb0800000000000000
+      internalID: -4688352343132025848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 237
+        width: 72
+        height: 81
+      alignment: 9
+      pivot: {x: 0.50416666, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d9f9c39a55501a0800000000000000
+      internalID: -6843969873364673269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_14
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 234
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.4688889, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682a4c30dbecc6b40800000000000000
+      internalID: 5434946161536705158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_15
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 234
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.46433336, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92db566204ff4e60800000000000000
+      internalID: 7948840158476620444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_16
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 234
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.48700002, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba84c952366db5f10800000000000000
+      internalID: 2259635359377541291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Bones_Dies_17
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 234
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6a5f9db690b5460800000000000000
+      internalID: 7231383985496368852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

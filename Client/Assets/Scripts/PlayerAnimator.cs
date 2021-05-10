@@ -8,12 +8,14 @@ public class PlayerAnimator : MonoBehaviour
 
     public int id;
     private Animator anim;
+    public PlayerManager playerManager;
 
     private bool isWalking;
     private bool isFacingRight = true;
     private bool isGrounded;
     private bool hasJumped;
     private bool hasShot;
+    private bool hasDied = false;
 
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -31,6 +33,7 @@ public class PlayerAnimator : MonoBehaviour
     private void Update()
     {
         CheckMovementDirection();
+        CheckIfHasDied();
         UpdateAnimations();
     }
 
@@ -108,6 +111,20 @@ public class PlayerAnimator : MonoBehaviour
         }
     }
 
+    private void CheckIfHasDied()
+    {
+        if (playerManager.health <= 0)
+        {
+            hasDied = true;
+            anim.SetBool("isDead", hasDied);
+        }
+        else if(playerManager.health > 0)
+        {
+            hasDied = false;
+            anim.SetBool("isDead", hasDied);
+        }
+    }
+
 
     private void UpdateAnimations()
     {
@@ -116,7 +133,8 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("hasJumped", hasJumped);
         anim.SetFloat("yVelocity", velocity.y);
         anim.SetBool("shoot1", hasShot);
-        
+        // anim.SetBool("isDead", hasDied);
+
     }
 
     // Checks if Player is Grounded

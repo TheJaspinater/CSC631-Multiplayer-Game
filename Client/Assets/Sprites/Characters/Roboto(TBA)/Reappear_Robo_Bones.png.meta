@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: c8d1eb5917538ba49ab26e3bde349e21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4963398922532475244
+    second: Reappear_Robo_Bones_0
+  - first:
+      213: 6873556734411748487
+    second: Reappear_Robo_Bones_1
+  - first:
+      213: 5326268958615861066
+    second: Reappear_Robo_Bones_2
+  - first:
+      213: 1691748952536536354
+    second: Reappear_Robo_Bones_3
+  - first:
+      213: -2496343101595158350
+    second: Reappear_Robo_Bones_4
+  - first:
+      213: 7767541011830869351
+    second: Reappear_Robo_Bones_5
+  - first:
+      213: -8345350278427881710
+    second: Reappear_Robo_Bones_6
+  - first:
+      213: -4186596167821318647
+    second: Reappear_Robo_Bones_7
+  - first:
+      213: -7226285903799674982
+    second: Reappear_Robo_Bones_8
+  - first:
+      213: 8912513149191515625
+    second: Reappear_Robo_Bones_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 62
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 529
+        width: 39
+        height: 20
+      alignment: 9
+      pivot: {x: 0.47725, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61da18d50981e440800000000000000
+      internalID: 4963398922532475244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 522
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.52125, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7843b1aae67c36f50800000000000000
+      internalID: 6873556734411748487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 520
+        width: 42
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49714285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47fc78e565bae940800000000000000
+      internalID: 5326268958615861066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 525
+        width: 44
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5672727, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225541585bc4a7710800000000000000
+      internalID: 1691748952536536354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_4
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 498
+        width: 55
+        height: 89
+      alignment: 9
+      pivot: {x: 0.506, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b87cefdc253b5dd0800000000000000
+      internalID: -2496343101595158350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_5
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 472
+        width: 58
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5378572, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d05746569dbcb60800000000000000
+      internalID: 7767541011830869351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_6
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 470
+        width: 58
+        height: 116
+      alignment: 9
+      pivot: {x: 0.50896555, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f4918232c5f2c80800000000000000
+      internalID: -8345350278427881710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_7
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 470
+        width: 57
+        height: 117
+      alignment: 9
+      pivot: {x: 0.47701755, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906aff687f836e5c0800000000000000
+      internalID: -4186596167821318647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 356
+        width: 57
+        height: 118
+      alignment: 9
+      pivot: {x: 0.46719298, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a979b9ac14317bb90800000000000000
+      internalID: -7226285903799674982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reappear_Robo_Bones_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 356
+        width: 57
+        height: 122
+      alignment: 9
+      pivot: {x: 0.4531579, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edee891d7b9fab70800000000000000
+      internalID: 8912513149191515625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

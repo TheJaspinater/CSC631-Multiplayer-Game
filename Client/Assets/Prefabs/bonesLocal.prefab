@@ -5283,6 +5283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust: {fileID: 4043955502949166080}
   id: 0
+  playerManager: {fileID: 3590756611983622355}
   groundCheckRadius: 0.45
   whatIsGround:
     serializedVersion: 2

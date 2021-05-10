@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 45a7195522a5e9840a1b4dc091805556
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6423110250615294054
+    second: Robo_Bones_Dies_0
+  - first:
+      213: 7143663253199608582
+    second: Robo_Bones_Dies_1
+  - first:
+      213: -3441226110225193886
+    second: Robo_Bones_Dies_2
+  - first:
+      213: 6546889378779015656
+    second: Robo_Bones_Dies_3
+  - first:
+      213: 2019616226560373749
+    second: Robo_Bones_Dies_4
+  - first:
+      213: 6905527988947720565
+    second: Robo_Bones_Dies_5
+  - first:
+      213: -4012469514803195449
+    second: Robo_Bones_Dies_6
+  - first:
+      213: -397739494937980783
+    second: Robo_Bones_Dies_7
+  - first:
+      213: -3325120289032360203
+    second: Robo_Bones_Dies_8
+  - first:
+      213: 4478692371751671016
+    second: Robo_Bones_Dies_9
+  - first:
+      213: 8684110527380875365
+    second: Robo_Bones_Dies_10
+  - first:
+      213: 1405946763173678710
+    second: Robo_Bones_Dies_11
+  - first:
+      213: 7568187532025933024
+    second: Robo_Bones_Dies_12
+  - first:
+      213: 2367497933573500311
+    second: Robo_Bones_Dies_13
+  - first:
+      213: 3006270840548368415
+    second: Robo_Bones_Dies_14
+  - first:
+      213: 575209897057480254
+    second: Robo_Bones_Dies_15
+  - first:
+      213: -6373338535097197026
+    second: Robo_Bones_Dies_16
+  - first:
+      213: -6426606348097986975
+    second: Robo_Bones_Dies_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 62
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 477
+        width: 57
+        height: 119
+      alignment: 9
+      pivot: {x: 0.47771928, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97b7e612478cd6a0800000000000000
+      internalID: -6423110250615294054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 477
+        width: 59
+        height: 119
+      alignment: 9
+      pivot: {x: 0.47457626, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b59f941e3632360800000000000000
+      internalID: 7143663253199608582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 477
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.4620635, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2646a3cc51f4e30d0800000000000000
+      internalID: -3441226110225193886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 477
+        width: 76
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5469737, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9a6edf3393bda50800000000000000
+      internalID: 6546889378779015656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_4
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 477
+        width: 87
+        height: 119
+      alignment: 9
+      pivot: {x: 0.50298846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3feb6f14e170c10800000000000000
+      internalID: 2019616226560373749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_5
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 477
+        width: 107
+        height: 119
+      alignment: 9
+      pivot: {x: 0.47785047, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5791fbf6e1d55df50800000000000000
+      internalID: 6905527988947720565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 369
+        width: 115
+        height: 85
+      alignment: 9
+      pivot: {x: 0.4907826, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1521a3c38d058c0800000000000000
+      internalID: -4012469514803195449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_7
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 375
+        width: 115
+        height: 85
+      alignment: 9
+      pivot: {x: 0.49130434, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19014136902fa7af0800000000000000
+      internalID: -397739494937980783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 375
+        width: 115
+        height: 85
+      alignment: 9
+      pivot: {x: 0.4904348, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe28c0e6bccad1d0800000000000000
+      internalID: -3325120289032360203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_9
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 382
+        width: 118
+        height: 85
+      alignment: 9
+      pivot: {x: 0.49737287, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e49284abf2872e30800000000000000
+      internalID: 4478692371751671016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 302
+        width: 80
+        height: 43
+      alignment: 9
+      pivot: {x: 0.508125, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56864c6a388248870800000000000000
+      internalID: 8684110527380875365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_11
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 307
+        width: 76
+        height: 66
+      alignment: 9
+      pivot: {x: 0.48592106, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ec310d12de28310800000000000000
+      internalID: 1405946763173678710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_12
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 294
+        width: 71
+        height: 81
+      alignment: 9
+      pivot: {x: 0.47915494, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec22ff567a970960800000000000000
+      internalID: 7568187532025933024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 288
+        width: 72
+        height: 81
+      alignment: 9
+      pivot: {x: 0.49708334, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79dae19b3da0bd020800000000000000
+      internalID: 2367497933573500311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_14
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 281
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.49466667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10208dc66b68b920800000000000000
+      internalID: 3006270840548368415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_15
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 281
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.47277778, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e66619a5e8bf700800000000000000
+      internalID: 575209897057480254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 180
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.44833332, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e1936ae5a5d87a0800000000000000
+      internalID: -6373338535097197026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robo_Bones_Dies_17
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 180
+        width: 90
+        height: 99
+      alignment: 9
+      pivot: {x: 0.45766667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e5956739b10d6a0800000000000000
+      internalID: -6426606348097986975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
