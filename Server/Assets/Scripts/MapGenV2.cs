@@ -181,7 +181,7 @@ public class MapGenV2 : MonoBehaviour
         }
     }
 
-    int CountAdjacentTiles(int mapX, int mapY, int startX, int endX, int startY, int endY) //returns count of nearby tiles to be used for smoothing and item spawning
+    public int CountAdjacentTiles(int mapX, int mapY, int startX, int endX, int startY, int endY) //returns count of nearby tiles to be used for smoothing and item spawning
     {
         int adjacentTitlesCount = 0;
 

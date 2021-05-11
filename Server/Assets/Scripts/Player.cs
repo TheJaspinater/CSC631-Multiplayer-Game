@@ -18,6 +18,10 @@ public class Player : MonoBehaviour
     private bool[] inputs;
     private bool[] attackInputs;
 
+    private int height;
+    private int width;
+    private System.Random randomeNumber;
+
     //TESTING---------------------
     private Vector2 _inputDirection;
     // private bool isWalking;
@@ -59,7 +63,9 @@ public class Player : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         circleCollider = GetComponent<CircleCollider2D>();
-    }
+        height = GameObject.Find("WorldGen").GetComponent<MapGenV2>().height;
+        width = GameObject.Find("WorldGen").GetComponent<MapGenV2>().width;
+}
 
     public void Initialize(int _id, string _username)
     {
@@ -75,8 +81,8 @@ public class Player : MonoBehaviour
     public void playerDied()
     {
         health = 0f;
-        transform.position = new Vector3(150f, 150f, 0);
-        ServerSend.PlayerPosition(this);
+        //transform.position = new Vector3(150f, 150f, 0);
+        //ServerSend.PlayerPosition(this);
         StartCoroutine(Respawn());
     }
 
@@ -323,12 +329,32 @@ public class Player : MonoBehaviour
 
     private IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0);
 
-        transform.position = new Vector3(150f, 152f, 0);
+        transform.position = findSpawnLocation();
         ServerSend.PlayerPosition(this);
 
         health = maxHealth;
         ServerSend.PlayerRespawned(this);
+    }
+
+    private Vector3 findSpawnLocation()
+    {
+        randomeNumber = new System.Random(DateTime.Now.ToString().GetHashCode());
+        int wallCount = 0;
+
+        for(int y = randomeNumber.Next(height - (height / 4), height); y > (height - (height / 4)); y--)
+        {
+            for(int x = randomeNumber.Next(0, width); x < width; x++)
+            {
+                wallCount = GameObject.Find("WorldGen").GetComponent<MapGenV2>().CountAdjacentTiles(x,y,1,1,3,3);
+                if(wallCount == 0)
+                {
+                    return new Vector3(x, y, 0);
+                }
+            }
+        }
+
+        return new Vector3(width / 2, height + 10, 0);
     }
 }
