@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     private int height;
     private int width;
-    private System.Random randomeNumber = new System.Random(DateTime.Now.ToString().GetHashCode());
+    private System.Random randomeNumber;
 
     //TESTING---------------------
     private Vector2 _inputDirection;
@@ -329,7 +329,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(2f);
 
         transform.position = findSpawnLocation();
         ServerSend.PlayerPosition(this);
@@ -340,6 +340,7 @@ public class Player : MonoBehaviour
 
     private Vector3 findSpawnLocation()
     {
+        randomeNumber = new System.Random(DateTime.Now.ToString().GetHashCode());
         int wallCount = 0;
 
         for(int y = randomeNumber.Next(height - (height / 4), height); y > (height - (height / 4)); y--)
@@ -347,7 +348,6 @@ public class Player : MonoBehaviour
             for (int x = randomeNumber.Next(0, width); x < width; x++)
             {
                 wallCount = GameObject.Find("WorldGen").GetComponent<MapGenV2>().CountAdjacentTiles(x,y,1,1,1,2);
-                Debug.Log("checking Respawn Location at " + x + " " + y + ". wallCount = " + wallCount + ".");
                 if (wallCount - 1 == 0)//HArd coded. Uknown bug not returning 0
                 {
                     return new Vector3(x, y, 0);
