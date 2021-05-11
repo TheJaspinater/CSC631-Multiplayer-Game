@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public Text gameTimerDisplay;
     public float Gametimer;
 
+    public Animator anim;
     public GameObject startMenu;
     public InputField usernameField;
     public int killsNeededToWin;
@@ -140,8 +141,24 @@ public class UIManager : MonoBehaviour
     {
         inGameUI.SetActive(false);
         inEndGame = true;
-        endGameScreen.SetActive(true); //quick fix to show victory screen for now. needs animation component. 
-        winnerText.text = string.Format($"A Winner Is You!{winnerID}");
+        endGameScreen.SetActive(true); //quick fix to show victory screen for now. needs animation component.
+        if (GameLobby[winnerID-1].charChoice == 0)
+        {
+            anim.SetBool("bonesWins", true);
+        }
+        else if(GameLobby[winnerID-1].charChoice == 2)
+        {
+            anim.SetBool("goopWins", true);
+        }
+        else if (GameLobby[winnerID-1].charChoice == 1)
+        {
+            anim.SetBool("robotWins", true);
+        }
+        else if (GameLobby[winnerID-1].charChoice == 3)
+        {
+            anim.SetBool("wraithWins", true);
+        }
+        winnerText.text = string.Format($"The Winner Is You! {GameLobby[winnerID-1].username}");
         
     }
 
