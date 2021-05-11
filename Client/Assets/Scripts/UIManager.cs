@@ -112,6 +112,7 @@ public class UIManager : MonoBehaviour
     {
         inGame = true;
         inLobby = false;
+        Client.instance.characterSelection = 0;
         usernameField.interactable = false;
         charSelectPNL.SetActive(false);
         lobbyPNL.SetActive(false);
