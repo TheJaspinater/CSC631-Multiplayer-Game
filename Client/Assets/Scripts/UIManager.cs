@@ -108,6 +108,11 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void DebugStartGame()
+    {
+        ClientSend.StartGame();
+    }
+
     public void GametimerCountdown(float timeRemaining)
     {
         timeRemaining += 1;
