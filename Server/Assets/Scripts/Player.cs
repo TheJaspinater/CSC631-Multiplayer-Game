@@ -329,7 +329,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         transform.position = findSpawnLocation();
         ServerSend.PlayerPosition(this);
