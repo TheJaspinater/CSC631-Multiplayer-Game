@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     public ParticleSystem dust;
+    public ParticleSystem slash;
 
     public int id;
     private Animator anim;
@@ -153,6 +154,11 @@ public class PlayerAnimator : MonoBehaviour
     {
         dust.Play();
         Debug.Log("dust happens");
+    }
+
+    public void CreateSlash()
+    {
+        slash.Play();
     }
 
     public bool getIfJumped()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForeignAnimator : MonoBehaviour
 {
     public ParticleSystem dust;
+    public ParticleSystem slash;
 
     public int id;
     private Animator anim;
@@ -139,5 +140,10 @@ public class ForeignAnimator : MonoBehaviour
     {
         dust.Play();
         Debug.Log("dust happens");
+    }
+
+    public void CreateSlash()
+    {
+        slash.Play();
     }
 }

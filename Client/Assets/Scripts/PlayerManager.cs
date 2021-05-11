@@ -111,6 +111,18 @@ public class PlayerManager : MonoBehaviour
             Player.GetComponent<ForeignAnimator>().isShooting(id, true);
         }
     }
+    
+    public void playerAttack()
+    {
+        if (Player.GetComponent<PlayerAnimator>())
+        {
+            Player.GetComponent<PlayerAnimator>().CreateSlash();
+        }
+        else if (Player.GetComponent<ForeignAnimator>())
+        {
+            Player.GetComponent<ForeignAnimator>().CreateSlash();
+        }
+    }
 
     public void Die()
     {

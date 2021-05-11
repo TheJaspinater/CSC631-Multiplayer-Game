@@ -46,12 +46,12 @@ public class PlayerController : MonoBehaviour
             Input.GetMouseButtonDown(1),
         };
 
-        /*
-        if (Input.GetMouseButtonDown(1))
+        
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(true);
+            GameManager.players[Client.instance.myId].playerAttack();
         }
-        */
+        
         if (UIManager.instance.inEndGame == false)
         {
             ClientSend.PlayerAttack(_attackInputs);
