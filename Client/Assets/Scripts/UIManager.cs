@@ -110,6 +110,15 @@ public class UIManager : MonoBehaviour
 
     public void DebugStartGame()
     {
+        inGame = true;
+        inLobby = false;
+        usernameField.interactable = false;
+        charSelectPNL.SetActive(false);
+        lobbyPNL.SetActive(false);
+        startMenu.SetActive(false);
+        inGameUI.SetActive(true);
+
+        Client.instance.ConnectToServer();
         ClientSend.StartGame();
     }
 
